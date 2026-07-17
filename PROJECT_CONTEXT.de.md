@@ -100,6 +100,8 @@ Shortcuts/
 - GitHub Actions Release-Status-Automatik eingerichtet.
 - GitHub Release `v1.2.2` mit ZIP, direktem Shortcut-Asset und SHA-256-Datei
   erstellt.
+- Das GitHub-Profil-Repository `Schrotty74/Schrotty74` muss mit dem aktuellen
+  öffentlichen Shortcuts-Release-Link und der Beschreibung synchron bleiben.
 
 ## Wichtige Designentscheidungen
 
@@ -116,6 +118,9 @@ Shortcuts/
   nicht nur Text.
 - Update-Prüfungen können den neuesten GitHub Release öffnen, aber Apple
   verlangt weiterhin eine Nutzerbestätigung beim Importieren oder Ersetzen.
+- Bei jedem öffentlichen Shortcut-Release/Update auch die GitHub-Profilseite
+  prüfen und den Shortcuts-Eintrag aktualisieren, wenn Version, Release-Link
+  oder öffentliche Beschreibung geändert wurden.
 
 ## Bekannte Einschränkungen oder Probleme
 

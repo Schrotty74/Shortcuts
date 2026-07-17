@@ -10,6 +10,8 @@ English: [NEXT_STEPS.md](NEXT_STEPS.md)
 ## Priorität 1: Offene Aufgaben
 
 - Import der veröffentlichten `.shortcut`-Datei aus dem Wetter-Ordner testen.
+- GitHub-Profil-README `Schrotty74/Schrotty74` bei öffentlichen
+  Versionsänderungen mit dem aktuellen Shortcuts-Release synchron halten.
 
 ## Priorität 2: Bugs und Robustheit
 
