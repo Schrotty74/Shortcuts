@@ -14,7 +14,7 @@ result view, and an animated HTML weather card.
 
 ## Installation
 
-1. Open the [official iCloud shortcut link](https://www.icloud.com/shortcuts/ab7055ef07da4836bc40b12c02204e51).
+1. Open the [official iCloud shortcut link](https://www.icloud.com/shortcuts/f746020fdacc40619e893818373050d8).
 2. Import it into Apple Shortcuts.
 3. Run the shortcut and enter a city.
 
