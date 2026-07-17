@@ -94,8 +94,9 @@ Shortcuts/
 - GitHub Actions release status automation configured.
 - GitHub Release `v1.2.2` created with ZIP, direct shortcut asset, and SHA-256
   file.
-- GitHub profile repository `Schrotty74/Schrotty74` must stay in sync with the
-  current public Shortcuts release link and description.
+- GitHub profile repository `Schrotty74/Schrotty74` must stay in sync with a
+  neutral link to the public Shortcuts collection, but must not show a specific
+  shortcut release version.
 
 ## Important Design Decisions
 
@@ -113,8 +114,9 @@ Shortcuts/
 - Update checks can open the latest GitHub release, but Apple still requires
   user confirmation to import or replace a shortcut.
 - For every public shortcut release/update, also check the GitHub profile page
-  and update its Shortcuts entry when the version, release link, or public
-  description changed.
+  and keep its neutral Shortcuts collection entry accurate. Do not add
+  per-shortcut release links there, because the repository can contain multiple
+  shortcuts.
 
 ## Known Limitations Or Problems
 

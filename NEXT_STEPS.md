@@ -10,8 +10,8 @@ Deutsch: [NEXT_STEPS.de.md](NEXT_STEPS.de.md)
 ## Priority 1: Open Tasks
 
 - Test importing the published `.shortcut` file from the weather folder.
-- Keep the GitHub profile README `Schrotty74/Schrotty74` aligned with the
-  current Shortcuts release whenever the public version changes.
+- Keep the GitHub profile README `Schrotty74/Schrotty74` aligned with a neutral
+  Shortcuts collection link, without showing a specific shortcut release.
 
 ## Priority 2: Bugs And Robustness
 
