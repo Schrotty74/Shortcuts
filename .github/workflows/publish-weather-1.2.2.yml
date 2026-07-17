@@ -1,0 +1,26 @@
+name: Publish Weather for City v1.2.2
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    if: github.event.head_commit.message == 'Publish Weather for City v1.2.2'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create v1.2.2 \
+            --title "Weather for City v1.2.2" \
+            --notes-file shortcuts/weather-for-city/RELEASE_NOTES.md \
+            "shortcuts/weather-for-city/Weather for City.shortcut#Weather.for.City.shortcut" \
+            shortcuts/weather-for-city/dist/weather-for-city-1.2.2.zip \
+            shortcuts/weather-for-city/dist/weather-for-city-1.2.2.zip.sha256
