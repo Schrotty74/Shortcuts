@@ -53,12 +53,10 @@ Nicht enthalten sind:
 
 Veröffentlicht werden nur die Dateien im öffentlichen Projektordner:
 
-- `Weather for City.shortcut`
 - `Weather_for_City.xml`
 - Projektdokumentation
 - Datenschutzbericht
 - Prüfsummen
-- Release-ZIP
 
 Nicht veröffentlicht werden lokale Arbeitsdateien aus `Shortcuts Playground`,
 alte Archivstände, Desktop-Screenshots oder `.DS_Store`-Dateien.
