@@ -37,6 +37,8 @@ Dokumentation:
 - [Datenschutzbericht](shortcuts/wetter-fuer-stadt/PRIVACY_REPORT.md)
 - [Prüfsummen](shortcuts/wetter-fuer-stadt/CHECKSUMS.txt)
 - [Release Notes](RELEASE_NOTES.md)
+- [Projektkontext](PROJECT_CONTEXT.md)
+- [Nächste Schritte](NEXT_STEPS.md)
 
 ## Datenschutz
 

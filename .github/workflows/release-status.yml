@@ -26,6 +26,8 @@ jobs:
           test -f "dist/wetter-fuer-stadt-1.0.zip.sha256"
           test -f "RELEASE_NOTES.md"
           test -f "PORTFOLIO_UPDATE.md"
+          test -f "PROJECT_CONTEXT.md"
+          test -f "NEXT_STEPS.md"
 
           grep -q "Version: \`1.0\`" README.md
           grep -q "Version: \`1.0\`" shortcuts/wetter-fuer-stadt/README.md
