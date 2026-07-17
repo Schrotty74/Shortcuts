@@ -28,6 +28,7 @@ animierte HTML-Wetterkarte.
 ## Funktionen
 
 - freie Stadteingabe
+- Ortsauswahl bei mehrdeutigen Städten wie `Columbia`
 - aktuelle Temperatur in Celsius oder Fahrenheit, abhängig vom Länder-Code der gefundenen Stadt
 - WMO-Wettercode als lesbare Beschreibung
 - animierte Wetterkarte
@@ -36,8 +37,9 @@ animierte HTML-Wetterkarte.
 - Fahrenheit-Anzeige für USA, Bahamas, Cayman Islands, Liberia und Myanmar
 - eingebaute Update-Prüfung gegen den neuesten GitHub Release
 - responsive Layouts für Mac und iPhone
-- deutsche HTML-Ausgabe für `de-AT`, `de-DE`, `de-CH`, `de-LI`
-- englischer Fallback für andere Gerätesprachen
+- deutsche sichtbare Shortcut-Texte und HTML-Ausgabe für `de-AT`, `de-DE`, `de-CH`, `de-LI`
+- englischer Fallback für andere Gerätesprachen und Regionen
+- Datenschutzbericht, signierte Shortcut-Datei, Release-ZIP und SHA-256-Prüfsummen
 
 ## Datenquellen
 

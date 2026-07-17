@@ -28,6 +28,7 @@ result view, and an animated HTML weather card.
 ## Features
 
 - free city input
+- location picker for ambiguous city names such as `Columbia`
 - current temperature in Celsius or Fahrenheit, selected from the found city's country code
 - WMO weather code converted to a readable description
 - animated weather card
@@ -36,9 +37,10 @@ result view, and an animated HTML weather card.
 - Fahrenheit display for US, Bahamas, Cayman Islands, Liberia, and Myanmar
 - built-in update check against the latest GitHub release
 - responsive layouts for Mac and iPhone
-- German HTML output for `de-AT`, `de-DE`, `de-CH`, `de-LI`
-- English fallback for all other device languages
+- German visible shortcut texts and HTML output for `de-AT`, `de-DE`, `de-CH`, `de-LI`
+- English fallback for all other device languages and regions
 - official iCloud installation link for iPhone and Mac
+- privacy report, signed shortcut file, release ZIP, and SHA-256 checksums
 
 ## Data Sources
 

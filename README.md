@@ -15,6 +15,23 @@ folder below `shortcuts/`, so future shortcuts can be released independently.
 | --- | --- | --- | --- | --- |
 | <img src="shortcuts/weather-for-city/assets/html-preview.svg" alt="Weather for City HTML preview" width="180"> | Weather for City | 1.2.2 | [`shortcuts/weather-for-city`](shortcuts/weather-for-city/) | [`Install`](https://www.icloud.com/shortcuts/d8cf3658a17d4f03b4441f378a5d1a7e), [`v1.2.2`](https://github.com/Schrotty74/Shortcuts/releases/tag/v1.2.2) |
 
+## Current Highlights
+
+- bilingual public shortcut documentation in English and German
+- compact preview image for every published shortcut entry
+- per-shortcut privacy reports, checksums, signed shortcut files, and ZIP
+  downloads
+- update-ready release structure for multiple independent shortcuts
+
+For `Weather for City`:
+
+- animated weather card with responsive layouts for Mac and iPhone
+- city lookup with location picker for ambiguous results
+- current weather through public Open-Meteo APIs, without an API key
+- Celsius or Fahrenheit selected from the found city's country
+- German UI for `de-AT`, `de-DE`, `de-CH`, `de-LI`; English fallback elsewhere
+- built-in update check against the latest GitHub release
+
 ## Privacy
 
 Each published shortcut includes its own privacy report in the shortcut folder.
