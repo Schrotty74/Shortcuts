@@ -1,6 +1,6 @@
 # Privacy Report: Weather for City
 
-Version: `1.0`
+Version: `1.1`
 
 Updated: 2026-07-17
 
@@ -18,6 +18,7 @@ The shortcut processes:
 - the city entered by the user when the shortcut starts
 - public geocoding data derived from that city
 - current weather data from Open-Meteo
+- the country code of the found city to select Celsius or Fahrenheit
 - the language/locale of the HTML web view to display German or English
 
 ## What Data Is Sent To External Services?

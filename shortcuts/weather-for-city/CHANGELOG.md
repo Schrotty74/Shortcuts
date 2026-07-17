@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.1 - 2026-07-17
+
+Bugfix release.
+
+- Selects Celsius or Fahrenheit from the found city's country code.
+- Uses Fahrenheit for US, Bahamas, Cayman Islands, Liberia, and Myanmar.
+- Keeps Celsius for all other countries.
+- Updates notification, result view, and HTML weather card to show the matching unit.
+- Keeps the HTML temperature color scale normalized to Celsius.
+
 ## 1.0 - 2026-07-17
 
 Initial public release.

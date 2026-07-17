@@ -1,6 +1,6 @@
 # Weather for City
 
-Version: `1.0`
+Version: `1.1`
 
 English: [README.md](README.md)
 
@@ -29,11 +29,12 @@ animierte HTML-Wetterkarte.
 ## Funktionen
 
 - freie Stadteingabe
-- aktuelle Temperatur in Grad Celsius
+- aktuelle Temperatur in Celsius oder Fahrenheit, abhängig vom Länder-Code der gefundenen Stadt
 - WMO-Wettercode als lesbare Beschreibung
 - animierte Wetterkarte
 - Wetterbild passend zum Wettercode
 - dynamische Temperaturfarbe von `-15 °C` bis `+50 °C`
+- Fahrenheit-Anzeige für USA, Bahamas, Cayman Islands, Liberia und Myanmar
 - responsive Layouts für Mac und iPhone
 - deutsche HTML-Ausgabe für `de-AT`, `de-DE`, `de-CH`, `de-LI`
 - englischer Fallback für andere Gerätesprachen

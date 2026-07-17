@@ -13,7 +13,7 @@ Dieses Repository stellt öffentliche Apple-Kurzbefehle bereit. Es ist als
 Sammlung angelegt: Jeder Kurzbefehl lebt vollständig in einem eigenen Ordner
 unter `shortcuts/`.
 
-Der erste veröffentlichte Kurzbefehl ist `Weather for City` in Version `1.0`.
+Der erste veröffentlichte Kurzbefehl ist `Weather for City` in Version `1.1`.
 
 ## Architektur und technische Entscheidungen
 
@@ -28,7 +28,7 @@ Der erste veröffentlichte Kurzbefehl ist `Weather for City` in Version `1.0`.
   anzeigen.
 - Aktueller Shortcut-Ordner: `shortcuts/weather-for-city/`
 - Das ZIP für `Weather for City` liegt unter:
-  `shortcuts/weather-for-city/dist/weather-for-city-1.0.zip`
+  `shortcuts/weather-for-city/dist/weather-for-city-1.1.zip`
 - GitHub Actions prüft die erwartete Ordnerstruktur, Prüfsummen und einfache
   Datenschutzindikatoren.
 - Der Wetter-Kurzbefehl nutzt öffentliche Open-Meteo-APIs und benötigt keinen
@@ -64,15 +64,15 @@ Shortcuts/
         |   |-- html-preview.svg
         |   `-- social-preview.svg
         `-- dist/
-            |-- weather-for-city-1.0.zip
-            `-- weather-for-city-1.0.zip.sha256
+            |-- weather-for-city-1.1.zip
+            `-- weather-for-city-1.1.zip.sha256
 ```
 
 ## Umgesetzte Funktionen
 
 - Öffentliches Repository für Shortcuts eingerichtet.
 - Sammlungsstruktur eingeführt: jeder Shortcut in eigenem Unterordner.
-- `Weather for City` Version `1.0` bereitgestellt.
+- `Weather for City` Version `1.1` bereitgestellt.
 - Signierte `.shortcut`-Datei und XML-Quelle veröffentlicht.
 - Wetter-spezifische Version, Changelog, Release Notes, Portfolio-Update,
   Datenschutzbericht, Assets und ZIP in `shortcuts/weather-for-city/`
@@ -81,8 +81,10 @@ Shortcuts/
   `shortcuts/weather-for-city/assets/html-preview.svg`.
 - Die Repository-Startseite zeigt das kompakte Vorschaubild direkt neben dem
   Shortcut-Eintrag, damit Besucher sofort sehen, wie der Shortcut aussieht.
+- Version `1.1` behebt die Temperatureinheit, indem Celsius oder Fahrenheit
+  aus dem Länder-Code der gefundenen Stadt ausgewählt wird.
 - GitHub Actions Release-Status-Automatik eingerichtet.
-- GitHub Release `v1.0` mit ZIP und SHA-256-Datei erstellt.
+- GitHub Release `v1.1` mit ZIP und SHA-256-Datei erstellt.
 
 ## Wichtige Designentscheidungen
 
@@ -101,7 +103,7 @@ Shortcuts/
   manuelles Datenschutzreview.
 - Der Wetter-Kurzbefehl sendet den eingegebenen Stadtnamen und Koordinaten an
   Open-Meteo, wie im Datenschutzbericht beschrieben.
-- GitHub Release `v1.0` bleibt ein Release für den Wetter-Kurzbefehl, auch wenn
+- GitHub Release `v1.1` bleibt ein Release für den Wetter-Kurzbefehl, auch wenn
   das Repository künftig weitere Shortcuts enthält.
 
 ## Pflegehinweis

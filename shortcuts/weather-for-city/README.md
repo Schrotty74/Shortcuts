@@ -1,6 +1,6 @@
 # Weather for City
 
-Version: `1.0`
+Version: `1.1`
 
 Deutsch: [README.de.md](README.de.md)
 
@@ -29,11 +29,12 @@ result view, and an animated HTML weather card.
 ## Features
 
 - free city input
-- current temperature in degrees Celsius
+- current temperature in Celsius or Fahrenheit, selected from the found city's country code
 - WMO weather code converted to a readable description
 - animated weather card
 - weather scene based on the weather code
 - dynamic temperature color from `-15 °C` to `+50 °C`
+- Fahrenheit display for US, Bahamas, Cayman Islands, Liberia, and Myanmar
 - responsive layouts for Mac and iPhone
 - German HTML output for `de-AT`, `de-DE`, `de-CH`, `de-LI`
 - English fallback for all other device languages

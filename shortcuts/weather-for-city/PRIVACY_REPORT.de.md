@@ -1,6 +1,6 @@
 # Datenschutzbericht: Weather for City
 
-Version: `1.0`
+Version: `1.1`
 
 Stand: 2026-07-17
 
@@ -18,6 +18,7 @@ Der Kurzbefehl verarbeitet:
 - die Stadt, die der Nutzer beim Start eingibt
 - die daraus ermittelten öffentlichen Geocoding-Daten
 - aktuelle Wetterdaten von Open-Meteo
+- den Länder-Code der gefundenen Stadt, um Celsius oder Fahrenheit auszuwählen
 - die Sprache/Locale der HTML-Webansicht, um Deutsch oder Englisch anzuzeigen
 
 ## Welche Daten werden an externe Dienste gesendet?

@@ -12,7 +12,7 @@ Deutsch: [PROJECT_CONTEXT.de.md](PROJECT_CONTEXT.de.md)
 This repository publishes public Apple Shortcuts. It is structured as a
 collection: each shortcut lives fully inside its own folder below `shortcuts/`.
 
-The first published shortcut is `Weather for City` version `1.0`.
+The first published shortcut is `Weather for City` version `1.1`.
 
 ## Architecture And Technical Decisions
 
@@ -26,7 +26,7 @@ The first published shortcut is `Weather for City` version `1.0`.
   folder and show that preview on the repository start page.
 - Current shortcut folder: `shortcuts/weather-for-city/`
 - The ZIP for `Weather for City` lives at:
-  `shortcuts/weather-for-city/dist/weather-for-city-1.0.zip`
+  `shortcuts/weather-for-city/dist/weather-for-city-1.1.zip`
 - GitHub Actions checks the expected folder structure, checksums, and basic
   privacy indicators.
 - The weather shortcut uses public Open-Meteo APIs and requires no API key.
@@ -61,15 +61,15 @@ Shortcuts/
         |   |-- html-preview.svg
         |   `-- social-preview.svg
         `-- dist/
-            |-- weather-for-city-1.0.zip
-            `-- weather-for-city-1.0.zip.sha256
+            |-- weather-for-city-1.1.zip
+            `-- weather-for-city-1.1.zip.sha256
 ```
 
 ## Implemented Features
 
 - Public Shortcuts repository created.
 - Collection structure introduced: each shortcut lives in its own folder.
-- `Weather for City` version `1.0` published.
+- `Weather for City` version `1.1` published.
 - Signed `.shortcut` file and XML source published.
 - Shortcut-specific version file, changelog, release notes, portfolio update,
   privacy report, assets, and ZIP are stored in `shortcuts/weather-for-city/`.
@@ -77,8 +77,10 @@ Shortcuts/
   `shortcuts/weather-for-city/assets/html-preview.svg`.
 - The repository start page shows the compact preview next to the shortcut
   entry so visitors immediately see what the shortcut looks like.
+- Version `1.1` fixes temperature units by selecting Celsius or Fahrenheit from
+  the found city's country code.
 - GitHub Actions release status automation configured.
-- GitHub Release `v1.0` created with ZIP and SHA-256 file.
+- GitHub Release `v1.1` created with ZIP and SHA-256 file.
 
 ## Important Design Decisions
 
@@ -97,7 +99,7 @@ Shortcuts/
   privacy review.
 - The weather shortcut sends the entered city name and derived coordinates to
   Open-Meteo, as described in the privacy report.
-- GitHub Release `v1.0` remains the weather shortcut release even when the
+- GitHub Release `v1.1` remains the weather shortcut release even when the
   repository contains more shortcuts later.
 
 ## Maintenance Note

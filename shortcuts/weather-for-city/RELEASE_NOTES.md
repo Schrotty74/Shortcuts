@@ -1,18 +1,16 @@
 # Release Notes
 
-## Weather for City 1.0
+## Weather for City 1.1
 
-Initial public release of the Apple Shortcut `Weather for City`.
+Bugfix release of the Apple Shortcut `Weather for City`.
 
-Included:
+Fixed:
 
-- signed shortcut file
-- XML source
-- privacy report
-- checksums
-- release ZIP
-- portfolio update
-- GitHub Actions release status check
+- selects Celsius or Fahrenheit from the found city's country code
+- uses Fahrenheit for US, Bahamas, Cayman Islands, Liberia, and Myanmar
+- keeps Celsius for all other countries
+- shows the matching unit in notification, result view, and HTML weather card
+- keeps the HTML temperature color scale normalized to Celsius
 
 Privacy:
 
@@ -25,5 +23,5 @@ Privacy:
 Release files:
 
 - `shortcuts/weather-for-city/Weather for City.shortcut`
-- `dist/weather-for-city-1.0.zip`
-- `dist/weather-for-city-1.0.zip.sha256`
+- `dist/weather-for-city-1.1.zip`
+- `dist/weather-for-city-1.1.zip.sha256`
