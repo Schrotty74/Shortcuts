@@ -62,6 +62,9 @@ Shortcuts/
         |-- Weather_for_City.xml
         |-- assets/
         |   |-- html-preview.svg
+        |   |-- reddit/
+        |   |   |-- weather-for-city-html-preview.png
+        |   |   `-- weather-for-city-reddit-card.png
         |   `-- social-preview.svg
         `-- dist/
             |-- weather-for-city-1.2.1.zip
@@ -79,6 +82,8 @@ Shortcuts/
   einsortiert.
 - Kompaktes HTML-Vorschaubild ergänzt unter
   `shortcuts/weather-for-city/assets/html-preview.svg`.
+- Reddit-taugliche PNG-Vorschaubilder ergänzt unter
+  `shortcuts/weather-for-city/assets/reddit/`.
 - Die Repository-Startseite zeigt das kompakte Vorschaubild direkt neben dem
   Shortcut-Eintrag, damit Besucher sofort sehen, wie der Shortcut aussieht.
 - Version `1.1` behebt die Temperatureinheit, indem Celsius oder Fahrenheit
@@ -97,6 +102,9 @@ Shortcuts/
 
 - Keine Shortcut-spezifischen Release-Dateien im Repository-Root.
 - Root bleibt für Sammlung, Lizenz, Projektkontext und nächste Schritte.
+- Veröffentlichungsablauf: Änderungen zuerst lokal bauen und prüfen, dann auf
+  Martins ausdrückliches OK warten, bevor etwas zu GitHub gepusht oder ein
+  Release-Asset ersetzt wird.
 - Datenschutzbericht ist pro Shortcut Pflichtbestandteil.
 - Nicht veröffentlicht werden lokale Arbeitsarchive, Screenshots, `.DS_Store`
   oder private lokale Projektdateien aus dem ursprünglichen Arbeitsordner.

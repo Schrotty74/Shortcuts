@@ -42,3 +42,7 @@ English: [NEXT_STEPS.md](NEXT_STEPS.md)
 
 Diese Datei bei größeren Änderungen, neuen Shortcuts, neuen Releases oder
 wichtigen Entscheidungen gemeinsam mit `PROJECT_CONTEXT.md` aktualisieren.
+
+Künftige Shortcut-Änderungen nicht sofort pushen oder veröffentlichen. Erst
+lokal bauen und prüfen, Martin testen lassen und nur nach ausdrücklichem OK
+veröffentlichen.

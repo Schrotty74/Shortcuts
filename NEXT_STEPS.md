@@ -41,3 +41,6 @@ Deutsch: [NEXT_STEPS.de.md](NEXT_STEPS.de.md)
 
 Update this file together with `PROJECT_CONTEXT.md` for larger changes, new
 shortcuts, new releases, or important decisions.
+
+Do not push or publish future shortcut changes immediately. Build and verify
+locally, let Martin test the result, and publish only after his explicit OK.
