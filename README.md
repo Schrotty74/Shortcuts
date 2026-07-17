@@ -4,53 +4,43 @@
 
 Öffentliche Apple-Kurzbefehle, gebaut mit Liebe und sauberer Dokumentation.
 
+Dieses Repository ist als Sammlung gedacht: Jeder Kurzbefehl liegt vollständig
+in einem eigenen Unterordner unter `shortcuts/`.
+
 ## Verfügbare Kurzbefehle
 
-### Wetter für Stadt
+| Kurzbefehl | Version | Ordner | Release |
+| --- | --- | --- | --- |
+| Wetter für Stadt | 1.0 | [`shortcuts/wetter-fuer-stadt`](shortcuts/wetter-fuer-stadt/) | [`v1.0`](https://github.com/Schrotty74/Shortcuts/releases/tag/v1.0), [`ZIP`](shortcuts/wetter-fuer-stadt/dist/wetter-fuer-stadt-1.0.zip) |
 
-Version: `1.0`
+## Struktur
 
-`Wetter für Stadt` fragt nach einer Stadt, ruft aktuelle Wetterdaten über die
-öffentlichen Open-Meteo-APIs ab und zeigt eine animierte Wetterkarte an.
-
-Highlights:
-
-- keine Anmeldung
-- kein API-Schlüssel
-- Deutsch für DACH/LI-Gerätesprachen, sonst Englisch in der HTML-Wetterkarte
-- dynamische Temperaturfarbe von `-15 °C` bis `+50 °C`
-- Wetterbild und Hintergrund passend zum Wettercode
-- responsive Darstellung für Mac und iPhone
-
-Installierbare Datei:
-
-- [Wetter für Stadt.shortcut](shortcuts/wetter-fuer-stadt/Wetter%20für%20Stadt.shortcut)
-
-Release-ZIP:
-
-- [wetter-fuer-stadt-1.0.zip](dist/wetter-fuer-stadt-1.0.zip)
-- [wetter-fuer-stadt-1.0.zip.sha256](dist/wetter-fuer-stadt-1.0.zip.sha256)
-
-Dokumentation:
-
-- [Shortcut-README](shortcuts/wetter-fuer-stadt/README.md)
-- [Datenschutzbericht](shortcuts/wetter-fuer-stadt/PRIVACY_REPORT.md)
-- [Prüfsummen](shortcuts/wetter-fuer-stadt/CHECKSUMS.txt)
-- [Release Notes](RELEASE_NOTES.md)
-- [Projektkontext](PROJECT_CONTEXT.md)
-- [Nächste Schritte](NEXT_STEPS.md)
+```text
+shortcuts/
+`-- wetter-fuer-stadt/
+    |-- Wetter für Stadt.shortcut
+    |-- Wetter_fuer_Stadt.xml
+    |-- VERSION
+    |-- README.md
+    |-- CHANGELOG.md
+    |-- RELEASE_NOTES.md
+    |-- PRIVACY_REPORT.md
+    |-- PORTFOLIO_UPDATE.md
+    |-- CHECKSUMS.txt
+    |-- assets/
+    `-- dist/
+```
 
 ## Datenschutz
 
-Dieses Repository enthält keine privaten Zugangsdaten, keine API-Schlüssel und
-keine lokalen persönlichen Pfade in den veröffentlichten Release-Dateien.
+Jeder veröffentlichte Kurzbefehl soll einen eigenen Datenschutzbericht im
+jeweiligen Shortcut-Ordner enthalten.
 
-Der Kurzbefehl verwendet nur die vom Nutzer eingegebene Stadt und öffentliche
-Open-Meteo-Endpunkte. Details stehen im
-[Datenschutzbericht](shortcuts/wetter-fuer-stadt/PRIVACY_REPORT.md).
+Für `Wetter für Stadt` liegt er hier:
 
-## Releases
+[`shortcuts/wetter-fuer-stadt/PRIVACY_REPORT.md`](shortcuts/wetter-fuer-stadt/PRIVACY_REPORT.md)
 
-Die Release-Status-Automatik prüft bei Änderungen, ob die wichtigen Dateien
-vorhanden sind, die Version konsistent ist, Prüfsummen passen und keine
-offensichtlichen lokalen privaten Pfade veröffentlicht werden.
+## Release-Status
+
+Die GitHub-Action prüft die aktuell veröffentlichte Struktur, Prüfsummen,
+ZIP-Dateien und einfache Datenschutzindikatoren.

@@ -7,22 +7,24 @@ Repository:
 
 ## Projektziel und Zweck
 
-Dieses Repository stellt öffentliche Apple-Kurzbefehle bereit. Der erste
-veröffentlichte Kurzbefehl ist `Wetter für Stadt` in Version `1.0`.
+Dieses Repository stellt öffentliche Apple-Kurzbefehle bereit. Es ist als
+Sammlung angelegt: Jeder Kurzbefehl lebt vollständig in einem eigenen Ordner
+unter `shortcuts/`.
 
-Ziel ist eine saubere öffentliche Veröffentlichung inklusive ZIP-Paket,
-Versionsangabe, Datenschutzbericht, Prüfsummen, Release-Status-Automatik und
-Portfolio-Hinweisen.
+Der erste veröffentlichte Kurzbefehl ist `Wetter für Stadt` in Version `1.0`.
 
 ## Architektur und technische Entscheidungen
 
-- Release-Version wird zentral in `VERSION` geführt.
-- Release-Dateien liegen unter `shortcuts/wetter-fuer-stadt`.
-- Das öffentliche ZIP liegt unter `dist/wetter-fuer-stadt-1.0.zip`.
-- Prüfsummen werden mit SHA-256 bereitgestellt.
-- GitHub Actions prüft Release-Dateien, Version, Prüfsummen und einfache
+- Root-Dateien beschreiben nur die Sammlung.
+- Jeder Shortcut hat einen eigenen Ordner mit Version, README, Changelog,
+  Release Notes, Datenschutzbericht, Prüfsummen, Assets und ZIP.
+- Aktueller Shortcut-Ordner:
+  `shortcuts/wetter-fuer-stadt/`
+- Das ZIP für `Wetter für Stadt` liegt unter:
+  `shortcuts/wetter-fuer-stadt/dist/wetter-fuer-stadt-1.0.zip`
+- GitHub Actions prüft die erwartete Ordnerstruktur, Prüfsummen und einfache
   Datenschutzindikatoren.
-- Der Kurzbefehl selbst nutzt öffentliche Open-Meteo-APIs und benötigt keinen
+- Der Wetter-Kurzbefehl nutzt öffentliche Open-Meteo-APIs und benötigt keinen
   API-Schlüssel.
 
 ## Dateistruktur
@@ -30,56 +32,56 @@ Portfolio-Hinweisen.
 ```text
 Shortcuts/
 |-- .github/workflows/release-status.yml
-|-- CHANGELOG.md
 |-- LICENSE
 |-- NEXT_STEPS.md
-|-- PORTFOLIO_UPDATE.md
 |-- PROJECT_CONTEXT.md
 |-- README.md
-|-- RELEASE_NOTES.md
-|-- VERSION
-|-- dist/
-|   |-- wetter-fuer-stadt-1.0.zip
-|   `-- wetter-fuer-stadt-1.0.zip.sha256
 `-- shortcuts/
     `-- wetter-fuer-stadt/
+        |-- CHANGELOG.md
         |-- CHECKSUMS.txt
+        |-- PORTFOLIO_UPDATE.md
         |-- PRIVACY_REPORT.md
         |-- README.md
+        |-- RELEASE_NOTES.md
+        |-- VERSION
         |-- Wetter für Stadt.shortcut
-        `-- Wetter_fuer_Stadt.xml
+        |-- Wetter_fuer_Stadt.xml
+        |-- assets/
+        |   `-- social-preview.svg
+        `-- dist/
+            |-- wetter-fuer-stadt-1.0.zip
+            `-- wetter-fuer-stadt-1.0.zip.sha256
 ```
 
 ## Umgesetzte Funktionen
 
 - Öffentliches Repository für Shortcuts eingerichtet.
+- Sammlung-Struktur eingeführt: jeder Shortcut in eigenem Unterordner.
 - `Wetter für Stadt` Version `1.0` bereitgestellt.
-- Signierte `.shortcut`-Datei veröffentlicht.
-- XML-Quelle veröffentlicht.
-- Release-ZIP und ZIP-Prüfsumme erstellt.
-- Datenschutzbericht erstellt.
-- Prüfsummen für Shortcut und XML erstellt.
+- Signierte `.shortcut`-Datei und XML-Quelle veröffentlicht.
+- Wetter-spezifische Version, Changelog, Release Notes, Portfolio-Update,
+  Datenschutzbericht, Assets und ZIP in `shortcuts/wetter-fuer-stadt/`
+  einsortiert.
 - GitHub Actions Release-Status-Automatik eingerichtet.
-- `PORTFOLIO_UPDATE.md` mit Texten für Portfolio und GitHub-Profil angelegt.
 - GitHub Release `v1.0` mit ZIP und SHA-256-Datei erstellt.
 
 ## Wichtige Designentscheidungen
 
-- Veröffentlicht werden nur notwendige Release-Dateien.
+- Keine Shortcut-spezifischen Release-Dateien im Repository-Root.
+- Root bleibt für Sammlung, Lizenz, Projektkontext und nächste Schritte.
+- Datenschutzbericht ist pro Shortcut Pflichtbestandteil.
 - Nicht veröffentlicht werden lokale Arbeitsarchive, Screenshots, `.DS_Store`
   oder private lokale Projektdateien aus dem ursprünglichen Arbeitsordner.
-- Datenschutzbericht ist Teil des Release-Pakets.
-- Release-Status-Prüfung soll früh erkennen, wenn wichtige Dateien fehlen oder
-  offensichtliche private Datenmuster auftauchen.
 
 ## Bekannte Einschränkungen oder Probleme
 
 - Die Release-Status-Automatik ist eine statische Prüfung und ersetzt kein
   manuelles Datenschutzreview.
-- Der Kurzbefehl sendet den eingegebenen Stadtnamen und Koordinaten an
+- Der Wetter-Kurzbefehl sendet den eingegebenen Stadtnamen und Koordinaten an
   Open-Meteo, wie im Datenschutzbericht beschrieben.
-- Native Kurzbefehle-Mitteilungen können optisch und sprachlich weniger stark
-  angepasst werden als die HTML-Wetterkarte.
+- GitHub Release `v1.0` bleibt ein Release für den Wetter-Kurzbefehl, auch wenn
+  das Repository künftig weitere Shortcuts enthält.
 
 ## Pflegehinweis
 

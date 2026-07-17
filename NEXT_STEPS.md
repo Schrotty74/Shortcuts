@@ -7,11 +7,10 @@ Repository:
 
 ## Priorität 1: Offene Aufgaben
 
-- GitHub Actions nach dem Push prüfen.
-- GitHub Release `v1.0` im Browser kontrollieren.
-- Download des ZIP-Pakets testen.
-- Import der veröffentlichten `.shortcut`-Datei aus dem Repository testen.
-- `PORTFOLIO_UPDATE.md` für Portfolio und GitHub-Profil verwenden.
+- GitHub Actions nach der Strukturänderung prüfen.
+- GitHub Release `v1.0` kontrollieren.
+- Download des Wetter-ZIP-Pakets aus dem neuen Unterordner testen.
+- Import der veröffentlichten `.shortcut`-Datei aus dem Wetter-Ordner testen.
 
 ## Priorität 2: Bugs und Robustheit
 
@@ -22,16 +21,18 @@ Repository:
 
 ## Priorität 3: Geplante Verbesserungen
 
-- Weitere Shortcuts nach derselben Struktur veröffentlichen.
+- Weitere Shortcuts jeweils in eigenem Ordner unter `shortcuts/` veröffentlichen.
+- Für neue Shortcuts dieselbe Mindeststruktur verwenden:
+  `VERSION`, `README.md`, `CHANGELOG.md`, `RELEASE_NOTES.md`,
+  `PRIVACY_REPORT.md`, `CHECKSUMS.txt`, `dist/`.
 - Optional pro Shortcut einen Screenshot oder eine Demo-GIF ergänzen, sofern
   keine privaten Inhalte sichtbar sind.
-- Optional Release-Notizen je Shortcut stärker standardisieren.
-- Optional automatische ZIP-Erstellung in GitHub Actions aus den Release-Dateien
-  einrichten, statt ZIP-Dateien manuell im Repository zu versionieren.
+- Optional automatische ZIP-Erstellung in GitHub Actions aus den jeweiligen
+  Shortcut-Ordnern einrichten.
 
 ## Ideen für zukünftige Entwicklungen
 
-- Shortcut-Katalog im README mit Kategorien.
+- Shortcut-Katalog im Root-README mit Kategorien.
 - Badges für neueste Version je Shortcut.
 - Ein gemeinsames Datenschutztemplate für neue Shortcuts.
 - Automatisierte Prüfung auf `.DS_Store`, lokale Pfade und alte Archivdateien.
