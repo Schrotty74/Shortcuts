@@ -1,6 +1,6 @@
 # Datenschutzbericht: Weather for City
 
-Version: `1.2.1`
+Version: `1.2.2`
 
 Stand: 2026-07-17
 

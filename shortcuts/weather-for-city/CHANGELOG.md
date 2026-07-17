@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.2.2 - 2026-07-17
+
+Bugfix release.
+
+- Fixes UTF-8 decoding of the generated HTML weather card on iPhone.
+- German special characters and the Celsius symbol now render correctly.
+
 ## 1.2.1 - 2026-07-17
 
 Bugfix release.
