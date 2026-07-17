@@ -489,8 +489,126 @@ The update check reads the latest public GitHub release from Schrotty74/Shortcut
 				<key>WFCommentActionText</key>
 				<string>Chooses celsius or fahrenheit from the found city country code.
 - Country Code comes from the geocoding result above.
-- Fahrenheit is used for US, BS, KY, LR, and MM.
-- All other countries use celsius.</string>
+- Match Text checks US, BS, KY, LR, and MM.
+- If the match count is greater than 0, Fahrenheit is used.
+- Otherwise celsius is used.</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>EEE11241-3DF7-44DC-9E2F-B536E5EC358A</string>
+				<key>WFTextActionText</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>string</key>
+						<string>￼</string>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputName</key>
+								<string>Country Code</string>
+								<key>OutputUUID</key>
+								<string>3CDA39EA-65CE-4C3C-A511-7E8C4B9B3D55</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+				<key>CustomOutputName</key>
+				<string>Country Code Text</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.text.match</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>98EDAB50-9F0F-4572-A0B1-3D54B929647C</string>
+				<key>WFMatchTextPattern</key>
+				<string>^(US|BS|KY|LR|MM)$</string>
+				<key>text</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>string</key>
+						<string>￼</string>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputName</key>
+								<string>Country Code Text</string>
+								<key>OutputUUID</key>
+								<string>EEE11241-3DF7-44DC-9E2F-B536E5EC358A</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.count</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>C875F080-9F96-4BD7-B92D-716C5B16B88D</string>
+				<key>WFCountType</key>
+				<string>Items</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>Matches</string>
+						<key>OutputUUID</key>
+						<string>98EDAB50-9F0F-4572-A0B1-3D54B929647C</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>Input</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>Matches</string>
+						<key>OutputUUID</key>
+						<string>98EDAB50-9F0F-4572-A0B1-3D54B929647C</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.comment</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFCommentActionText</key>
+				<string>Branches on whether the country code matched a Fahrenheit country.
+- Input uses the match count from Count above.
+- Greater than 0 means Fahrenheit.
+- Otherwise celsius is used.</string>
 			</dict>
 		</dict>
 		<dict>
@@ -502,145 +620,28 @@ The update check reads the latest public GitHub release from Schrotty74/Shortcut
 				<string>A55AB465-7C61-4704-AE10-A96964256D4B</string>
 				<key>WFControlFlowMode</key>
 				<integer>0</integer>
-				<key>WFConditions</key>
+				<key>WFCondition</key>
+				<integer>2</integer>
+				<key>WFNumberValue</key>
+				<string>0</string>
+				<key>WFInput</key>
 				<dict>
-					<key>Value</key>
+					<key>Type</key>
+					<string>Variable</string>
+					<key>Variable</key>
 					<dict>
-						<key>WFActionParameterFilterPrefix</key>
-						<integer>0</integer>
-						<key>WFActionParameterFilterTemplates</key>
-						<array>
-							<dict>
-								<key>WFCondition</key>
-								<integer>4</integer>
-								<key>WFConditionalActionString</key>
-								<string>US</string>
-								<key>WFInput</key>
-								<dict>
-									<key>Type</key>
-									<string>Variable</string>
-									<key>Variable</key>
-									<dict>
-										<key>Value</key>
-										<dict>
-											<key>OutputName</key>
-											<string>Country Code</string>
-											<key>OutputUUID</key>
-											<string>3CDA39EA-65CE-4C3C-A511-7E8C4B9B3D55</string>
-											<key>Type</key>
-											<string>ActionOutput</string>
-										</dict>
-										<key>WFSerializationType</key>
-										<string>WFTextTokenAttachment</string>
-									</dict>
-								</dict>
-							</dict>
-							<dict>
-								<key>WFCondition</key>
-								<integer>4</integer>
-								<key>WFConditionalActionString</key>
-								<string>BS</string>
-								<key>WFInput</key>
-								<dict>
-									<key>Type</key>
-									<string>Variable</string>
-									<key>Variable</key>
-									<dict>
-										<key>Value</key>
-										<dict>
-											<key>OutputName</key>
-											<string>Country Code</string>
-											<key>OutputUUID</key>
-											<string>3CDA39EA-65CE-4C3C-A511-7E8C4B9B3D55</string>
-											<key>Type</key>
-											<string>ActionOutput</string>
-										</dict>
-										<key>WFSerializationType</key>
-										<string>WFTextTokenAttachment</string>
-									</dict>
-								</dict>
-							</dict>
-							<dict>
-								<key>WFCondition</key>
-								<integer>4</integer>
-								<key>WFConditionalActionString</key>
-								<string>KY</string>
-								<key>WFInput</key>
-								<dict>
-									<key>Type</key>
-									<string>Variable</string>
-									<key>Variable</key>
-									<dict>
-										<key>Value</key>
-										<dict>
-											<key>OutputName</key>
-											<string>Country Code</string>
-											<key>OutputUUID</key>
-											<string>3CDA39EA-65CE-4C3C-A511-7E8C4B9B3D55</string>
-											<key>Type</key>
-											<string>ActionOutput</string>
-										</dict>
-										<key>WFSerializationType</key>
-										<string>WFTextTokenAttachment</string>
-									</dict>
-								</dict>
-							</dict>
-							<dict>
-								<key>WFCondition</key>
-								<integer>4</integer>
-								<key>WFConditionalActionString</key>
-								<string>LR</string>
-								<key>WFInput</key>
-								<dict>
-									<key>Type</key>
-									<string>Variable</string>
-									<key>Variable</key>
-									<dict>
-										<key>Value</key>
-										<dict>
-											<key>OutputName</key>
-											<string>Country Code</string>
-											<key>OutputUUID</key>
-											<string>3CDA39EA-65CE-4C3C-A511-7E8C4B9B3D55</string>
-											<key>Type</key>
-											<string>ActionOutput</string>
-										</dict>
-										<key>WFSerializationType</key>
-										<string>WFTextTokenAttachment</string>
-									</dict>
-								</dict>
-							</dict>
-							<dict>
-								<key>WFCondition</key>
-								<integer>4</integer>
-								<key>WFConditionalActionString</key>
-								<string>MM</string>
-								<key>WFInput</key>
-								<dict>
-									<key>Type</key>
-									<string>Variable</string>
-									<key>Variable</key>
-									<dict>
-										<key>Value</key>
-										<dict>
-											<key>OutputName</key>
-											<string>Country Code</string>
-											<key>OutputUUID</key>
-											<string>3CDA39EA-65CE-4C3C-A511-7E8C4B9B3D55</string>
-											<key>Type</key>
-											<string>ActionOutput</string>
-										</dict>
-										<key>WFSerializationType</key>
-										<string>WFTextTokenAttachment</string>
-									</dict>
-								</dict>
-							</dict>
-						</array>
-						<key>WFContentPredicateBoundedDate</key>
-						<false/>
+						<key>Value</key>
+						<dict>
+							<key>OutputName</key>
+							<string>Count</string>
+							<key>OutputUUID</key>
+							<string>C875F080-9F96-4BD7-B92D-716C5B16B88D</string>
+							<key>Type</key>
+							<string>ActionOutput</string>
+						</dict>
+						<key>WFSerializationType</key>
+						<string>WFTextTokenAttachment</string>
 					</dict>
-					<key>WFSerializationType</key>
-					<string>WFContentPredicateTableTemplate</string>
 				</dict>
 			</dict>
 		</dict>
@@ -1351,7 +1352,7 @@ Temperature: ￼ ￼</string>
 			<dict>
 				<key>WFCommentActionText</key>
 				<string>Checks the latest public GitHub release.
-- Current installed version is v1.2.
+- Current installed version is v1.2.1.
 - If GitHub reports a newer tag, the release page is opened so the user can import it.</string>
 			</dict>
 		</dict>
@@ -1521,7 +1522,7 @@ Temperature: ￼ ￼</string>
 				<key>WFCommentActionText</key>
 				<string>Compares the installed version with the latest GitHub release.
 - Input uses Latest Version Text from the GitHub response.
-- If it is not v1.2, an update is available.</string>
+- If it is not v1.2.1, an update is available.</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1536,7 +1537,7 @@ Temperature: ￼ ￼</string>
 				<key>WFCondition</key>
 				<integer>5</integer>
 				<key>WFConditionalActionString</key>
-				<string>v1.2</string>
+				<string>v1.2.1</string>
 				<key>WFInput</key>
 				<dict>
 					<key>Type</key>
@@ -1572,13 +1573,13 @@ Temperature: ￼ ￼</string>
 					<key>Value</key>
 					<dict>
 						<key>string</key>
-						<string>Installed: v1.2
+						<string>Installed: v1.2.1
 Latest: ￼
 
 The latest GitHub release will open now. Import the new shortcut there to update.</string>
 						<key>attachmentsByRange</key>
 						<dict>
-							<key>{24, 1}</key>
+							<key>{26, 1}</key>
 							<dict>
 								<key>OutputName</key>
 								<string>Latest Version Text</string>
@@ -1644,7 +1645,7 @@ The latest GitHub release will open now. Import the new shortcut there to update
 				<key>WFAlertActionTitle</key>
 				<string>Weather for City is up to date</string>
 				<key>WFAlertActionMessage</key>
-				<string>Installed version v1.2 is the latest GitHub release.</string>
+				<string>Installed version v1.2.1 is the latest GitHub release.</string>
 			</dict>
 		</dict>
 		<dict>

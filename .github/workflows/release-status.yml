@@ -24,8 +24,8 @@ jobs:
           test -f "shortcuts/weather-for-city/PRIVACY_REPORT.md"
           test -f "shortcuts/weather-for-city/PRIVACY_REPORT.de.md"
           test -f "shortcuts/weather-for-city/CHECKSUMS.txt"
-          test -f "shortcuts/weather-for-city/dist/weather-for-city-1.2.zip"
-          test -f "shortcuts/weather-for-city/dist/weather-for-city-1.2.zip.sha256"
+          test -f "shortcuts/weather-for-city/dist/weather-for-city-1.2.1.zip"
+          test -f "shortcuts/weather-for-city/dist/weather-for-city-1.2.1.zip.sha256"
           test -f "shortcuts/weather-for-city/RELEASE_NOTES.md"
           test -f "shortcuts/weather-for-city/PORTFOLIO_UPDATE.md"
           test -f "shortcuts/weather-for-city/assets/html-preview.svg"
@@ -45,7 +45,7 @@ jobs:
           grep -q "no private credentials" shortcuts/weather-for-city/PRIVACY_REPORT.md
 
           shasum -a 256 -c shortcuts/weather-for-city/CHECKSUMS.txt
-          shasum -a 256 -c shortcuts/weather-for-city/dist/weather-for-city-1.2.zip.sha256
+          shasum -a 256 -c shortcuts/weather-for-city/dist/weather-for-city-1.2.1.zip.sha256
 
           if grep -R \
             --exclude-dir=.git \
@@ -58,4 +58,4 @@ jobs:
 
       - name: Show release summary
         run: |
-          echo "Release 1.2 files are present and privacy checks passed."
+          echo "Release 1.2.1 files are present and privacy checks passed."

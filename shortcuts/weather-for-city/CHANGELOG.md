@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.2.1 - 2026-07-17
+
+Bugfix release.
+
+- Replaces the imported multi-condition temperature-unit branch with a more compatible Match Text + Count + If flow.
+- Fixes a runtime prompt that asked the user to choose values for missing action parameters after entering a city.
+- Keeps the 1.2 update-check feature intact.
+
 ## 1.2 - 2026-07-17
 
 Feature release.

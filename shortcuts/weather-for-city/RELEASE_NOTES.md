@@ -1,20 +1,15 @@
 # Release Notes
 
-## Weather for City 1.2
+## Weather for City 1.2.1
 
-Feature release of the Apple Shortcut `Weather for City`.
+Bugfix release of the Apple Shortcut `Weather for City`.
 
-Added:
+Fixed:
 
-- start menu with `Get Weather` and `Check for Update`
-- latest-release check through the public GitHub Releases API
-- release-page handoff when a newer version is available
-- direct signed `.shortcut` release asset, in addition to the ZIP package
-
-Note:
-
-- Apple Shortcuts does not allow a shortcut to silently replace itself.
-  Updating still requires user confirmation during import.
+- replaces the fragile multi-condition temperature-unit branch with a more compatible Match Text + Count + If flow
+- fixes the runtime prompt that could appear after entering a city: `Choose a value for each parameter in this action`
+- keeps the `Check for Update` feature from 1.2 intact
+- keeps direct signed `.shortcut` release asset publishing
 
 Privacy:
 
@@ -29,5 +24,5 @@ Release files:
 
 - `shortcuts/weather-for-city/Weather for City.shortcut`
 - `Weather for City.shortcut`
-- `dist/weather-for-city-1.2.zip`
-- `dist/weather-for-city-1.2.zip.sha256`
+- `dist/weather-for-city-1.2.1.zip`
+- `dist/weather-for-city-1.2.1.zip.sha256`

@@ -23,5 +23,5 @@
   <rect x="130" y="290" width="940" height="220" rx="44" fill="rgba(15,23,42,.56)" stroke="rgba(219,234,254,.45)" stroke-width="3"/>
   <text x="190" y="368" fill="#bfdbfe" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="30" font-weight="700" letter-spacing="8">PUBLIC APPLE SHORTCUTS</text>
   <text x="190" y="438" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="64" font-weight="900">Weather for City</text>
-  <text x="190" y="488" fill="#fde68a" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="30" font-weight="700">Open-Meteo · Privacy report · Release v1.2</text>
+  <text x="190" y="488" fill="#fde68a" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="30" font-weight="700">Open-Meteo · Privacy report · Release v1.2.1</text>
 </svg>

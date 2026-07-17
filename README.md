@@ -13,7 +13,7 @@ folder below `shortcuts/`, so future shortcuts can be released independently.
 
 | Preview | Shortcut | Version | Folder | Release |
 | --- | --- | --- | --- | --- |
-| <img src="shortcuts/weather-for-city/assets/html-preview.svg" alt="Weather for City HTML preview" width="180"> | Weather for City | 1.2 | [`shortcuts/weather-for-city`](shortcuts/weather-for-city/) | [`v1.2`](https://github.com/Schrotty74/Shortcuts/releases/tag/v1.2), [`ZIP`](shortcuts/weather-for-city/dist/weather-for-city-1.2.zip) |
+| <img src="shortcuts/weather-for-city/assets/html-preview.svg" alt="Weather for City HTML preview" width="180"> | Weather for City | 1.2.1 | [`shortcuts/weather-for-city`](shortcuts/weather-for-city/) | [`v1.2.1`](https://github.com/Schrotty74/Shortcuts/releases/tag/v1.2.1), [`ZIP`](shortcuts/weather-for-city/dist/weather-for-city-1.2.1.zip) |
 
 ## Structure
 

@@ -1,6 +1,6 @@
 # Weather for City
 
-Version: `1.2`
+Version: `1.2.1`
 
 English: [README.md](README.md)
 
