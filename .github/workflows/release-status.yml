@@ -17,7 +17,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          test "$(cat shortcuts/weather-for-city/VERSION)" = "1.2"
+          test "$(cat shortcuts/weather-for-city/VERSION)" = "1.2.1"
           test -f "shortcuts/weather-for-city/Weather for City.shortcut"
           test -f "shortcuts/weather-for-city/Weather_for_City.xml"
           test -f "shortcuts/weather-for-city/README.de.md"
@@ -35,7 +35,7 @@ jobs:
           test -f "NEXT_STEPS.de.md"
           test -f "README.de.md"
 
-          grep -q "Version: \`1.2\`" shortcuts/weather-for-city/README.md
+          grep -q "Version: \`1.2.1\`" shortcuts/weather-for-city/README.md
           grep -q "Fahrenheit" shortcuts/weather-for-city/README.md
           grep -q "update check" shortcuts/weather-for-city/README.md
           grep -q "Deutsch: \\[README.de.md\\]" shortcuts/weather-for-city/README.md
