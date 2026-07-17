@@ -10,6 +10,8 @@ Der Kurzbefehl fragt nach einer Stadt, sucht den passenden Ort über Open-Meteo,
 ruft aktuelle Wetterdaten ab und zeigt sie als Mitteilung, Ergebnisansicht und
 animierte HTML-Wetterkarte.
 
+![Weather for City HTML-Vorschau](assets/html-preview.svg)
+
 ## Installation
 
 1. Datei `Weather for City.shortcut` öffnen.
@@ -22,6 +24,7 @@ animierte HTML-Wetterkarte.
 - `Weather_for_City.xml` - lesbare XML-Quelle
 - `PRIVACY_REPORT.de.md` - Datenschutzbericht
 - `CHECKSUMS.txt` - SHA-256-Prüfsummen
+- `assets/html-preview.svg` - kompaktes Vorschaubild der HTML-Wetterkarte
 
 ## Funktionen
 

@@ -58,6 +58,7 @@ Shortcuts/
         |-- Weather for City.shortcut
         |-- Weather_for_City.xml
         |-- assets/
+        |   |-- html-preview.svg
         |   `-- social-preview.svg
         `-- dist/
             |-- weather-for-city-1.0.zip
@@ -73,6 +74,8 @@ Shortcuts/
 - Wetter-spezifische Version, Changelog, Release Notes, Portfolio-Update,
   Datenschutzbericht, Assets und ZIP in `shortcuts/weather-for-city/`
   einsortiert.
+- Kompaktes HTML-Vorschaubild ergänzt unter
+  `shortcuts/weather-for-city/assets/html-preview.svg`.
 - GitHub Actions Release-Status-Automatik eingerichtet.
 - GitHub Release `v1.0` mit ZIP und SHA-256-Datei erstellt.
 

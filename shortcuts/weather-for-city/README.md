@@ -10,6 +10,8 @@ The shortcut asks for a city, resolves the matching location through
 Open-Meteo, fetches current weather data, and shows it as a notification, a
 result view, and an animated HTML weather card.
 
+![Weather for City HTML preview](assets/html-preview.svg)
+
 ## Installation
 
 1. Open `Weather for City.shortcut`.
@@ -22,6 +24,7 @@ result view, and an animated HTML weather card.
 - `Weather_for_City.xml` - readable XML source
 - `PRIVACY_REPORT.md` - privacy report
 - `CHECKSUMS.txt` - SHA-256 checksums
+- `assets/html-preview.svg` - compact preview image of the HTML weather card
 
 ## Features
 
