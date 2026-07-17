@@ -52,12 +52,10 @@ The release does not include:
 
 Only files inside the public project folder are published:
 
-- `Weather for City.shortcut`
 - `Weather_for_City.xml`
 - project documentation
 - privacy report
 - checksums
-- release ZIP
 
 Local work files from `Shortcuts Playground`, old archive states, desktop
 screenshots, and `.DS_Store` files are not published.
