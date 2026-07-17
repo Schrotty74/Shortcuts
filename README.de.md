@@ -17,26 +17,6 @@ sauber getrennt veröffentlicht werden können.
 | --- | --- | --- | --- | --- |
 | <img src="shortcuts/weather-for-city/assets/html-preview.svg" alt="Weather for City HTML-Vorschau" width="180"> | Weather for City | 1.2.2 | [`shortcuts/weather-for-city`](shortcuts/weather-for-city/) | [`Installieren`](https://www.icloud.com/shortcuts/d8cf3658a17d4f03b4441f378a5d1a7e), [`v1.2.2`](https://github.com/Schrotty74/Shortcuts/releases/tag/v1.2.2) |
 
-## Struktur
-
-```text
-shortcuts/
-`-- weather-for-city/
-    |-- Weather_for_City.xml
-    |-- VERSION
-    |-- README.md
-    |-- README.de.md
-    |-- CHANGELOG.md
-    |-- RELEASE_NOTES.md
-    |-- PRIVACY_REPORT.md
-    |-- PRIVACY_REPORT.de.md
-    |-- PORTFOLIO_UPDATE.md
-    |-- PORTFOLIO_UPDATE.de.md
-    |-- CHECKSUMS.txt
-    |-- assets/
-    `-- dist/
-```
-
 ## Datenschutz
 
 Jeder veröffentlichte Kurzbefehl enthält einen eigenen Datenschutzbericht im
