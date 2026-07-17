@@ -1,0 +1,47 @@
+name: Release Status
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate release files
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          test "$(cat VERSION)" = "1.0"
+          test -f "shortcuts/wetter-fuer-stadt/Wetter für Stadt.shortcut"
+          test -f "shortcuts/wetter-fuer-stadt/Wetter_fuer_Stadt.xml"
+          test -f "shortcuts/wetter-fuer-stadt/PRIVACY_REPORT.md"
+          test -f "shortcuts/wetter-fuer-stadt/CHECKSUMS.txt"
+          test -f "dist/wetter-fuer-stadt-1.0.zip"
+          test -f "dist/wetter-fuer-stadt-1.0.zip.sha256"
+          test -f "RELEASE_NOTES.md"
+          test -f "PORTFOLIO_UPDATE.md"
+
+          grep -q "Version: \`1.0\`" README.md
+          grep -q "Version: \`1.0\`" shortcuts/wetter-fuer-stadt/README.md
+          grep -q "keine privaten Zugangsdaten" shortcuts/wetter-fuer-stadt/PRIVACY_REPORT.md
+
+          shasum -a 256 -c shortcuts/wetter-fuer-stadt/CHECKSUMS.txt
+          shasum -a 256 -c dist/wetter-fuer-stadt-1.0.zip.sha256
+
+          if grep -R "/Users/martin\\|gho_\\|API_KEY\\|TOKEN\\|PASSWORD" \
+            --exclude-dir=.git \
+            --exclude="release-status.yml" \
+            .; then
+            echo "Potential private data found."
+            exit 1
+          fi
+
+      - name: Show release summary
+        run: |
+          echo "Release 1.0 files are present and privacy checks passed."
