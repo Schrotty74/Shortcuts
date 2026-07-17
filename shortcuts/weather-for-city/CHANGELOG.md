@@ -6,6 +6,12 @@ Bugfix release.
 
 - Fixes UTF-8 decoding of the generated HTML weather card on iPhone.
 - German special characters and the Celsius symbol now render correctly.
+- Rebuilt in place to repair ambiguous Open-Meteo city lookup.
+- Loads multiple geocoding results and asks the user to choose the correct
+  location when needed.
+- Normalizes city inputs such as `Columbia SC` and `Columbia, SC` before
+  searching, so they resolve to the expected Columbia results.
+- Keeps the HTML weather card UTF-8 declaration and DACH/LI language handling.
 
 ## 1.2.1 - 2026-07-17
 

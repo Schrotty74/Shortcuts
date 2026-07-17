@@ -53,40 +53,9 @@ The update check reads the latest public GitHub release from Schrotty74/Shortcut
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>WFCommentActionText</key>
-				<string>Lets the user choose the normal weather lookup or a GitHub release update check.
+				<string>Lets the user choose weather lookup or a GitHub release update check.
 - Get Weather continues with the city prompt below.
 - Check for Update reads the latest public GitHub release.</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.choosefrommenu</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>WFMenuPrompt</key>
-				<string>What do you want to do?</string>
-				<key>WFControlFlowMode</key>
-				<integer>0</integer>
-				<key>WFMenuItems</key>
-				<array>
-					<string>Get Weather</string>
-					<string>Check for Update</string>
-				</array>
-				<key>GroupingIdentifier</key>
-				<string>D9F2B0EC-3116-48D2-A289-0777555773E2</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.choosefrommenu</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>WFMenuItemTitle</key>
-				<string>Get Weather</string>
-				<key>GroupingIdentifier</key>
-				<string>D9F2B0EC-3116-48D2-A289-0777555773E2</string>
-				<key>WFControlFlowMode</key>
-				<integer>1</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -95,7 +64,2508 @@ The update check reads the latest public GitHub release from Schrotty74/Shortcut
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>WFCommentActionText</key>
-				<string>Fragt nach der Stadt und sucht den ersten passenden Treffer bei Open-Meteo.</string>
+				<string>Chooses visible shortcut language from device settings.
+- German is used only when the localized weekday is German and the time zone is in AT, DE, CH, or LI.
+- All other devices use English.</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.date</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFDateActionMode</key>
+				<string>Current Date</string>
+				<key>UUID</key>
+				<string>1C55F0E1-5459-465A-AF3B-4CA56597238A</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.format.date</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFDate</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>string</key>
+						<string>￼</string>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputUUID</key>
+								<string>1C55F0E1-5459-465A-AF3B-4CA56597238A</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+								<key>OutputName</key>
+								<string>Date</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+				<key>WFDateFormatStyle</key>
+				<string>Custom</string>
+				<key>WFDateFormat</key>
+				<string>EEEE</string>
+				<key>UUID</key>
+				<string>6B5FAEE0-FF4A-488E-A365-6816A5098872</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.text.match</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>text</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>string</key>
+						<string>￼</string>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputUUID</key>
+								<string>6B5FAEE0-FF4A-488E-A365-6816A5098872</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+								<key>OutputName</key>
+								<string>Formatted Date</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+				<key>WFMatchTextPattern</key>
+				<string>^(Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag|Sonntag)$</string>
+				<key>WFMatchTextCaseSensitive</key>
+				<false/>
+				<key>UUID</key>
+				<string>60D9F13B-2C5B-4844-A057-0F49B02EA422</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.count</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>60D9F13B-2C5B-4844-A057-0F49B02EA422</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Matches</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>Input</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>60D9F13B-2C5B-4844-A057-0F49B02EA422</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Matches</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFCountType</key>
+				<string>Items</string>
+				<key>UUID</key>
+				<string>774ED9F3-FEC3-489A-9DC3-60DC30F51020</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.format.date</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFDate</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>string</key>
+						<string>￼</string>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputUUID</key>
+								<string>1C55F0E1-5459-465A-AF3B-4CA56597238A</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+								<key>OutputName</key>
+								<string>Date</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+				<key>WFDateFormatStyle</key>
+				<string>Custom</string>
+				<key>WFDateFormat</key>
+				<string>VV</string>
+				<key>UUID</key>
+				<string>F75FD044-031D-45C8-BAFF-03974DC97576</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.text.match</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>text</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>string</key>
+						<string>￼</string>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputUUID</key>
+								<string>F75FD044-031D-45C8-BAFF-03974DC97576</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+								<key>OutputName</key>
+								<string>Formatted Date</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+				<key>WFMatchTextPattern</key>
+				<string>^Europe/(Vienna|Berlin|Zurich|Vaduz)$</string>
+				<key>WFMatchTextCaseSensitive</key>
+				<false/>
+				<key>UUID</key>
+				<string>62FCACC5-A204-483D-B1F2-CA52B2F02087</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.count</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>62FCACC5-A204-483D-B1F2-CA52B2F02087</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Matches</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>Input</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>62FCACC5-A204-483D-B1F2-CA52B2F02087</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Matches</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFCountType</key>
+				<string>Items</string>
+				<key>UUID</key>
+				<string>C8DC168D-9488-4552-9373-0956261B523C</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.comment</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFCommentActionText</key>
+				<string>Sets all visible text variables for this run.
+- German branch is only for DACH/LI German device settings.
+- English branch is the fallback for every other device.</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.conditional</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>E2D2E430-9A02-4F57-8515-5F65554F9F7D</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Type</key>
+					<string>Variable</string>
+					<key>Variable</key>
+					<dict>
+						<key>Value</key>
+						<dict>
+							<key>OutputUUID</key>
+							<string>774ED9F3-FEC3-489A-9DC3-60DC30F51020</string>
+							<key>Type</key>
+							<string>ActionOutput</string>
+							<key>OutputName</key>
+							<string>Count</string>
+						</dict>
+						<key>WFSerializationType</key>
+						<string>WFTextTokenAttachment</string>
+					</dict>
+				</dict>
+				<key>WFControlFlowMode</key>
+				<integer>0</integer>
+				<key>WFNumberValue</key>
+				<string>0</string>
+				<key>WFCondition</key>
+				<integer>2</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.comment</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFCommentActionText</key>
+				<string>Checks whether the device time zone is in the DACH/LI area.
+- Input uses the time-zone match count above.
+- A match keeps the German text branch active.</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.conditional</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>ED861854-4E33-42B2-BD8B-93C449D7F4BB</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Type</key>
+					<string>Variable</string>
+					<key>Variable</key>
+					<dict>
+						<key>Value</key>
+						<dict>
+							<key>OutputUUID</key>
+							<string>C8DC168D-9488-4552-9373-0956261B523C</string>
+							<key>Type</key>
+							<string>ActionOutput</string>
+							<key>OutputName</key>
+							<string>Count</string>
+						</dict>
+						<key>WFSerializationType</key>
+						<string>WFTextTokenAttachment</string>
+					</dict>
+				</dict>
+				<key>WFControlFlowMode</key>
+				<integer>0</integer>
+				<key>WFNumberValue</key>
+				<string>0</string>
+				<key>WFCondition</key>
+				<integer>2</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Was möchtest du tun?</string>
+				<key>UUID</key>
+				<string>2EBEE997-84D4-44C6-B9ED-575D651E278A</string>
+				<key>CustomOutputName</key>
+				<string>Menu Prompt</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>2EBEE997-84D4-44C6-B9ED-575D651E278A</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Menu Prompt</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Menu Prompt</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Wetter abrufen</string>
+				<key>UUID</key>
+				<string>F6B8D8A3-8B70-4198-826D-B8DF6FE364FB</string>
+				<key>CustomOutputName</key>
+				<string>Get Weather Label</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>F6B8D8A3-8B70-4198-826D-B8DF6FE364FB</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Get Weather Label</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Get Weather Label</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Nach Update suchen</string>
+				<key>UUID</key>
+				<string>B2726A77-4AAA-4E97-AB7D-2A8F4896CF15</string>
+				<key>CustomOutputName</key>
+				<string>Check Update Label</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>B2726A77-4AAA-4E97-AB7D-2A8F4896CF15</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Check Update Label</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Check Update Label</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Für welche Stadt möchtest du das Wetter abrufen?</string>
+				<key>UUID</key>
+				<string>151B61B1-0B61-44A6-9AF7-2DD1DAB894DA</string>
+				<key>CustomOutputName</key>
+				<string>City Prompt</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>151B61B1-0B61-44A6-9AF7-2DD1DAB894DA</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>City Prompt</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>City Prompt</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Stadt nicht gefunden</string>
+				<key>UUID</key>
+				<string>E6C09597-11D5-4823-918F-67369926C5F3</string>
+				<key>CustomOutputName</key>
+				<string>City Not Found Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>E6C09597-11D5-4823-918F-67369926C5F3</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>City Not Found Title</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>City Not Found Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Bitte prüfe den Stadtnamen und versuche es erneut.</string>
+				<key>UUID</key>
+				<string>B10E2F86-2AFF-4A76-8C8C-53ED34D88FD0</string>
+				<key>CustomOutputName</key>
+				<string>City Not Found Message</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>B10E2F86-2AFF-4A76-8C8C-53ED34D88FD0</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>City Not Found Message</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>City Not Found Message</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Wähle den richtigen Ort</string>
+				<key>UUID</key>
+				<string>9DB215F7-83A8-491A-A734-A9D08A72A9FD</string>
+				<key>CustomOutputName</key>
+				<string>Choose Location Prompt</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>9DB215F7-83A8-491A-A734-A9D08A72A9FD</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Choose Location Prompt</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Choose Location Prompt</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Aktuelles Wetter</string>
+				<key>UUID</key>
+				<string>C4944EA3-F7D8-4C0B-A912-169550125D59</string>
+				<key>CustomOutputName</key>
+				<string>Notification Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>C4944EA3-F7D8-4C0B-A912-169550125D59</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Notification Title</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Notification Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Wetter für</string>
+				<key>UUID</key>
+				<string>45623F5D-E8B2-4FBD-AA8C-D7EE9D3CF374</string>
+				<key>CustomOutputName</key>
+				<string>Result Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>45623F5D-E8B2-4FBD-AA8C-D7EE9D3CF374</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Result Title</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Result Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Temperatur</string>
+				<key>UUID</key>
+				<string>4F51AE84-DEB3-48AC-95DC-8DDD37D40A6B</string>
+				<key>CustomOutputName</key>
+				<string>Temperature Label</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>4F51AE84-DEB3-48AC-95DC-8DDD37D40A6B</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Temperature Label</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Temperature Label</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Update verfügbar</string>
+				<key>UUID</key>
+				<string>8429A126-AA21-4E9A-B81A-BAF12F1A8892</string>
+				<key>CustomOutputName</key>
+				<string>Update Available Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>8429A126-AA21-4E9A-B81A-BAF12F1A8892</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Update Available Title</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Update Available Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Installiert: v1.2.2
+Neueste Version: </string>
+				<key>UUID</key>
+				<string>F271B111-7279-4B18-9F1B-4542192180C8</string>
+				<key>CustomOutputName</key>
+				<string>Update Available Message</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>F271B111-7279-4B18-9F1B-4542192180C8</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Update Available Message</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Update Available Message</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>
+
+Der neueste GitHub-Release wird jetzt geöffnet. Importiere dort den neuen Kurzbefehl, um zu aktualisieren.</string>
+				<key>UUID</key>
+				<string>D385E529-4425-47EA-B0A3-33D88FBAF014</string>
+				<key>CustomOutputName</key>
+				<string>Update Available Footer</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>D385E529-4425-47EA-B0A3-33D88FBAF014</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Update Available Footer</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Update Available Footer</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Weather for City ist aktuell</string>
+				<key>UUID</key>
+				<string>7313D6FE-68A1-4E07-B12D-C810A38CCC1D</string>
+				<key>CustomOutputName</key>
+				<string>Up To Date Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>7313D6FE-68A1-4E07-B12D-C810A38CCC1D</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Up To Date Title</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Up To Date Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Installierte Version v1.2.2 ist der neueste GitHub-Release.</string>
+				<key>UUID</key>
+				<string>B324054B-919B-4287-8E61-D21012483438</string>
+				<key>CustomOutputName</key>
+				<string>Up To Date Message</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>B324054B-919B-4287-8E61-D21012483438</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Up To Date Message</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Up To Date Message</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>de</string>
+				<key>UUID</key>
+				<string>1C098D9F-A91A-4A72-B77A-8708C789168B</string>
+				<key>CustomOutputName</key>
+				<string>Geocoding Language</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>1C098D9F-A91A-4A72-B77A-8708C789168B</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Geocoding Language</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Geocoding Language</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Wetter.html</string>
+				<key>UUID</key>
+				<string>B6967FE1-E77D-45A5-93B4-35E980B78F1D</string>
+				<key>CustomOutputName</key>
+				<string>HTML File Name</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>B6967FE1-E77D-45A5-93B4-35E980B78F1D</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>HTML File Name</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>HTML File Name</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>{"0":"Klarer Himmel","1":"Überwiegend klar","2":"Teilweise bewölkt","3":"Bedeckt","45":"Nebel","48":"Nebel mit Reifablagerung","51":"Leichter Nieselregen","53":"Mäßiger Nieselregen","55":"Starker Nieselregen","56":"Leichter gefrierender Nieselregen","57":"Starker gefrierender Nieselregen","61":"Leichter Regen","63":"Mäßiger Regen","65":"Starker Regen","66":"Leichter gefrierender Regen","67":"Starker gefrierender Regen","71":"Leichter Schneefall","73":"Mäßiger Schneefall","75":"Starker Schneefall","77":"Schneegriesel","80":"Leichte Regenschauer","81":"Mäßige Regenschauer","82":"Starke Regenschauer","85":"Leichte Schneeschauer","86":"Starke Schneeschauer","95":"Gewitter","96":"Gewitter mit leichtem Hagel","99":"Gewitter mit starkem Hagel"}</string>
+				<key>UUID</key>
+				<string>0E069F90-2D4F-4D17-B765-3A7870AE8138</string>
+				<key>CustomOutputName</key>
+				<string>Weather Text Map</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>0E069F90-2D4F-4D17-B765-3A7870AE8138</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Weather Text Map</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Weather Text Map</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.conditional</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>ED861854-4E33-42B2-BD8B-93C449D7F4BB</string>
+				<key>WFControlFlowMode</key>
+				<integer>1</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>What do you want to do?</string>
+				<key>UUID</key>
+				<string>72452026-E4C9-401D-9212-6850C3733EB7</string>
+				<key>CustomOutputName</key>
+				<string>Menu Prompt</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>72452026-E4C9-401D-9212-6850C3733EB7</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Menu Prompt</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Menu Prompt</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Get Weather</string>
+				<key>UUID</key>
+				<string>9E04D4BF-5051-4BA3-821B-BE6C89D35C51</string>
+				<key>CustomOutputName</key>
+				<string>Get Weather Label</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>9E04D4BF-5051-4BA3-821B-BE6C89D35C51</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Get Weather Label</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Get Weather Label</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Check for Update</string>
+				<key>UUID</key>
+				<string>6D7F9123-B416-4258-9252-8B2ED3354625</string>
+				<key>CustomOutputName</key>
+				<string>Check Update Label</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>6D7F9123-B416-4258-9252-8B2ED3354625</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Check Update Label</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Check Update Label</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Which city would you like weather for?</string>
+				<key>UUID</key>
+				<string>BE642515-C01D-47D2-86C9-10D3522BE62E</string>
+				<key>CustomOutputName</key>
+				<string>City Prompt</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>BE642515-C01D-47D2-86C9-10D3522BE62E</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>City Prompt</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>City Prompt</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>City not found</string>
+				<key>UUID</key>
+				<string>C9A6EFC5-0507-4FD5-A90C-C6B37E2D7A85</string>
+				<key>CustomOutputName</key>
+				<string>City Not Found Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>C9A6EFC5-0507-4FD5-A90C-C6B37E2D7A85</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>City Not Found Title</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>City Not Found Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Please check the city name and try again.</string>
+				<key>UUID</key>
+				<string>2F97F545-246D-4B4B-B2C2-4FE8264B3A47</string>
+				<key>CustomOutputName</key>
+				<string>City Not Found Message</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>2F97F545-246D-4B4B-B2C2-4FE8264B3A47</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>City Not Found Message</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>City Not Found Message</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Choose the correct location</string>
+				<key>UUID</key>
+				<string>7BFB0AC8-339B-4296-8D37-1B2E91642A31</string>
+				<key>CustomOutputName</key>
+				<string>Choose Location Prompt</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>7BFB0AC8-339B-4296-8D37-1B2E91642A31</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Choose Location Prompt</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Choose Location Prompt</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Current Weather</string>
+				<key>UUID</key>
+				<string>D3A9883C-5182-46B3-B290-D6D1E4E7B892</string>
+				<key>CustomOutputName</key>
+				<string>Notification Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>D3A9883C-5182-46B3-B290-D6D1E4E7B892</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Notification Title</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Notification Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Weather for</string>
+				<key>UUID</key>
+				<string>A036A025-207A-42B5-B7F2-485266E92DA7</string>
+				<key>CustomOutputName</key>
+				<string>Result Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>A036A025-207A-42B5-B7F2-485266E92DA7</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Result Title</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Result Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Temperature</string>
+				<key>UUID</key>
+				<string>E997F944-1493-49F4-8E07-050C8254BC82</string>
+				<key>CustomOutputName</key>
+				<string>Temperature Label</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>E997F944-1493-49F4-8E07-050C8254BC82</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Temperature Label</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Temperature Label</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Update Available</string>
+				<key>UUID</key>
+				<string>437C2400-403A-4306-9B50-EB8C45FA05FE</string>
+				<key>CustomOutputName</key>
+				<string>Update Available Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>437C2400-403A-4306-9B50-EB8C45FA05FE</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Update Available Title</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Update Available Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Installed: v1.2.2
+Latest: </string>
+				<key>UUID</key>
+				<string>02DE9911-2CEC-4C89-B269-AD8BCF4773D5</string>
+				<key>CustomOutputName</key>
+				<string>Update Available Message</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>02DE9911-2CEC-4C89-B269-AD8BCF4773D5</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Update Available Message</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Update Available Message</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>
+
+The latest GitHub release will open now. Import the new shortcut there to update.</string>
+				<key>UUID</key>
+				<string>3855C91E-2CA2-4B4F-B4D4-84F2E0359696</string>
+				<key>CustomOutputName</key>
+				<string>Update Available Footer</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>3855C91E-2CA2-4B4F-B4D4-84F2E0359696</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Update Available Footer</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Update Available Footer</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Weather for City is up to date</string>
+				<key>UUID</key>
+				<string>F54102FB-628D-4917-8E67-21E71907E16F</string>
+				<key>CustomOutputName</key>
+				<string>Up To Date Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>F54102FB-628D-4917-8E67-21E71907E16F</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Up To Date Title</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Up To Date Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Installed version v1.2.2 is the latest GitHub release.</string>
+				<key>UUID</key>
+				<string>417C0AFF-C9D6-4E96-A4CF-9D49B15B3B76</string>
+				<key>CustomOutputName</key>
+				<string>Up To Date Message</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>417C0AFF-C9D6-4E96-A4CF-9D49B15B3B76</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Up To Date Message</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Up To Date Message</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>en</string>
+				<key>UUID</key>
+				<string>38E470A8-409B-4A25-A99D-33185B1A21FD</string>
+				<key>CustomOutputName</key>
+				<string>Geocoding Language</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>38E470A8-409B-4A25-A99D-33185B1A21FD</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Geocoding Language</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Geocoding Language</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Weather.html</string>
+				<key>UUID</key>
+				<string>B59EAE62-2F1C-4798-9B0F-15E9214EEE80</string>
+				<key>CustomOutputName</key>
+				<string>HTML File Name</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>B59EAE62-2F1C-4798-9B0F-15E9214EEE80</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>HTML File Name</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>HTML File Name</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>{"0":"Clear sky","1":"Mainly clear","2":"Partly cloudy","3":"Overcast","45":"Fog","48":"Depositing rime fog","51":"Light drizzle","53":"Moderate drizzle","55":"Dense drizzle","56":"Light freezing drizzle","57":"Dense freezing drizzle","61":"Slight rain","63":"Moderate rain","65":"Heavy rain","66":"Light freezing rain","67":"Heavy freezing rain","71":"Slight snow fall","73":"Moderate snow fall","75":"Heavy snow fall","77":"Snow grains","80":"Slight rain showers","81":"Moderate rain showers","82":"Violent rain showers","85":"Slight snow showers","86":"Heavy snow showers","95":"Thunderstorm","96":"Thunderstorm with slight hail","99":"Thunderstorm with heavy hail"}</string>
+				<key>UUID</key>
+				<string>E4A499A5-5AC0-4A00-A8BE-0039135EF188</string>
+				<key>CustomOutputName</key>
+				<string>Weather Text Map</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>E4A499A5-5AC0-4A00-A8BE-0039135EF188</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Weather Text Map</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Weather Text Map</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.conditional</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>ED861854-4E33-42B2-BD8B-93C449D7F4BB</string>
+				<key>WFControlFlowMode</key>
+				<integer>2</integer>
+				<key>UUID</key>
+				<string>1B2FB4C9-EAA7-43FA-AD56-67B8D8A9FD60</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.conditional</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>E2D2E430-9A02-4F57-8515-5F65554F9F7D</string>
+				<key>WFControlFlowMode</key>
+				<integer>1</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>What do you want to do?</string>
+				<key>UUID</key>
+				<string>A3159659-2643-46A4-8DDC-65F3805D6D96</string>
+				<key>CustomOutputName</key>
+				<string>Menu Prompt</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>A3159659-2643-46A4-8DDC-65F3805D6D96</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Menu Prompt</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Menu Prompt</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Get Weather</string>
+				<key>UUID</key>
+				<string>7245F2DD-0576-4DCE-9011-2F6CA66EE222</string>
+				<key>CustomOutputName</key>
+				<string>Get Weather Label</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>7245F2DD-0576-4DCE-9011-2F6CA66EE222</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Get Weather Label</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Get Weather Label</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Check for Update</string>
+				<key>UUID</key>
+				<string>49055221-A547-416A-B85F-4E4EA6352768</string>
+				<key>CustomOutputName</key>
+				<string>Check Update Label</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>49055221-A547-416A-B85F-4E4EA6352768</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Check Update Label</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Check Update Label</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Which city would you like weather for?</string>
+				<key>UUID</key>
+				<string>CA3A2D49-EC9D-4C0D-B28A-9F301CD9489A</string>
+				<key>CustomOutputName</key>
+				<string>City Prompt</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>CA3A2D49-EC9D-4C0D-B28A-9F301CD9489A</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>City Prompt</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>City Prompt</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>City not found</string>
+				<key>UUID</key>
+				<string>3D9815B0-4711-4A4C-9C40-30541097C325</string>
+				<key>CustomOutputName</key>
+				<string>City Not Found Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>3D9815B0-4711-4A4C-9C40-30541097C325</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>City Not Found Title</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>City Not Found Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Please check the city name and try again.</string>
+				<key>UUID</key>
+				<string>FD8541EA-3177-4338-ABBA-38354A928622</string>
+				<key>CustomOutputName</key>
+				<string>City Not Found Message</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>FD8541EA-3177-4338-ABBA-38354A928622</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>City Not Found Message</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>City Not Found Message</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Choose the correct location</string>
+				<key>UUID</key>
+				<string>7F8ACF00-E3F6-4375-B591-22F4E6445667</string>
+				<key>CustomOutputName</key>
+				<string>Choose Location Prompt</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>7F8ACF00-E3F6-4375-B591-22F4E6445667</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Choose Location Prompt</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Choose Location Prompt</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Current Weather</string>
+				<key>UUID</key>
+				<string>3688E858-B3B0-4433-95CB-3DBFDD4FFA74</string>
+				<key>CustomOutputName</key>
+				<string>Notification Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>3688E858-B3B0-4433-95CB-3DBFDD4FFA74</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Notification Title</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Notification Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Weather for</string>
+				<key>UUID</key>
+				<string>9F580381-2936-437B-A395-7EBA6F26D323</string>
+				<key>CustomOutputName</key>
+				<string>Result Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>9F580381-2936-437B-A395-7EBA6F26D323</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Result Title</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Result Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Temperature</string>
+				<key>UUID</key>
+				<string>2FF1E3C2-E60C-4853-B368-F733879B934D</string>
+				<key>CustomOutputName</key>
+				<string>Temperature Label</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>2FF1E3C2-E60C-4853-B368-F733879B934D</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Temperature Label</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Temperature Label</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Update Available</string>
+				<key>UUID</key>
+				<string>9B44E00B-904B-4BD0-AD86-4DE99467D58A</string>
+				<key>CustomOutputName</key>
+				<string>Update Available Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>9B44E00B-904B-4BD0-AD86-4DE99467D58A</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Update Available Title</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Update Available Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Installed: v1.2.2
+Latest: </string>
+				<key>UUID</key>
+				<string>5BBCEC8A-8BEF-4BA9-B196-D042AD0F42F9</string>
+				<key>CustomOutputName</key>
+				<string>Update Available Message</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>5BBCEC8A-8BEF-4BA9-B196-D042AD0F42F9</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Update Available Message</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Update Available Message</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>
+
+The latest GitHub release will open now. Import the new shortcut there to update.</string>
+				<key>UUID</key>
+				<string>B1F1D239-EA25-496F-AC85-7CD56398DCB4</string>
+				<key>CustomOutputName</key>
+				<string>Update Available Footer</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>B1F1D239-EA25-496F-AC85-7CD56398DCB4</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Update Available Footer</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Update Available Footer</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Weather for City is up to date</string>
+				<key>UUID</key>
+				<string>45FB4B93-A488-4F39-A01E-A521D2BC5529</string>
+				<key>CustomOutputName</key>
+				<string>Up To Date Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>45FB4B93-A488-4F39-A01E-A521D2BC5529</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Up To Date Title</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Up To Date Title</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Installed version v1.2.2 is the latest GitHub release.</string>
+				<key>UUID</key>
+				<string>BF8C51F8-AE4D-4984-ACF3-15AA162901BD</string>
+				<key>CustomOutputName</key>
+				<string>Up To Date Message</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>BF8C51F8-AE4D-4984-ACF3-15AA162901BD</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Up To Date Message</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Up To Date Message</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>en</string>
+				<key>UUID</key>
+				<string>4839ECBB-3935-47FB-8177-1E7219B1AF26</string>
+				<key>CustomOutputName</key>
+				<string>Geocoding Language</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>4839ECBB-3935-47FB-8177-1E7219B1AF26</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Geocoding Language</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Geocoding Language</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>Weather.html</string>
+				<key>UUID</key>
+				<string>BA702448-F5CC-4108-B567-14B76356A123</string>
+				<key>CustomOutputName</key>
+				<string>HTML File Name</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>BA702448-F5CC-4108-B567-14B76356A123</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>HTML File Name</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>HTML File Name</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<string>{"0":"Clear sky","1":"Mainly clear","2":"Partly cloudy","3":"Overcast","45":"Fog","48":"Depositing rime fog","51":"Light drizzle","53":"Moderate drizzle","55":"Dense drizzle","56":"Light freezing drizzle","57":"Dense freezing drizzle","61":"Slight rain","63":"Moderate rain","65":"Heavy rain","66":"Light freezing rain","67":"Heavy freezing rain","71":"Slight snow fall","73":"Moderate snow fall","75":"Heavy snow fall","77":"Snow grains","80":"Slight rain showers","81":"Moderate rain showers","82":"Violent rain showers","85":"Slight snow showers","86":"Heavy snow showers","95":"Thunderstorm","96":"Thunderstorm with slight hail","99":"Thunderstorm with heavy hail"}</string>
+				<key>UUID</key>
+				<string>ECA8E257-1E9C-4CC4-AC1D-2DDB4760B866</string>
+				<key>CustomOutputName</key>
+				<string>Weather Text Map</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>ECA8E257-1E9C-4CC4-AC1D-2DDB4760B866</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Weather Text Map</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Weather Text Map</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.conditional</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>E2D2E430-9A02-4F57-8515-5F65554F9F7D</string>
+				<key>WFControlFlowMode</key>
+				<integer>2</integer>
+				<key>UUID</key>
+				<string>CACB51E6-C85A-4D9B-8800-0AB8EDA9663A</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.list</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFItems</key>
+				<array>
+					<dict>
+						<key>WFItemType</key>
+						<integer>0</integer>
+						<key>WFValue</key>
+						<dict>
+							<key>Value</key>
+							<dict>
+								<key>string</key>
+								<string>￼</string>
+								<key>attachmentsByRange</key>
+								<dict>
+									<key>{0, 1}</key>
+									<dict>
+										<key>Type</key>
+										<string>Variable</string>
+										<key>VariableName</key>
+										<string>Get Weather Label</string>
+									</dict>
+								</dict>
+							</dict>
+							<key>WFSerializationType</key>
+							<string>WFTextTokenString</string>
+						</dict>
+					</dict>
+					<dict>
+						<key>WFItemType</key>
+						<integer>0</integer>
+						<key>WFValue</key>
+						<dict>
+							<key>Value</key>
+							<dict>
+								<key>string</key>
+								<string>￼</string>
+								<key>attachmentsByRange</key>
+								<dict>
+									<key>{0, 1}</key>
+									<dict>
+										<key>Type</key>
+										<string>Variable</string>
+										<key>VariableName</key>
+										<string>Check Update Label</string>
+									</dict>
+								</dict>
+							</dict>
+							<key>WFSerializationType</key>
+							<string>WFTextTokenString</string>
+						</dict>
+					</dict>
+				</array>
+				<key>UUID</key>
+				<string>187F0D61-4EA1-4EB4-8113-38CCA9A9CFA8</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.choosefromlist</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>187F0D61-4EA1-4EB4-8113-38CCA9A9CFA8</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>List</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFChooseFromListActionPrompt</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>string</key>
+						<string>￼</string>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Menu Prompt</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+				<key>WFChooseFromListActionSelectMultiple</key>
+				<false/>
+				<key>UUID</key>
+				<string>B7A8CD18-CD34-4ACE-AF32-5E581A8E32B7</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.comment</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFCommentActionText</key>
+				<string>Branches on the selected start action.
+- First list item runs the weather lookup.
+- Second list item checks GitHub for updates.</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.conditional</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>F47C3D5D-8BA5-4228-84E2-F1763ED8FF17</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Type</key>
+					<string>Variable</string>
+					<key>Variable</key>
+					<dict>
+						<key>Value</key>
+						<dict>
+							<key>OutputUUID</key>
+							<string>B7A8CD18-CD34-4ACE-AF32-5E581A8E32B7</string>
+							<key>Type</key>
+							<string>ActionOutput</string>
+							<key>OutputName</key>
+							<string>Chosen Item</string>
+						</dict>
+						<key>WFSerializationType</key>
+						<string>WFTextTokenAttachment</string>
+					</dict>
+				</dict>
+				<key>WFControlFlowMode</key>
+				<integer>0</integer>
+				<key>WFConditionalActionString</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>string</key>
+						<string>￼</string>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Get Weather Label</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+				<key>WFCondition</key>
+				<integer>4</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.comment</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFCommentActionText</key>
+				<string>Asks for a city and searches Open-Meteo for matching locations.
+- City input is normalized so entries like Columbia SC and Columbia, SC still search for Columbia.
+- The geocoding request loads multiple results for ambiguous city names.</string>
 			</dict>
 		</dict>
 		<dict>
@@ -104,11 +2574,70 @@ The update check reads the latest public GitHub release from Schrotty74/Shortcut
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>WFAskActionPrompt</key>
-				<string>Für welche Stadt möchtest du das Wetter abrufen? / Which city would you like weather for?</string>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>string</key>
+						<string>￼</string>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>City Prompt</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
 				<key>WFInputType</key>
 				<string>Text</string>
 				<key>UUID</key>
 				<string>99B2CE2F-9FCD-4639-82AB-53E428EF2F75</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.text.replace</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>string</key>
+						<string>￼</string>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputUUID</key>
+								<string>99B2CE2F-9FCD-4639-82AB-53E428EF2F75</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+								<key>OutputName</key>
+								<string>Provided Input</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+				<key>WFReplaceTextFind</key>
+				<string>(?:,\s*|\s+)[A-Za-z]{2}$</string>
+				<key>WFReplaceTextReplace</key>
+				<string></string>
+				<key>WFReplaceTextRegularExpression</key>
+				<true/>
+				<key>WFReplaceTextCaseSensitive</key>
+				<false/>
+				<key>CustomOutputName</key>
+				<string>Search City</string>
+				<key>UUID</key>
+				<string>61657D9E-9D30-4A8B-97F0-BA03F5BBE168</string>
 			</dict>
 		</dict>
 		<dict>
@@ -121,17 +2650,24 @@ The update check reads the latest public GitHub release from Schrotty74/Shortcut
 					<key>Value</key>
 					<dict>
 						<key>string</key>
-						<string>https://geocoding-api.open-meteo.com/v1/search?name=￼&amp;count=1&amp;language=de&amp;format=json</string>
+						<string>https://geocoding-api.open-meteo.com/v1/search?name=￼&amp;count=10&amp;language=￼&amp;format=json</string>
 						<key>attachmentsByRange</key>
 						<dict>
 							<key>{52, 1}</key>
 							<dict>
 								<key>OutputUUID</key>
-								<string>99B2CE2F-9FCD-4639-82AB-53E428EF2F75</string>
+								<string>61657D9E-9D30-4A8B-97F0-BA03F5BBE168</string>
 								<key>Type</key>
 								<string>ActionOutput</string>
 								<key>OutputName</key>
-								<string>Provided Input</string>
+								<string>Updated Text</string>
+							</dict>
+							<key>{72, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Geocoding Language</string>
 							</dict>
 						</dict>
 					</dict>
@@ -218,7 +2754,7 @@ The update check reads the latest public GitHub release from Schrotty74/Shortcut
 					<string>WFTextTokenAttachment</string>
 				</dict>
 				<key>CustomOutputName</key>
-				<string>Suchergebnisse</string>
+				<string>Search Results</string>
 				<key>UUID</key>
 				<string>970D74A0-9D60-4FF8-9164-A45205609B43</string>
 				<key>WFGetDictionaryValueType</key>
@@ -275,9 +2811,45 @@ The update check reads the latest public GitHub release from Schrotty74/Shortcut
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>WFAlertActionMessage</key>
-				<string>Bitte prüfe den Stadtnamen und versuche es erneut.</string>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>string</key>
+						<string>￼</string>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>City Not Found Message</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
 				<key>WFAlertActionTitle</key>
-				<string>Stadt nicht gefunden</string>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>string</key>
+						<string>￼</string>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>City Not Found Title</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
 				<key>WFAlertActionCancelButtonShown</key>
 				<false/>
 			</dict>
@@ -307,7 +2879,131 @@ The update check reads the latest public GitHub release from Schrotty74/Shortcut
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>WFCommentActionText</key>
-				<string>Liest Koordinaten und Namen des ersten Treffers aus und ruft die aktuellen Wetterdaten ab.</string>
+				<string>Selects the correct geocoding result.
+- If only one result exists, it is used directly.
+- If multiple results exist, the user chooses a location such as Columbia — South Carolina, United States.</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.count</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>970D74A0-9D60-4FF8-9164-A45205609B43</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Search Results</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>Input</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>970D74A0-9D60-4FF8-9164-A45205609B43</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Search Results</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFCountType</key>
+				<string>Items</string>
+				<key>UUID</key>
+				<string>381676AC-6EBA-418D-B5D7-FE9A2B4AA776</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.comment</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFCommentActionText</key>
+				<string>Branches on ambiguous location results.
+- Input uses the result count above.
+- More than one result opens a visible location picker.
+- One result continues directly.</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.conditional</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>2F41497A-2063-4E91-9A37-A6FCBAF220C0</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Type</key>
+					<string>Variable</string>
+					<key>Variable</key>
+					<dict>
+						<key>Value</key>
+						<dict>
+							<key>OutputUUID</key>
+							<string>381676AC-6EBA-418D-B5D7-FE9A2B4AA776</string>
+							<key>Type</key>
+							<string>ActionOutput</string>
+							<key>OutputName</key>
+							<string>Count</string>
+						</dict>
+						<key>WFSerializationType</key>
+						<string>WFTextTokenAttachment</string>
+					</dict>
+				</dict>
+				<key>WFControlFlowMode</key>
+				<integer>0</integer>
+				<key>WFNumberValue</key>
+				<string>1</string>
+				<key>WFCondition</key>
+				<integer>2</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.comment</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFCommentActionText</key>
+				<string>Builds the visible location choices.
+- Repeat Item is one Open-Meteo location result.
+- Each row uses city, admin area, and country.
+- Repeat Results becomes the list shown to the user.</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.repeat.each</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>5D76C9BA-854B-4547-8CC1-3569728DAAD7</string>
+				<key>WFControlFlowMode</key>
+				<integer>0</integer>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>970D74A0-9D60-4FF8-9164-A45205609B43</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Search Results</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
 			</dict>
 		</dict>
 		<dict>
@@ -319,24 +3015,596 @@ The update check reads the latest public GitHub release from Schrotty74/Shortcut
 				<dict>
 					<key>Value</key>
 					<dict>
-						<key>OutputUUID</key>
-						<string>FF9DDEE1-DEAE-4D48-88BB-5F8EFAE5E1BC</string>
 						<key>Type</key>
-						<string>ActionOutput</string>
-						<key>OutputName</key>
-						<string>Dictionary</string>
+						<string>Variable</string>
+						<key>VariableName</key>
+						<string>Repeat Item</string>
 					</dict>
 					<key>WFSerializationType</key>
 					<string>WFTextTokenAttachment</string>
 				</dict>
+				<key>WFGetDictionaryValueType</key>
+				<string>Value</string>
+				<key>WFDictionaryKey</key>
+				<string>name</string>
 				<key>CustomOutputName</key>
-				<string>Breitengrad</string>
+				<string>Choice City</string>
+				<key>UUID</key>
+				<string>4DC9375C-3B2C-452A-996D-CFD02BC7C012</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.getvalueforkey</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>Type</key>
+						<string>Variable</string>
+						<key>VariableName</key>
+						<string>Repeat Item</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFGetDictionaryValueType</key>
+				<string>Value</string>
+				<key>WFDictionaryKey</key>
+				<string>admin1</string>
+				<key>CustomOutputName</key>
+				<string>Choice Region</string>
+				<key>UUID</key>
+				<string>1EC7B082-C433-49A2-95AB-8F4F894118E8</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.getvalueforkey</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>Type</key>
+						<string>Variable</string>
+						<key>VariableName</key>
+						<string>Repeat Item</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFGetDictionaryValueType</key>
+				<string>Value</string>
+				<key>WFDictionaryKey</key>
+				<string>country</string>
+				<key>CustomOutputName</key>
+				<string>Choice Country</string>
+				<key>UUID</key>
+				<string>0D746AD4-3F40-4902-B164-C89F4996468D</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>string</key>
+						<string>￼ — ￼, ￼</string>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputUUID</key>
+								<string>4DC9375C-3B2C-452A-996D-CFD02BC7C012</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+								<key>OutputName</key>
+								<string>Choice City</string>
+							</dict>
+							<key>{4, 1}</key>
+							<dict>
+								<key>OutputUUID</key>
+								<string>1EC7B082-C433-49A2-95AB-8F4F894118E8</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+								<key>OutputName</key>
+								<string>Choice Region</string>
+							</dict>
+							<key>{7, 1}</key>
+							<dict>
+								<key>OutputUUID</key>
+								<string>0D746AD4-3F40-4902-B164-C89F4996468D</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+								<key>OutputName</key>
+								<string>Choice Country</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+				<key>CustomOutputName</key>
+				<string>Location Choice</string>
+				<key>UUID</key>
+				<string>1B50802A-D411-4F18-A6EE-5C4732CF3873</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>1B50802A-D411-4F18-A6EE-5C4732CF3873</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Location Choice</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Location Choice</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.repeat.each</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>5D76C9BA-854B-4547-8CC1-3569728DAAD7</string>
+				<key>WFControlFlowMode</key>
+				<integer>2</integer>
+				<key>UUID</key>
+				<string>5020C787-219C-47A7-93FE-119E3A899042</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.choosefromlist</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>5020C787-219C-47A7-93FE-119E3A899042</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Repeat Results</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFChooseFromListActionPrompt</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>string</key>
+						<string>￼</string>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Choose Location Prompt</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+				<key>WFChooseFromListActionSelectMultiple</key>
+				<false/>
+				<key>UUID</key>
+				<string>6751D7DC-EF9B-4093-897A-550B6D1AA3A5</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.comment</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFCommentActionText</key>
+				<string>Finds the selected location result.
+- The visible row is rebuilt for each Open-Meteo result.
+- When the row matches the chosen item, that Repeat Item becomes Selected Location.</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.repeat.each</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>27D25CFE-92A7-4940-8804-D28848A0700E</string>
+				<key>WFControlFlowMode</key>
+				<integer>0</integer>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>970D74A0-9D60-4FF8-9164-A45205609B43</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Search Results</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.getvalueforkey</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>Type</key>
+						<string>Variable</string>
+						<key>VariableName</key>
+						<string>Repeat Item</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFGetDictionaryValueType</key>
+				<string>Value</string>
+				<key>WFDictionaryKey</key>
+				<string>name</string>
+				<key>CustomOutputName</key>
+				<string>Choice City</string>
+				<key>UUID</key>
+				<string>9BFFBCF6-6327-4E0A-B2E0-03F08C02C675</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.getvalueforkey</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>Type</key>
+						<string>Variable</string>
+						<key>VariableName</key>
+						<string>Repeat Item</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFGetDictionaryValueType</key>
+				<string>Value</string>
+				<key>WFDictionaryKey</key>
+				<string>admin1</string>
+				<key>CustomOutputName</key>
+				<string>Choice Region</string>
+				<key>UUID</key>
+				<string>450EEBA3-ACB5-4F6D-A05A-2D67E67E0882</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.getvalueforkey</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>Type</key>
+						<string>Variable</string>
+						<key>VariableName</key>
+						<string>Repeat Item</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFGetDictionaryValueType</key>
+				<string>Value</string>
+				<key>WFDictionaryKey</key>
+				<string>country</string>
+				<key>CustomOutputName</key>
+				<string>Choice Country</string>
+				<key>UUID</key>
+				<string>FF77C626-9CCD-4D65-A3C0-096CB96120E2</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>string</key>
+						<string>￼ — ￼, ￼</string>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputUUID</key>
+								<string>9BFFBCF6-6327-4E0A-B2E0-03F08C02C675</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+								<key>OutputName</key>
+								<string>Choice City</string>
+							</dict>
+							<key>{4, 1}</key>
+							<dict>
+								<key>OutputUUID</key>
+								<string>450EEBA3-ACB5-4F6D-A05A-2D67E67E0882</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+								<key>OutputName</key>
+								<string>Choice Region</string>
+							</dict>
+							<key>{7, 1}</key>
+							<dict>
+								<key>OutputUUID</key>
+								<string>FF77C626-9CCD-4D65-A3C0-096CB96120E2</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+								<key>OutputName</key>
+								<string>Choice Country</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+				<key>CustomOutputName</key>
+				<string>Location Choice</string>
+				<key>UUID</key>
+				<string>07177585-75A2-4B97-B3D2-B8F363683E40</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.comment</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFCommentActionText</key>
+				<string>Checks whether this rebuilt row is the chosen location.
+- Input uses the Location Choice text above.
+- Matching row sets Selected Location to the current Repeat Item.</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.conditional</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>76A41FB7-F6C5-4823-A286-A100C36BAB2E</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Type</key>
+					<string>Variable</string>
+					<key>Variable</key>
+					<dict>
+						<key>Value</key>
+						<dict>
+							<key>OutputUUID</key>
+							<string>07177585-75A2-4B97-B3D2-B8F363683E40</string>
+							<key>Type</key>
+							<string>ActionOutput</string>
+							<key>OutputName</key>
+							<string>Location Choice</string>
+						</dict>
+						<key>WFSerializationType</key>
+						<string>WFTextTokenAttachment</string>
+					</dict>
+				</dict>
+				<key>WFControlFlowMode</key>
+				<integer>0</integer>
+				<key>WFConditionalActionString</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>string</key>
+						<string>￼</string>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputUUID</key>
+								<string>6751D7DC-EF9B-4093-897A-550B6D1AA3A5</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+								<key>OutputName</key>
+								<string>Chosen Item</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+				<key>WFCondition</key>
+				<integer>4</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>Type</key>
+						<string>Variable</string>
+						<key>VariableName</key>
+						<string>Repeat Item</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Selected Location</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.conditional</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>76A41FB7-F6C5-4823-A286-A100C36BAB2E</string>
+				<key>WFControlFlowMode</key>
+				<integer>2</integer>
+				<key>UUID</key>
+				<string>4A4331B3-5763-46C0-8E77-EA547A726C90</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.repeat.each</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>27D25CFE-92A7-4940-8804-D28848A0700E</string>
+				<key>WFControlFlowMode</key>
+				<integer>2</integer>
+				<key>UUID</key>
+				<string>79AD47BA-61B8-4B75-A033-A40918DE4AE7</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.conditional</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>2F41497A-2063-4E91-9A37-A6FCBAF220C0</string>
+				<key>WFControlFlowMode</key>
+				<integer>1</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.getitemfromlist</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>970D74A0-9D60-4FF8-9164-A45205609B43</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Search Results</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFItemSpecifier</key>
+				<string>First Item</string>
+				<key>UUID</key>
+				<string>EEC0092F-EFF9-4CFD-B864-5EA298DB401A</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputUUID</key>
+						<string>EEC0092F-EFF9-4CFD-B864-5EA298DB401A</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+						<key>OutputName</key>
+						<string>Item from List</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Selected Location</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.conditional</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>2F41497A-2063-4E91-9A37-A6FCBAF220C0</string>
+				<key>WFControlFlowMode</key>
+				<integer>2</integer>
+				<key>UUID</key>
+				<string>31536402-F68A-4F39-BFB9-FADAEA196F87</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.comment</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFCommentActionText</key>
+				<string>Reads coordinates and display values from the selected Open-Meteo location result.</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.getvalueforkey</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>Type</key>
+						<string>Variable</string>
+						<key>VariableName</key>
+						<string>Selected Location</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFGetDictionaryValueType</key>
+				<string>Value</string>
+				<key>WFDictionaryKey</key>
+				<string>latitude</string>
+				<key>CustomOutputName</key>
+				<string>Latitude</string>
 				<key>UUID</key>
 				<string>134F8C1E-5E54-4145-965E-78C2946F9019</string>
-				<key>WFGetDictionaryValueType</key>
-				<string>Value</string>
-				<key>WFDictionaryKey</key>
-				<string>results.1.latitude</string>
 			</dict>
 		</dict>
 		<dict>
@@ -348,24 +3616,22 @@ The update check reads the latest public GitHub release from Schrotty74/Shortcut
 				<dict>
 					<key>Value</key>
 					<dict>
-						<key>OutputUUID</key>
-						<string>FF9DDEE1-DEAE-4D48-88BB-5F8EFAE5E1BC</string>
 						<key>Type</key>
-						<string>ActionOutput</string>
-						<key>OutputName</key>
-						<string>Dictionary</string>
+						<string>Variable</string>
+						<key>VariableName</key>
+						<string>Selected Location</string>
 					</dict>
 					<key>WFSerializationType</key>
 					<string>WFTextTokenAttachment</string>
 				</dict>
+				<key>WFGetDictionaryValueType</key>
+				<string>Value</string>
+				<key>WFDictionaryKey</key>
+				<string>longitude</string>
 				<key>CustomOutputName</key>
-				<string>Längengrad</string>
+				<string>Longitude</string>
 				<key>UUID</key>
 				<string>DC15EBA5-C278-4D70-881B-39E3A710FF78</string>
-				<key>WFGetDictionaryValueType</key>
-				<string>Value</string>
-				<key>WFDictionaryKey</key>
-				<string>results.1.longitude</string>
 			</dict>
 		</dict>
 		<dict>
@@ -377,24 +3643,22 @@ The update check reads the latest public GitHub release from Schrotty74/Shortcut
 				<dict>
 					<key>Value</key>
 					<dict>
-						<key>OutputUUID</key>
-						<string>FF9DDEE1-DEAE-4D48-88BB-5F8EFAE5E1BC</string>
 						<key>Type</key>
-						<string>ActionOutput</string>
-						<key>OutputName</key>
-						<string>Dictionary</string>
+						<string>Variable</string>
+						<key>VariableName</key>
+						<string>Selected Location</string>
 					</dict>
 					<key>WFSerializationType</key>
 					<string>WFTextTokenAttachment</string>
 				</dict>
+				<key>WFGetDictionaryValueType</key>
+				<string>Value</string>
+				<key>WFDictionaryKey</key>
+				<string>name</string>
 				<key>CustomOutputName</key>
-				<string>Gefundene Stadt</string>
+				<string>Found City</string>
 				<key>UUID</key>
 				<string>1A2205E4-8186-42C3-A6C1-B85A9DFF473D</string>
-				<key>WFGetDictionaryValueType</key>
-				<string>Value</string>
-				<key>WFDictionaryKey</key>
-				<string>results.1.name</string>
 			</dict>
 		</dict>
 		<dict>
@@ -406,24 +3670,22 @@ The update check reads the latest public GitHub release from Schrotty74/Shortcut
 				<dict>
 					<key>Value</key>
 					<dict>
-						<key>OutputUUID</key>
-						<string>FF9DDEE1-DEAE-4D48-88BB-5F8EFAE5E1BC</string>
 						<key>Type</key>
-						<string>ActionOutput</string>
-						<key>OutputName</key>
-						<string>Dictionary</string>
+						<string>Variable</string>
+						<key>VariableName</key>
+						<string>Selected Location</string>
 					</dict>
 					<key>WFSerializationType</key>
 					<string>WFTextTokenAttachment</string>
 				</dict>
+				<key>WFGetDictionaryValueType</key>
+				<string>Value</string>
+				<key>WFDictionaryKey</key>
+				<string>country_code</string>
 				<key>CustomOutputName</key>
 				<string>Country Code</string>
 				<key>UUID</key>
 				<string>3CDA39EA-65CE-4C3C-A511-7E8C4B9B3D55</string>
-				<key>WFGetDictionaryValueType</key>
-				<string>Value</string>
-				<key>WFDictionaryKey</key>
-				<string>results.1.country_code</string>
 			</dict>
 		</dict>
 		<dict>
@@ -446,7 +3708,7 @@ The update check reads the latest public GitHub release from Schrotty74/Shortcut
 								<key>Type</key>
 								<string>ActionOutput</string>
 								<key>OutputName</key>
-								<string>Breitengrad</string>
+								<string>Latitude</string>
 							</dict>
 						</dict>
 					</dict>
@@ -483,7 +3745,7 @@ The update check reads the latest public GitHub release from Schrotty74/Shortcut
 								<key>Type</key>
 								<string>ActionOutput</string>
 								<key>OutputName</key>
-								<string>Längengrad</string>
+								<string>Longitude</string>
 							</dict>
 						</dict>
 					</dict>
@@ -506,8 +3768,8 @@ The update check reads the latest public GitHub release from Schrotty74/Shortcut
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>WFCommentActionText</key>
-				<string>Chooses celsius or fahrenheit from the found city country code.
-- Country Code comes from the geocoding result above.
+				<string>Chooses celsius or fahrenheit from the selected city country code.
+- Country Code comes from the selected geocoding result above.
 - Match Text checks US, BS, KY, LR, and MM.
 - If the match count is greater than 0, Fahrenheit is used.
 - Otherwise celsius is used.</string>
@@ -955,7 +4217,7 @@ The update check reads the latest public GitHub release from Schrotty74/Shortcut
 					<string>WFTextTokenAttachment</string>
 				</dict>
 				<key>CustomOutputName</key>
-				<string>Aktuelles Wetter</string>
+				<string>Current Weather</string>
 				<key>UUID</key>
 				<string>6B90AA55-53F4-4994-AEB9-23C36B83B4A2</string>
 				<key>WFGetDictionaryValueType</key>
@@ -978,13 +4240,13 @@ The update check reads the latest public GitHub release from Schrotty74/Shortcut
 						<key>Type</key>
 						<string>ActionOutput</string>
 						<key>OutputName</key>
-						<string>Aktuelles Wetter</string>
+						<string>Current Weather</string>
 					</dict>
 					<key>WFSerializationType</key>
 					<string>WFTextTokenAttachment</string>
 				</dict>
 				<key>CustomOutputName</key>
-				<string>Temperatur</string>
+				<string>Temperature</string>
 				<key>UUID</key>
 				<string>A55C5ABE-D672-46F2-8E29-0C66F9C85E76</string>
 				<key>WFGetDictionaryValueType</key>
@@ -1007,13 +4269,13 @@ The update check reads the latest public GitHub release from Schrotty74/Shortcut
 						<key>Type</key>
 						<string>ActionOutput</string>
 						<key>OutputName</key>
-						<string>Aktuelles Wetter</string>
+						<string>Current Weather</string>
 					</dict>
 					<key>WFSerializationType</key>
 					<string>WFTextTokenAttachment</string>
 				</dict>
 				<key>CustomOutputName</key>
-				<string>Wettercode</string>
+				<string>Weather Code</string>
 				<key>UUID</key>
 				<string>B8E060FF-3674-4C15-9097-B560D3C83F2E</string>
 				<key>WFGetDictionaryValueType</key>
@@ -1028,7 +4290,25 @@ The update check reads the latest public GitHub release from Schrotty74/Shortcut
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>WFTextActionText</key>
-				<string>{"0":"Klarer Himmel","1":"Überwiegend klar","2":"Teilweise bewölkt","3":"Bedeckt","45":"Nebel","48":"Nebel mit Reifablagerung","51":"Leichter Nieselregen","53":"Mäßiger Nieselregen","55":"Starker Nieselregen","56":"Leichter gefrierender Nieselregen","57":"Starker gefrierender Nieselregen","61":"Leichter Regen","63":"Mäßiger Regen","65":"Starker Regen","66":"Leichter gefrierender Regen","67":"Starker gefrierender Regen","71":"Leichter Schneefall","73":"Mäßiger Schneefall","75":"Starker Schneefall","77":"Schneegriesel","80":"Leichte Regenschauer","81":"Mäßige Regenschauer","82":"Starke Regenschauer","85":"Leichte Schneeschauer","86":"Starke Schneeschauer","95":"Gewitter","96":"Gewitter mit leichtem Hagel","99":"Gewitter mit starkem Hagel"}</string>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>string</key>
+						<string>￼</string>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Weather Text Map</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
 				<key>UUID</key>
 				<string>BC167C9D-C0D3-4A79-AFEE-5CAA9AF5FFC8</string>
 			</dict>
@@ -1076,7 +4356,7 @@ The update check reads the latest public GitHub release from Schrotty74/Shortcut
 					<string>WFTextTokenAttachment</string>
 				</dict>
 				<key>CustomOutputName</key>
-				<string>Wettertext</string>
+				<string>Weather Text</string>
 				<key>UUID</key>
 				<string>8DD74411-941A-4A1F-84F6-BA557FA2D799</string>
 				<key>WFGetDictionaryValueType</key>
@@ -1096,7 +4376,7 @@ The update check reads the latest public GitHub release from Schrotty74/Shortcut
 								<key>Type</key>
 								<string>ActionOutput</string>
 								<key>OutputName</key>
-								<string>Wettercode</string>
+								<string>Weather Code</string>
 							</dict>
 						</dict>
 					</dict>
@@ -1120,14 +4400,14 @@ The update check reads the latest public GitHub release from Schrotty74/Shortcut
 						<string>￼: ￼ ￼, ￼</string>
 						<key>attachmentsByRange</key>
 						<dict>
-							<key>{8, 1}</key>
+							<key>{0, 1}</key>
 							<dict>
 								<key>OutputUUID</key>
-								<string>8DD74411-941A-4A1F-84F6-BA557FA2D799</string>
+								<string>1A2205E4-8186-42C3-A6C1-B85A9DFF473D</string>
 								<key>Type</key>
 								<string>ActionOutput</string>
 								<key>OutputName</key>
-								<string>Wettertext</string>
+								<string>Found City</string>
 							</dict>
 							<key>{3, 1}</key>
 							<dict>
@@ -1136,23 +4416,23 @@ The update check reads the latest public GitHub release from Schrotty74/Shortcut
 								<key>Type</key>
 								<string>ActionOutput</string>
 								<key>OutputName</key>
-								<string>Temperatur</string>
+								<string>Temperature</string>
 							</dict>
 							<key>{5, 1}</key>
 							<dict>
-								<key>VariableName</key>
-								<string>Temperature Unit Symbol</string>
 								<key>Type</key>
 								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Temperature Unit Symbol</string>
 							</dict>
-							<key>{0, 1}</key>
+							<key>{8, 1}</key>
 							<dict>
 								<key>OutputUUID</key>
-								<string>1A2205E4-8186-42C3-A6C1-B85A9DFF473D</string>
+								<string>8DD74411-941A-4A1F-84F6-BA557FA2D799</string>
 								<key>Type</key>
 								<string>ActionOutput</string>
 								<key>OutputName</key>
-								<string>Gefundene Stadt</string>
+								<string>Weather Text</string>
 							</dict>
 						</dict>
 					</dict>
@@ -1160,7 +4440,25 @@ The update check reads the latest public GitHub release from Schrotty74/Shortcut
 					<string>WFTextTokenString</string>
 				</dict>
 				<key>WFNotificationActionTitle</key>
-				<string>Current Weather</string>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>string</key>
+						<string>￼</string>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Notification Title</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
 			</dict>
 		</dict>
 		<dict>
@@ -1182,45 +4480,59 @@ The update check reads the latest public GitHub release from Schrotty74/Shortcut
 					<key>Value</key>
 					<dict>
 						<key>string</key>
-						<string>☀️ Weather for ￼
+						<string>￼ ￼
 
 ￼
-Temperature: ￼ ￼</string>
+￼: ￼ ￼</string>
 						<key>attachmentsByRange</key>
 						<dict>
-							<key>{18, 1}</key>
+							<key>{0, 1}</key>
 							<dict>
-								<key>OutputUUID</key>
-								<string>8DD74411-941A-4A1F-84F6-BA557FA2D799</string>
-								<key>Type</key>
-								<string>ActionOutput</string>
-								<key>OutputName</key>
-								<string>Wettertext</string>
-							</dict>
-							<key>{35, 1}</key>
-							<dict>
-								<key>VariableName</key>
-								<string>Temperature Unit Symbol</string>
 								<key>Type</key>
 								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Result Title</string>
 							</dict>
-							<key>{33, 1}</key>
-							<dict>
-								<key>OutputUUID</key>
-								<string>A55C5ABE-D672-46F2-8E29-0C66F9C85E76</string>
-								<key>Type</key>
-								<string>ActionOutput</string>
-								<key>OutputName</key>
-								<string>Temperatur</string>
-							</dict>
-							<key>{15, 1}</key>
+							<key>{2, 1}</key>
 							<dict>
 								<key>OutputUUID</key>
 								<string>1A2205E4-8186-42C3-A6C1-B85A9DFF473D</string>
 								<key>Type</key>
 								<string>ActionOutput</string>
 								<key>OutputName</key>
-								<string>Gefundene Stadt</string>
+								<string>Found City</string>
+							</dict>
+							<key>{5, 1}</key>
+							<dict>
+								<key>OutputUUID</key>
+								<string>8DD74411-941A-4A1F-84F6-BA557FA2D799</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+								<key>OutputName</key>
+								<string>Weather Text</string>
+							</dict>
+							<key>{7, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Temperature Label</string>
+							</dict>
+							<key>{10, 1}</key>
+							<dict>
+								<key>OutputUUID</key>
+								<string>A55C5ABE-D672-46F2-8E29-0C66F9C85E76</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+								<key>OutputName</key>
+								<string>Temperature</string>
+							</dict>
+							<key>{12, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Temperature Unit Symbol</string>
 							</dict>
 						</dict>
 					</dict>
@@ -1249,7 +4561,7 @@ Temperature: ￼ ￼</string>
 								<key>Type</key>
 								<string>ActionOutput</string>
 								<key>OutputName</key>
-								<string>Temperatur</string>
+								<string>Temperature</string>
 							</dict>
 							<key>{5579, 1}</key>
 							<dict>
@@ -1258,7 +4570,7 @@ Temperature: ￼ ￼</string>
 								<key>Type</key>
 								<string>ActionOutput</string>
 								<key>OutputName</key>
-								<string>Temperatur</string>
+								<string>Temperature</string>
 							</dict>
 							<key>{5504, 1}</key>
 							<dict>
@@ -1267,7 +4579,7 @@ Temperature: ￼ ￼</string>
 								<key>Type</key>
 								<string>ActionOutput</string>
 								<key>OutputName</key>
-								<string>Gefundene Stadt</string>
+								<string>Found City</string>
 							</dict>
 							<key>{5576, 1}</key>
 							<dict>
@@ -1290,7 +4602,7 @@ Temperature: ￼ ￼</string>
 								<key>Type</key>
 								<string>ActionOutput</string>
 								<key>OutputName</key>
-								<string>Wettercode</string>
+								<string>Weather Code</string>
 							</dict>
 						</dict>
 					</dict>
@@ -1307,7 +4619,25 @@ Temperature: ￼ ￼</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>WFName</key>
-				<string>Wetter.html</string>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>string</key>
+						<string>￼</string>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>HTML File Name</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
 				<key>WFInput</key>
 				<dict>
 					<key>Value</key>
@@ -1359,13 +4689,11 @@ Temperature: ￼ ￼</string>
 		</dict>
 		<dict>
 			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.choosefrommenu</string>
+			<string>is.workflow.actions.conditional</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
-				<key>WFMenuItemTitle</key>
-				<string>Check for Update</string>
 				<key>GroupingIdentifier</key>
-				<string>D9F2B0EC-3116-48D2-A289-0777555773E2</string>
+				<string>F47C3D5D-8BA5-4228-84E2-F1763ED8FF17</string>
 				<key>WFControlFlowMode</key>
 				<integer>1</integer>
 			</dict>
@@ -1594,13 +4922,17 @@ Temperature: ￼ ￼</string>
 					<key>Value</key>
 					<dict>
 						<key>string</key>
-						<string>Installed: v1.2.2
-Latest: ￼
-
-The latest GitHub release will open now. Import the new shortcut there to update.</string>
+						<string>￼￼￼</string>
 						<key>attachmentsByRange</key>
 						<dict>
-							<key>{26, 1}</key>
+							<key>{0, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Update Available Message</string>
+							</dict>
+							<key>{1, 1}</key>
 							<dict>
 								<key>OutputUUID</key>
 								<string>28E60E33-07A4-4D76-80EA-97DBD2611E11</string>
@@ -1609,13 +4941,38 @@ The latest GitHub release will open now. Import the new shortcut there to update
 								<key>OutputName</key>
 								<string>Latest Version Text</string>
 							</dict>
+							<key>{2, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Update Available Footer</string>
+							</dict>
 						</dict>
 					</dict>
 					<key>WFSerializationType</key>
 					<string>WFTextTokenString</string>
 				</dict>
 				<key>WFAlertActionTitle</key>
-				<string>Update Available</string>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>string</key>
+						<string>￼</string>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Update Available Title</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
 				<key>WFAlertActionCancelButtonShown</key>
 				<false/>
 			</dict>
@@ -1666,9 +5023,45 @@ The latest GitHub release will open now. Import the new shortcut there to update
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>WFAlertActionMessage</key>
-				<string>Installed version v1.2.2 is the latest GitHub release.</string>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>string</key>
+						<string>￼</string>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Up To Date Message</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
 				<key>WFAlertActionTitle</key>
-				<string>Weather for City is up to date</string>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>string</key>
+						<string>￼</string>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Up To Date Title</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
 				<key>WFAlertActionCancelButtonShown</key>
 				<false/>
 			</dict>
@@ -1694,15 +5087,15 @@ The latest GitHub release will open now. Import the new shortcut there to update
 		</dict>
 		<dict>
 			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.choosefrommenu</string>
+			<string>is.workflow.actions.conditional</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
-				<key>UUID</key>
-				<string>B94E67AE-6486-4623-A2BE-BB34F1048DD8</string>
 				<key>GroupingIdentifier</key>
-				<string>D9F2B0EC-3116-48D2-A289-0777555773E2</string>
+				<string>F47C3D5D-8BA5-4228-84E2-F1763ED8FF17</string>
 				<key>WFControlFlowMode</key>
 				<integer>2</integer>
+				<key>UUID</key>
+				<string>8DF9ED4B-6821-4A52-BA3D-9E0AF00818A8</string>
 			</dict>
 		</dict>
 	</array>

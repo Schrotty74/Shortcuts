@@ -8,6 +8,9 @@ Fixed:
 
 - adds an explicit UTF-8 character declaration to the generated HTML card
 - fixes malformed German special characters and `°C` on iPhone
+- repairs ambiguous city lookup by loading multiple Open-Meteo geocoding
+  results and letting the user choose the correct location
+- normalizes city inputs such as `Columbia SC` and `Columbia, SC`
 - keeps the existing weather lookup and update-check behavior
 
 Privacy:
@@ -20,6 +23,10 @@ Privacy:
 - GitHub update check reads only the public latest-release metadata
 
 Release files:
+
+- `Weather for City.shortcut`
+- `dist/weather-for-city-1.2.2.zip`
+- `dist/weather-for-city-1.2.2.zip.sha256`
 
 Installation:
 
