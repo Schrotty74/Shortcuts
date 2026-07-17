@@ -14,13 +14,12 @@ result view, and an animated HTML weather card.
 
 ## Installation
 
-1. Open `Weather for City.shortcut`.
+1. Open the [official iCloud shortcut link](https://www.icloud.com/shortcuts/ab7055ef07da4836bc40b12c02204e51).
 2. Import it into Apple Shortcuts.
 3. Run the shortcut and enter a city.
 
 ## Included Files
 
-- `Weather for City.shortcut` - signed importable shortcut file
 - `Weather_for_City.xml` - readable XML source
 - `PRIVACY_REPORT.md` - privacy report
 - `CHECKSUMS.txt` - SHA-256 checksums
@@ -39,6 +38,7 @@ result view, and an animated HTML weather card.
 - responsive layouts for Mac and iPhone
 - German HTML output for `de-AT`, `de-DE`, `de-CH`, `de-LI`
 - English fallback for all other device languages
+- official iCloud installation link for iPhone and Mac
 
 ## Data Sources
 
