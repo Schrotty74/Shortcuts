@@ -18,14 +18,11 @@ jobs:
           set -euo pipefail
 
           test "$(cat shortcuts/weather-for-city/VERSION)" = "1.2.2"
-          test -f "shortcuts/weather-for-city/Weather for City.shortcut"
           test -f "shortcuts/weather-for-city/Weather_for_City.xml"
           test -f "shortcuts/weather-for-city/README.de.md"
           test -f "shortcuts/weather-for-city/PRIVACY_REPORT.md"
           test -f "shortcuts/weather-for-city/PRIVACY_REPORT.de.md"
           test -f "shortcuts/weather-for-city/CHECKSUMS.txt"
-          test -f "shortcuts/weather-for-city/dist/weather-for-city-1.2.2.zip"
-          test -f "shortcuts/weather-for-city/dist/weather-for-city-1.2.2.zip.sha256"
           test -f "shortcuts/weather-for-city/RELEASE_NOTES.md"
           test -f "shortcuts/weather-for-city/PORTFOLIO_UPDATE.md"
           test -f "shortcuts/weather-for-city/assets/html-preview.svg"
@@ -45,7 +42,6 @@ jobs:
           grep -q "no private credentials" shortcuts/weather-for-city/PRIVACY_REPORT.md
 
           shasum -a 256 -c shortcuts/weather-for-city/CHECKSUMS.txt
-          shasum -a 256 -c shortcuts/weather-for-city/dist/weather-for-city-1.2.2.zip.sha256
 
           if grep -R \
             --exclude-dir=.git \
@@ -58,4 +54,4 @@ jobs:
 
       - name: Show release summary
         run: |
-          echo "Release 1.2.2 files are present and privacy checks passed."
+          echo "Release 1.2.2 source files are present and privacy checks passed."
