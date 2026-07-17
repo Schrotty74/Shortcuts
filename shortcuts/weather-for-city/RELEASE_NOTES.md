@@ -21,7 +21,6 @@ Privacy:
 
 Release files:
 
-- `shortcuts/weather-for-city/Weather for City.shortcut`
-- `Weather for City.shortcut`
-- `dist/weather-for-city-1.2.2.zip`
-- `dist/weather-for-city-1.2.2.zip.sha256`
+Installation:
+
+- [Official iCloud shortcut link](https://www.icloud.com/shortcuts/ab7055ef07da4836bc40b12c02204e51)
