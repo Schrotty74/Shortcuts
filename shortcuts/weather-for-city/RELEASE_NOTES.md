@@ -23,4 +23,4 @@ Release files:
 
 Installation:
 
-- [Official iCloud shortcut link](https://www.icloud.com/shortcuts/f746020fdacc40619e893818373050d8)
+- [Official iCloud shortcut link](https://www.icloud.com/shortcuts/d8cf3658a17d4f03b4441f378a5d1a7e)
