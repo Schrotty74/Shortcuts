@@ -85,6 +85,8 @@ Shortcuts/
   aus dem Länder-Code der gefundenen Stadt ausgewählt wird.
 - Version `1.2.1` ergänzt ein Startmenü und eine GitHub-Latest-Release-
   Update-Prüfung.
+- Version `1.2.1` wurde innerhalb derselben Version neu gebaut, damit der große
+  Temperaturwert und die Einheit in der HTML-Wetteransicht einzeilig bleiben.
 - Die signierte `.shortcut`-Datei wird zusätzlich zum ZIP als direktes
   Release-Asset veröffentlicht.
 - GitHub Actions Release-Status-Automatik eingerichtet.

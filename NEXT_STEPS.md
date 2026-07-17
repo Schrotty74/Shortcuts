@@ -9,9 +9,6 @@ Deutsch: [NEXT_STEPS.de.md](NEXT_STEPS.de.md)
 
 ## Priority 1: Open Tasks
 
-- Verify GitHub Actions after the English/bilingual release structure update.
-- Check GitHub Release `v1.2.1`.
-- Test downloading the `Weather for City` ZIP from the shortcut folder.
 - Test importing the published `.shortcut` file from the weather folder.
 
 ## Priority 2: Bugs And Robustness
@@ -19,6 +16,8 @@ Deutsch: [NEXT_STEPS.de.md](NEXT_STEPS.de.md)
 - Check whether spaces in `Weather for City.shortcut` behave cleanly in all
   download contexts.
 - Check whether the ZIP extracts cleanly on iPhone and Mac.
+- Watch the HTML weather view on small Mac/iPhone windows to confirm the large
+  temperature value remains on one line.
 - Add more privacy patterns to the GitHub Action if needed.
 
 ## Priority 3: Planned Improvements

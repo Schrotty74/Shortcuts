@@ -9,9 +9,6 @@ English: [NEXT_STEPS.md](NEXT_STEPS.md)
 
 ## Priorität 1: Offene Aufgaben
 
-- GitHub Actions nach der englisch/zweisprachigen Release-Struktur prüfen.
-- GitHub Release `v1.2.1` kontrollieren.
-- Download des `Weather for City`-ZIP-Pakets aus dem Shortcut-Ordner testen.
 - Import der veröffentlichten `.shortcut`-Datei aus dem Wetter-Ordner testen.
 
 ## Priorität 2: Bugs und Robustheit
@@ -19,6 +16,8 @@ English: [NEXT_STEPS.md](NEXT_STEPS.md)
 - Prüfen, ob Leerzeichen im Dateinamen `Weather for City.shortcut` in allen
   Download-Kontexten sauber funktionieren.
 - Prüfen, ob das ZIP auf iPhone und Mac problemlos entpackt werden kann.
+- Die HTML-Wetteransicht auf kleinen Mac-/iPhone-Fenstern beobachten, damit der
+  große Temperaturwert dauerhaft einzeilig bleibt.
 - Bei Bedarf zusätzliche Datenschutzmuster in der GitHub Action ergänzen.
 
 ## Priorität 3: Geplante Verbesserungen

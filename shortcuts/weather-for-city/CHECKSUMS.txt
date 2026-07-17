@@ -1,2 +1,2 @@
-16e6b42bf2b99bce47b8a3f8d8e2f828491d50db5d4893fcf354c8e7700a14e0  shortcuts/weather-for-city/Weather for City.shortcut
-81373983adb771824d65ed6d32de2faa15ce7f7988155018780d5970f3a57201  shortcuts/weather-for-city/Weather_for_City.xml
+8256f10d5b3523629402047a621808c8efa2b5dacaf300d6f6cd583a03689db7  shortcuts/weather-for-city/Weather for City.shortcut
+5d4fe718ee9c5f425796669aa46251ca9567fa81d1198a272dcd29239cedbcce  shortcuts/weather-for-city/Weather_for_City.xml

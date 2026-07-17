@@ -80,6 +80,8 @@ Shortcuts/
 - Version `1.1` fixes temperature units by selecting Celsius or Fahrenheit from
   the found city's country code.
 - Version `1.2.1` adds a start menu and a GitHub latest-release update check.
+- Version `1.2.1` was rebuilt in place to keep the large temperature value and
+  unit on one line in the HTML weather view.
 - The signed `.shortcut` is published as a direct release asset in addition to
   the ZIP package.
 - GitHub Actions release status automation configured.
