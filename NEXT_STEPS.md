@@ -27,8 +27,8 @@ Deutsch: [NEXT_STEPS.de.md](NEXT_STEPS.de.md)
 - Use the same minimum structure for new shortcuts:
   `VERSION`, `README.md`, `CHANGELOG.md`, `RELEASE_NOTES.md`,
   `PRIVACY_REPORT.md`, `CHECKSUMS.txt`, `dist/`.
-- Optionally add one screenshot or demo GIF per shortcut, as long as no private
-  content is visible.
+- Add one compact preview image per shortcut and show it on the repository
+  start page, as long as no private content is visible.
 - Optionally automate ZIP creation in GitHub Actions from each shortcut folder.
 
 ## Ideas For Future Development

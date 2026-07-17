@@ -38,6 +38,8 @@ jobs:
           grep -q "Version: \`1.0\`" shortcuts/weather-for-city/README.md
           grep -q "Deutsch: \\[README.de.md\\]" shortcuts/weather-for-city/README.md
           grep -q "English: \\[README.md\\]" shortcuts/weather-for-city/README.de.md
+          grep -q "assets/html-preview.svg" README.md
+          grep -q "assets/html-preview.svg" README.de.md
           grep -q "no private credentials" shortcuts/weather-for-city/PRIVACY_REPORT.md
 
           shasum -a 256 -c shortcuts/weather-for-city/CHECKSUMS.txt

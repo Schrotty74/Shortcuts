@@ -13,9 +13,9 @@ sauber getrennt veröffentlicht werden können.
 
 ## Verfügbare Kurzbefehle
 
-| Kurzbefehl | Version | Ordner | Release |
-| --- | --- | --- | --- |
-| Weather for City | 1.0 | [`shortcuts/weather-for-city`](shortcuts/weather-for-city/) | [`v1.0`](https://github.com/Schrotty74/Shortcuts/releases/tag/v1.0), [`ZIP`](shortcuts/weather-for-city/dist/weather-for-city-1.0.zip) |
+| Vorschau | Kurzbefehl | Version | Ordner | Release |
+| --- | --- | --- | --- | --- |
+| <img src="shortcuts/weather-for-city/assets/html-preview.svg" alt="Weather for City HTML-Vorschau" width="180"> | Weather for City | 1.0 | [`shortcuts/weather-for-city`](shortcuts/weather-for-city/) | [`v1.0`](https://github.com/Schrotty74/Shortcuts/releases/tag/v1.0), [`ZIP`](shortcuts/weather-for-city/dist/weather-for-city-1.0.zip) |
 
 ## Struktur
 

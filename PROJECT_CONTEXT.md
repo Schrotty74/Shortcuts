@@ -22,6 +22,8 @@ The first published shortcut is `Weather for City` version `1.0`.
 - English is the primary repository language. German documentation is provided
   as `.de.md` files and cross-linked from the English files.
 - Changelog and release notes are always written in English.
+- Every public shortcut should include a compact visual preview in its shortcut
+  folder and show that preview on the repository start page.
 - Current shortcut folder: `shortcuts/weather-for-city/`
 - The ZIP for `Weather for City` lives at:
   `shortcuts/weather-for-city/dist/weather-for-city-1.0.zip`
@@ -73,6 +75,8 @@ Shortcuts/
   privacy report, assets, and ZIP are stored in `shortcuts/weather-for-city/`.
 - Compact HTML preview image added at
   `shortcuts/weather-for-city/assets/html-preview.svg`.
+- The repository start page shows the compact preview next to the shortcut
+  entry so visitors immediately see what the shortcut looks like.
 - GitHub Actions release status automation configured.
 - GitHub Release `v1.0` created with ZIP and SHA-256 file.
 
@@ -85,6 +89,7 @@ Shortcuts/
 - Local work archives, screenshots, `.DS_Store`, and private local files are
   not published.
 - The shortcut name is always English in public files: `Weather for City`.
+- Start-page shortcut entries include a small preview image, not just text.
 
 ## Known Limitations Or Problems
 

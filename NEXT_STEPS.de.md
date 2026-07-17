@@ -27,8 +27,8 @@ English: [NEXT_STEPS.md](NEXT_STEPS.md)
 - Für neue Shortcuts dieselbe Mindeststruktur verwenden:
   `VERSION`, `README.md`, `CHANGELOG.md`, `RELEASE_NOTES.md`,
   `PRIVACY_REPORT.md`, `CHECKSUMS.txt`, `dist/`.
-- Optional pro Shortcut einen Screenshot oder eine Demo-GIF ergänzen, sofern
-  keine privaten Inhalte sichtbar sind.
+- Pro Shortcut ein kompaktes Vorschaubild ergänzen und auf der
+  Repository-Startseite anzeigen, sofern keine privaten Inhalte sichtbar sind.
 - Optional automatische ZIP-Erstellung in GitHub Actions aus den jeweiligen
   Shortcut-Ordnern einrichten.
 

@@ -23,6 +23,9 @@ Der erste veröffentlichte Kurzbefehl ist `Weather for City` in Version `1.0`.
 - Englisch ist die Hauptsprache des Repositorys. Deutsche Dokumentation liegt
   als `.de.md` vor und ist gegenseitig verlinkt.
 - Changelog und Release Notes bleiben immer Englisch.
+- Jeder öffentliche Shortcut soll ein kompaktes Vorschaubild im eigenen
+  Shortcut-Ordner enthalten und dieses Bild auf der Repository-Startseite
+  anzeigen.
 - Aktueller Shortcut-Ordner: `shortcuts/weather-for-city/`
 - Das ZIP für `Weather for City` liegt unter:
   `shortcuts/weather-for-city/dist/weather-for-city-1.0.zip`
@@ -76,6 +79,8 @@ Shortcuts/
   einsortiert.
 - Kompaktes HTML-Vorschaubild ergänzt unter
   `shortcuts/weather-for-city/assets/html-preview.svg`.
+- Die Repository-Startseite zeigt das kompakte Vorschaubild direkt neben dem
+  Shortcut-Eintrag, damit Besucher sofort sehen, wie der Shortcut aussieht.
 - GitHub Actions Release-Status-Automatik eingerichtet.
 - GitHub Release `v1.0` mit ZIP und SHA-256-Datei erstellt.
 
@@ -87,6 +92,8 @@ Shortcuts/
 - Nicht veröffentlicht werden lokale Arbeitsarchive, Screenshots, `.DS_Store`
   oder private lokale Projektdateien aus dem ursprünglichen Arbeitsordner.
 - Der öffentliche Shortcut-Name bleibt immer Englisch: `Weather for City`.
+- Shortcut-Einträge auf der Startseite enthalten ein kleines Vorschaubild,
+  nicht nur Text.
 
 ## Bekannte Einschränkungen oder Probleme
 
