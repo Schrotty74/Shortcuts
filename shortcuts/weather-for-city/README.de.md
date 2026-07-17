@@ -1,6 +1,6 @@
 # Weather for City
 
-Version: `1.1`
+Version: `1.2`
 
 English: [README.md](README.md)
 
@@ -35,6 +35,7 @@ animierte HTML-Wetterkarte.
 - Wetterbild passend zum Wettercode
 - dynamische Temperaturfarbe von `-15 °C` bis `+50 °C`
 - Fahrenheit-Anzeige für USA, Bahamas, Cayman Islands, Liberia und Myanmar
+- eingebaute Update-Prüfung gegen den neuesten GitHub Release
 - responsive Layouts für Mac und iPhone
 - deutsche HTML-Ausgabe für `de-AT`, `de-DE`, `de-CH`, `de-LI`
 - englischer Fallback für andere Gerätesprachen

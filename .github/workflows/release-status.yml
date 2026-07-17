@@ -17,15 +17,15 @@ jobs:
         run: |
           set -euo pipefail
 
-          test "$(cat shortcuts/weather-for-city/VERSION)" = "1.1"
+          test "$(cat shortcuts/weather-for-city/VERSION)" = "1.2"
           test -f "shortcuts/weather-for-city/Weather for City.shortcut"
           test -f "shortcuts/weather-for-city/Weather_for_City.xml"
           test -f "shortcuts/weather-for-city/README.de.md"
           test -f "shortcuts/weather-for-city/PRIVACY_REPORT.md"
           test -f "shortcuts/weather-for-city/PRIVACY_REPORT.de.md"
           test -f "shortcuts/weather-for-city/CHECKSUMS.txt"
-          test -f "shortcuts/weather-for-city/dist/weather-for-city-1.1.zip"
-          test -f "shortcuts/weather-for-city/dist/weather-for-city-1.1.zip.sha256"
+          test -f "shortcuts/weather-for-city/dist/weather-for-city-1.2.zip"
+          test -f "shortcuts/weather-for-city/dist/weather-for-city-1.2.zip.sha256"
           test -f "shortcuts/weather-for-city/RELEASE_NOTES.md"
           test -f "shortcuts/weather-for-city/PORTFOLIO_UPDATE.md"
           test -f "shortcuts/weather-for-city/assets/html-preview.svg"
@@ -35,8 +35,9 @@ jobs:
           test -f "NEXT_STEPS.de.md"
           test -f "README.de.md"
 
-          grep -q "Version: \`1.1\`" shortcuts/weather-for-city/README.md
+          grep -q "Version: \`1.2\`" shortcuts/weather-for-city/README.md
           grep -q "Fahrenheit" shortcuts/weather-for-city/README.md
+          grep -q "update check" shortcuts/weather-for-city/README.md
           grep -q "Deutsch: \\[README.de.md\\]" shortcuts/weather-for-city/README.md
           grep -q "English: \\[README.md\\]" shortcuts/weather-for-city/README.de.md
           grep -q "assets/html-preview.svg" README.md
@@ -44,7 +45,7 @@ jobs:
           grep -q "no private credentials" shortcuts/weather-for-city/PRIVACY_REPORT.md
 
           shasum -a 256 -c shortcuts/weather-for-city/CHECKSUMS.txt
-          shasum -a 256 -c shortcuts/weather-for-city/dist/weather-for-city-1.1.zip.sha256
+          shasum -a 256 -c shortcuts/weather-for-city/dist/weather-for-city-1.2.zip.sha256
 
           if grep -R \
             --exclude-dir=.git \
@@ -57,4 +58,4 @@ jobs:
 
       - name: Show release summary
         run: |
-          echo "Release 1.1 files are present and privacy checks passed."
+          echo "Release 1.2 files are present and privacy checks passed."

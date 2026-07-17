@@ -1,6 +1,6 @@
 # Weather for City
 
-Version: `1.1`
+Version: `1.2`
 
 Deutsch: [README.de.md](README.de.md)
 
@@ -35,6 +35,7 @@ result view, and an animated HTML weather card.
 - weather scene based on the weather code
 - dynamic temperature color from `-15 °C` to `+50 °C`
 - Fahrenheit display for US, Bahamas, Cayman Islands, Liberia, and Myanmar
+- built-in update check against the latest GitHub release
 - responsive layouts for Mac and iPhone
 - German HTML output for `de-AT`, `de-DE`, `de-CH`, `de-LI`
 - English fallback for all other device languages

@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.2 - 2026-07-17
+
+Feature release.
+
+- Adds a start menu with `Get Weather` and `Check for Update`.
+- Checks the latest public GitHub release through the GitHub Releases API.
+- Opens the latest release page when a newer version is available.
+- Documents that Apple Shortcuts still requires user confirmation to import or
+  replace a shortcut.
+- Publishes the signed `.shortcut` file as a direct release asset in addition to
+  the ZIP package.
+
 ## 1.1 - 2026-07-17
 
 Bugfix release.

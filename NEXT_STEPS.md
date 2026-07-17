@@ -10,7 +10,7 @@ Deutsch: [NEXT_STEPS.de.md](NEXT_STEPS.de.md)
 ## Priority 1: Open Tasks
 
 - Verify GitHub Actions after the English/bilingual release structure update.
-- Check GitHub Release `v1.1`.
+- Check GitHub Release `v1.2`.
 - Test downloading the `Weather for City` ZIP from the shortcut folder.
 - Test importing the published `.shortcut` file from the weather folder.
 

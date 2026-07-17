@@ -1,6 +1,6 @@
 # Datenschutzbericht: Weather for City
 
-Version: `1.1`
+Version: `1.2`
 
 Stand: 2026-07-17
 
@@ -20,6 +20,7 @@ Der Kurzbefehl verarbeitet:
 - aktuelle Wetterdaten von Open-Meteo
 - den Länder-Code der gefundenen Stadt, um Celsius oder Fahrenheit auszuwählen
 - die Sprache/Locale der HTML-Webansicht, um Deutsch oder Englisch anzuzeigen
+- öffentliche GitHub-Latest-Release-Metadaten, wenn der Nutzer `Check for Update` auswählt
 
 ## Welche Daten werden an externe Dienste gesendet?
 
@@ -33,6 +34,7 @@ Koordinaten gesendet:
 
 - Open-Meteo Geocoding API
 - Open-Meteo Forecast API
+- GitHub Releases API für Update-Prüfungen
 
 ## Was ist nicht enthalten?
 

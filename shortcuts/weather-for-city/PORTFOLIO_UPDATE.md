@@ -24,5 +24,5 @@ checksums, and automated release status check.
 ## Links
 
 - Repository: https://github.com/Schrotty74/Shortcuts
-- Release ZIP: `dist/weather-for-city-1.1.zip`
+- Release ZIP: `dist/weather-for-city-1.2.zip`
 - Privacy report: `shortcuts/weather-for-city/PRIVACY_REPORT.md`

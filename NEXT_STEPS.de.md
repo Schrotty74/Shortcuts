@@ -10,7 +10,7 @@ English: [NEXT_STEPS.md](NEXT_STEPS.md)
 ## Priorität 1: Offene Aufgaben
 
 - GitHub Actions nach der englisch/zweisprachigen Release-Struktur prüfen.
-- GitHub Release `v1.1` kontrollieren.
+- GitHub Release `v1.2` kontrollieren.
 - Download des `Weather for City`-ZIP-Pakets aus dem Shortcut-Ordner testen.
 - Import der veröffentlichten `.shortcut`-Datei aus dem Wetter-Ordner testen.
 

@@ -1,6 +1,6 @@
 # Privacy Report: Weather for City
 
-Version: `1.1`
+Version: `1.2`
 
 Updated: 2026-07-17
 
@@ -20,6 +20,7 @@ The shortcut processes:
 - current weather data from Open-Meteo
 - the country code of the found city to select Celsius or Fahrenheit
 - the language/locale of the HTML web view to display German or English
+- public GitHub latest-release metadata when the user chooses `Check for Update`
 
 ## What Data Is Sent To External Services?
 
@@ -32,6 +33,7 @@ Open-Meteo receives the entered city or coordinates derived from it:
 
 - Open-Meteo Geocoding API
 - Open-Meteo Forecast API
+- GitHub Releases API for update checks
 
 ## What Is Not Included?
 

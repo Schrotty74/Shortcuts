@@ -13,7 +13,7 @@ Dieses Repository stellt öffentliche Apple-Kurzbefehle bereit. Es ist als
 Sammlung angelegt: Jeder Kurzbefehl lebt vollständig in einem eigenen Ordner
 unter `shortcuts/`.
 
-Der erste veröffentlichte Kurzbefehl ist `Weather for City` in Version `1.1`.
+Der erste veröffentlichte Kurzbefehl ist `Weather for City` in Version `1.2`.
 
 ## Architektur und technische Entscheidungen
 
@@ -28,7 +28,7 @@ Der erste veröffentlichte Kurzbefehl ist `Weather for City` in Version `1.1`.
   anzeigen.
 - Aktueller Shortcut-Ordner: `shortcuts/weather-for-city/`
 - Das ZIP für `Weather for City` liegt unter:
-  `shortcuts/weather-for-city/dist/weather-for-city-1.1.zip`
+  `shortcuts/weather-for-city/dist/weather-for-city-1.2.zip`
 - GitHub Actions prüft die erwartete Ordnerstruktur, Prüfsummen und einfache
   Datenschutzindikatoren.
 - Der Wetter-Kurzbefehl nutzt öffentliche Open-Meteo-APIs und benötigt keinen
@@ -64,15 +64,15 @@ Shortcuts/
         |   |-- html-preview.svg
         |   `-- social-preview.svg
         `-- dist/
-            |-- weather-for-city-1.1.zip
-            `-- weather-for-city-1.1.zip.sha256
+            |-- weather-for-city-1.2.zip
+            `-- weather-for-city-1.2.zip.sha256
 ```
 
 ## Umgesetzte Funktionen
 
 - Öffentliches Repository für Shortcuts eingerichtet.
 - Sammlungsstruktur eingeführt: jeder Shortcut in eigenem Unterordner.
-- `Weather for City` Version `1.1` bereitgestellt.
+- `Weather for City` Version `1.2` bereitgestellt.
 - Signierte `.shortcut`-Datei und XML-Quelle veröffentlicht.
 - Wetter-spezifische Version, Changelog, Release Notes, Portfolio-Update,
   Datenschutzbericht, Assets und ZIP in `shortcuts/weather-for-city/`
@@ -83,8 +83,13 @@ Shortcuts/
   Shortcut-Eintrag, damit Besucher sofort sehen, wie der Shortcut aussieht.
 - Version `1.1` behebt die Temperatureinheit, indem Celsius oder Fahrenheit
   aus dem Länder-Code der gefundenen Stadt ausgewählt wird.
+- Version `1.2` ergänzt ein Startmenü und eine GitHub-Latest-Release-
+  Update-Prüfung.
+- Die signierte `.shortcut`-Datei wird zusätzlich zum ZIP als direktes
+  Release-Asset veröffentlicht.
 - GitHub Actions Release-Status-Automatik eingerichtet.
-- GitHub Release `v1.1` mit ZIP und SHA-256-Datei erstellt.
+- GitHub Release `v1.2` mit ZIP, direktem Shortcut-Asset und SHA-256-Datei
+  erstellt.
 
 ## Wichtige Designentscheidungen
 
@@ -96,6 +101,8 @@ Shortcuts/
 - Der öffentliche Shortcut-Name bleibt immer Englisch: `Weather for City`.
 - Shortcut-Einträge auf der Startseite enthalten ein kleines Vorschaubild,
   nicht nur Text.
+- Update-Prüfungen können den neuesten GitHub Release öffnen, aber Apple
+  verlangt weiterhin eine Nutzerbestätigung beim Importieren oder Ersetzen.
 
 ## Bekannte Einschränkungen oder Probleme
 
@@ -103,7 +110,7 @@ Shortcuts/
   manuelles Datenschutzreview.
 - Der Wetter-Kurzbefehl sendet den eingegebenen Stadtnamen und Koordinaten an
   Open-Meteo, wie im Datenschutzbericht beschrieben.
-- GitHub Release `v1.1` bleibt ein Release für den Wetter-Kurzbefehl, auch wenn
+- GitHub Release `v1.2` bleibt ein Release für den Wetter-Kurzbefehl, auch wenn
   das Repository künftig weitere Shortcuts enthält.
 
 ## Pflegehinweis
