@@ -14,7 +14,7 @@ animierte HTML-Wetterkarte.
 
 ## Installation
 
-1. Den [offiziellen iCloud-Kurzbefehl-Link](https://www.icloud.com/shortcuts/ab7055ef07da4836bc40b12c02204e51) öffnen.
+1. Den [offiziellen iCloud-Kurzbefehl-Link](https://www.icloud.com/shortcuts/f746020fdacc40619e893818373050d8) öffnen.
 2. In Apple Kurzbefehle importieren.
 3. Den Kurzbefehl starten und eine Stadt eingeben.
 
