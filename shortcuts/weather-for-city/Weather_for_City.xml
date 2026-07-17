@@ -104,7 +104,7 @@ The update check reads the latest public GitHub release from Schrotty74/Shortcut
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>WFAskActionPrompt</key>
-				<string>Which city would you like weather for?</string>
+				<string>Für welche Stadt möchtest du das Wetter abrufen?</string>
 				<key>WFInputType</key>
 				<string>Text</string>
 				<key>UUID</key>
