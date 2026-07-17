@@ -1,8 +1,10 @@
-# Datenschutzbericht: Wetter für Stadt
+# Datenschutzbericht: Weather for City
 
 Version: `1.0`
 
 Stand: 2026-07-17
+
+English: [PRIVACY_REPORT.md](PRIVACY_REPORT.md)
 
 ## Ergebnis
 
@@ -48,8 +50,8 @@ Nicht enthalten sind:
 
 Veröffentlicht werden nur die Dateien im öffentlichen Projektordner:
 
-- `Wetter für Stadt.shortcut`
-- `Wetter_fuer_Stadt.xml`
+- `Weather for City.shortcut`
+- `Weather_for_City.xml`
 - Projektdokumentation
 - Datenschutzbericht
 - Prüfsummen

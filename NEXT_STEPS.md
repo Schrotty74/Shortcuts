@@ -1,43 +1,44 @@
-# Nächste Schritte: Shortcuts
+# Next Steps: Shortcuts
 
-Stand: 2026-07-17
+Updated: 2026-07-17
 
 Repository:
 `https://github.com/Schrotty74/Shortcuts`
 
-## Priorität 1: Offene Aufgaben
+Deutsch: [NEXT_STEPS.de.md](NEXT_STEPS.de.md)
 
-- GitHub Actions nach der Strukturänderung prüfen.
-- GitHub Release `v1.0` kontrollieren.
-- Download des Wetter-ZIP-Pakets aus dem neuen Unterordner testen.
-- Import der veröffentlichten `.shortcut`-Datei aus dem Wetter-Ordner testen.
+## Priority 1: Open Tasks
 
-## Priorität 2: Bugs und Robustheit
+- Verify GitHub Actions after the English/bilingual release structure update.
+- Check GitHub Release `v1.0`.
+- Test downloading the `Weather for City` ZIP from the shortcut folder.
+- Test importing the published `.shortcut` file from the weather folder.
 
-- Prüfen, ob Sonderzeichen im Dateinamen `Wetter für Stadt.shortcut` in allen
-  Download-Kontexten sauber funktionieren.
-- Prüfen, ob das ZIP auf iPhone und Mac problemlos entpackt werden kann.
-- Bei Bedarf zusätzliche Datenschutzmuster in der GitHub Action ergänzen.
+## Priority 2: Bugs And Robustness
 
-## Priorität 3: Geplante Verbesserungen
+- Check whether spaces in `Weather for City.shortcut` behave cleanly in all
+  download contexts.
+- Check whether the ZIP extracts cleanly on iPhone and Mac.
+- Add more privacy patterns to the GitHub Action if needed.
 
-- Weitere Shortcuts jeweils in eigenem Ordner unter `shortcuts/` veröffentlichen.
-- Für neue Shortcuts dieselbe Mindeststruktur verwenden:
+## Priority 3: Planned Improvements
+
+- Publish additional shortcuts in their own folders below `shortcuts/`.
+- Use the same minimum structure for new shortcuts:
   `VERSION`, `README.md`, `CHANGELOG.md`, `RELEASE_NOTES.md`,
   `PRIVACY_REPORT.md`, `CHECKSUMS.txt`, `dist/`.
-- Optional pro Shortcut einen Screenshot oder eine Demo-GIF ergänzen, sofern
-  keine privaten Inhalte sichtbar sind.
-- Optional automatische ZIP-Erstellung in GitHub Actions aus den jeweiligen
-  Shortcut-Ordnern einrichten.
+- Optionally add one screenshot or demo GIF per shortcut, as long as no private
+  content is visible.
+- Optionally automate ZIP creation in GitHub Actions from each shortcut folder.
 
-## Ideen für zukünftige Entwicklungen
+## Ideas For Future Development
 
-- Shortcut-Katalog im Root-README mit Kategorien.
-- Badges für neueste Version je Shortcut.
-- Ein gemeinsames Datenschutztemplate für neue Shortcuts.
-- Automatisierte Prüfung auf `.DS_Store`, lokale Pfade und alte Archivdateien.
+- Shortcut catalog in the root README with categories.
+- Latest-version badges per shortcut.
+- Shared privacy template for new shortcuts.
+- Automated checks for `.DS_Store`, local paths, and old archive files.
 
-## Pflegehinweis
+## Maintenance Note
 
-Diese Datei bei größeren Änderungen, neuen Shortcuts, neuen Releases oder
-wichtigen Entscheidungen gemeinsam mit `PROJECT_CONTEXT.md` aktualisieren.
+Update this file together with `PROJECT_CONTEXT.md` for larger changes, new
+shortcuts, new releases, or important decisions.

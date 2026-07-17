@@ -1,8 +1,10 @@
-# Wetter für Stadt
+# Weather for City
 
 Version: `1.0`
 
-`Wetter für Stadt` ist ein Apple-Kurzbefehl für Mac und iPhone.
+English: [README.md](README.md)
+
+`Weather for City` ist ein Apple-Kurzbefehl für Mac und iPhone.
 
 Der Kurzbefehl fragt nach einer Stadt, sucht den passenden Ort über Open-Meteo,
 ruft aktuelle Wetterdaten ab und zeigt sie als Mitteilung, Ergebnisansicht und
@@ -10,15 +12,15 @@ animierte HTML-Wetterkarte.
 
 ## Installation
 
-1. Datei `Wetter für Stadt.shortcut` öffnen.
+1. Datei `Weather for City.shortcut` öffnen.
 2. In Apple Kurzbefehle importieren.
 3. Den Kurzbefehl starten und eine Stadt eingeben.
 
 ## Enthaltene Dateien
 
-- `Wetter für Stadt.shortcut` - signierte, importierbare Shortcut-Datei
-- `Wetter_fuer_Stadt.xml` - lesbare XML-Quelle
-- `PRIVACY_REPORT.md` - Datenschutzbericht
+- `Weather for City.shortcut` - signierte, importierbare Shortcut-Datei
+- `Weather_for_City.xml` - lesbare XML-Quelle
+- `PRIVACY_REPORT.de.md` - Datenschutzbericht
 - `CHECKSUMS.txt` - SHA-256-Prüfsummen
 
 ## Funktionen

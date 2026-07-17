@@ -727,7 +727,7 @@ ALLOW_MANUAL_UNIT_CONVERSION: Die API liefert die Temperatur bereits in Grad Cel
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>WFCommentActionText</key>
-				<string>Zeigt eine groessere Textansicht und danach eine gestaltete HTML-Wetterkarte an.</string>
+				<string>Shows a larger text result and then a styled HTML weather card.</string>
 			</dict>
 		</dict>
 		<dict>
@@ -741,7 +741,7 @@ ALLOW_MANUAL_UNIT_CONVERSION: Die API liefert die Temperatur bereits in Grad Cel
 					<dict>
 						<key>attachmentsByRange</key>
 						<dict>
-							<key>{14, 1}</key>
+							<key>{15, 1}</key>
 							<dict>
 								<key>OutputName</key>
 								<string>Gefundene Stadt</string>
@@ -750,7 +750,7 @@ ALLOW_MANUAL_UNIT_CONVERSION: Die API liefert die Temperatur bereits in Grad Cel
 								<key>Type</key>
 								<string>ActionOutput</string>
 							</dict>
-							<key>{17, 1}</key>
+							<key>{18, 1}</key>
 							<dict>
 								<key>OutputName</key>
 								<string>Wettertext</string>
@@ -759,7 +759,7 @@ ALLOW_MANUAL_UNIT_CONVERSION: Die API liefert die Temperatur bereits in Grad Cel
 								<key>Type</key>
 								<string>ActionOutput</string>
 							</dict>
-							<key>{31, 1}</key>
+							<key>{33, 1}</key>
 							<dict>
 								<key>OutputName</key>
 								<string>Temperatur</string>
@@ -770,10 +770,10 @@ ALLOW_MANUAL_UNIT_CONVERSION: Die API liefert die Temperatur bereits in Grad Cel
 							</dict>
 						</dict>
 						<key>string</key>
-						<string>☀️ Wetter für ￼
+						<string>☀️ Weather for ￼
 
 ￼
-Temperatur: ￼ °C</string>
+Temperature: ￼ °C</string>
 					</dict>
 					<key>WFSerializationType</key>
 					<string>WFTextTokenString</string>
@@ -913,7 +913,7 @@ Temperatur: ￼ °C</string>
 	<key>WFWorkflowMinimumClientVersionString</key>
 	<string>900</string>
 	<key>WFWorkflowName</key>
-	<string>Wetter für Stadt</string>
+	<string>Weather for City</string>
 	<key>WFWorkflowOutputContentItemClasses</key>
 	<array/>
 	<key>WFWorkflowTypes</key>

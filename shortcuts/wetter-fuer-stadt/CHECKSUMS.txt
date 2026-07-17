@@ -1,2 +1,0 @@
-23b742614cb63c22ff71920ce84fa002fd1b238485f1b40f5f393a31bd7a64ae  shortcuts/wetter-fuer-stadt/Wetter für Stadt.shortcut
-4ed22a247322c0f21128af7c11e0ae723545d679eb0f9ee82f60fa260bd556f9  shortcuts/wetter-fuer-stadt/Wetter_fuer_Stadt.xml

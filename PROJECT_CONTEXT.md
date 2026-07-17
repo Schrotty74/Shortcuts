@@ -1,90 +1,99 @@
-# Projektkontext: Shortcuts
+# Project Context: Shortcuts
 
-Stand: 2026-07-17
+Updated: 2026-07-17
 
 Repository:
 `https://github.com/Schrotty74/Shortcuts`
 
-## Projektziel und Zweck
+Deutsch: [PROJECT_CONTEXT.de.md](PROJECT_CONTEXT.de.md)
 
-Dieses Repository stellt öffentliche Apple-Kurzbefehle bereit. Es ist als
-Sammlung angelegt: Jeder Kurzbefehl lebt vollständig in einem eigenen Ordner
-unter `shortcuts/`.
+## Goal And Purpose
 
-Der erste veröffentlichte Kurzbefehl ist `Wetter für Stadt` in Version `1.0`.
+This repository publishes public Apple Shortcuts. It is structured as a
+collection: each shortcut lives fully inside its own folder below `shortcuts/`.
 
-## Architektur und technische Entscheidungen
+The first published shortcut is `Weather for City` version `1.0`.
 
-- Root-Dateien beschreiben nur die Sammlung.
-- Jeder Shortcut hat einen eigenen Ordner mit Version, README, Changelog,
-  Release Notes, Datenschutzbericht, Prüfsummen, Assets und ZIP.
-- Aktueller Shortcut-Ordner:
-  `shortcuts/wetter-fuer-stadt/`
-- Das ZIP für `Wetter für Stadt` liegt unter:
-  `shortcuts/wetter-fuer-stadt/dist/wetter-fuer-stadt-1.0.zip`
-- GitHub Actions prüft die erwartete Ordnerstruktur, Prüfsummen und einfache
-  Datenschutzindikatoren.
-- Der Wetter-Kurzbefehl nutzt öffentliche Open-Meteo-APIs und benötigt keinen
-  API-Schlüssel.
+## Architecture And Technical Decisions
 
-## Dateistruktur
+- Root files describe the collection only.
+- Each shortcut has its own folder with version, README files, changelog,
+  release notes, privacy reports, checksums, assets, and ZIP files.
+- English is the primary repository language. German documentation is provided
+  as `.de.md` files and cross-linked from the English files.
+- Changelog and release notes are always written in English.
+- Current shortcut folder: `shortcuts/weather-for-city/`
+- The ZIP for `Weather for City` lives at:
+  `shortcuts/weather-for-city/dist/weather-for-city-1.0.zip`
+- GitHub Actions checks the expected folder structure, checksums, and basic
+  privacy indicators.
+- The weather shortcut uses public Open-Meteo APIs and requires no API key.
+
+## File Structure
 
 ```text
 Shortcuts/
 |-- .github/workflows/release-status.yml
 |-- LICENSE
 |-- NEXT_STEPS.md
+|-- NEXT_STEPS.de.md
 |-- PROJECT_CONTEXT.md
+|-- PROJECT_CONTEXT.de.md
 |-- README.md
+|-- README.de.md
 `-- shortcuts/
-    `-- wetter-fuer-stadt/
+    `-- weather-for-city/
         |-- CHANGELOG.md
         |-- CHECKSUMS.txt
         |-- PORTFOLIO_UPDATE.md
+        |-- PORTFOLIO_UPDATE.de.md
         |-- PRIVACY_REPORT.md
+        |-- PRIVACY_REPORT.de.md
         |-- README.md
+        |-- README.de.md
         |-- RELEASE_NOTES.md
         |-- VERSION
-        |-- Wetter für Stadt.shortcut
-        |-- Wetter_fuer_Stadt.xml
+        |-- Weather for City.shortcut
+        |-- Weather_for_City.xml
         |-- assets/
         |   `-- social-preview.svg
         `-- dist/
-            |-- wetter-fuer-stadt-1.0.zip
-            `-- wetter-fuer-stadt-1.0.zip.sha256
+            |-- weather-for-city-1.0.zip
+            `-- weather-for-city-1.0.zip.sha256
 ```
 
-## Umgesetzte Funktionen
+## Implemented Features
 
-- Öffentliches Repository für Shortcuts eingerichtet.
-- Sammlung-Struktur eingeführt: jeder Shortcut in eigenem Unterordner.
-- `Wetter für Stadt` Version `1.0` bereitgestellt.
-- Signierte `.shortcut`-Datei und XML-Quelle veröffentlicht.
-- Wetter-spezifische Version, Changelog, Release Notes, Portfolio-Update,
-  Datenschutzbericht, Assets und ZIP in `shortcuts/wetter-fuer-stadt/`
-  einsortiert.
-- GitHub Actions Release-Status-Automatik eingerichtet.
-- GitHub Release `v1.0` mit ZIP und SHA-256-Datei erstellt.
+- Public Shortcuts repository created.
+- Collection structure introduced: each shortcut lives in its own folder.
+- `Weather for City` version `1.0` published.
+- Signed `.shortcut` file and XML source published.
+- Shortcut-specific version file, changelog, release notes, portfolio update,
+  privacy report, assets, and ZIP are stored in `shortcuts/weather-for-city/`.
+- GitHub Actions release status automation configured.
+- GitHub Release `v1.0` created with ZIP and SHA-256 file.
 
-## Wichtige Designentscheidungen
+## Important Design Decisions
 
-- Keine Shortcut-spezifischen Release-Dateien im Repository-Root.
-- Root bleibt für Sammlung, Lizenz, Projektkontext und nächste Schritte.
-- Datenschutzbericht ist pro Shortcut Pflichtbestandteil.
-- Nicht veröffentlicht werden lokale Arbeitsarchive, Screenshots, `.DS_Store`
-  oder private lokale Projektdateien aus dem ursprünglichen Arbeitsordner.
+- No shortcut-specific release files in the repository root.
+- The root stays reserved for the collection, license, project context, and
+  next steps.
+- Each shortcut must include its own privacy report.
+- Local work archives, screenshots, `.DS_Store`, and private local files are
+  not published.
+- The shortcut name is always English in public files: `Weather for City`.
 
-## Bekannte Einschränkungen oder Probleme
+## Known Limitations Or Problems
 
-- Die Release-Status-Automatik ist eine statische Prüfung und ersetzt kein
-  manuelles Datenschutzreview.
-- Der Wetter-Kurzbefehl sendet den eingegebenen Stadtnamen und Koordinaten an
-  Open-Meteo, wie im Datenschutzbericht beschrieben.
-- GitHub Release `v1.0` bleibt ein Release für den Wetter-Kurzbefehl, auch wenn
-  das Repository künftig weitere Shortcuts enthält.
+- The release status automation is a static check and does not replace a manual
+  privacy review.
+- The weather shortcut sends the entered city name and derived coordinates to
+  Open-Meteo, as described in the privacy report.
+- GitHub Release `v1.0` remains the weather shortcut release even when the
+  repository contains more shortcuts later.
 
-## Pflegehinweis
+## Maintenance Note
 
-Bei größeren Änderungen, neuen Shortcuts, neuen Releases oder wichtigen
-Entscheidungen müssen `PROJECT_CONTEXT.md` und `NEXT_STEPS.md` aktualisiert
-werden.
+For larger changes, new shortcuts, new releases, or important decisions,
+update `PROJECT_CONTEXT.md` and `NEXT_STEPS.md` before considering the task
+complete.

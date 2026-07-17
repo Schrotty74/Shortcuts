@@ -2,20 +2,22 @@
 
 [![Release Status](https://github.com/Schrotty74/Shortcuts/actions/workflows/release-status.yml/badge.svg)](https://github.com/Schrotty74/Shortcuts/actions/workflows/release-status.yml)
 
-Public Apple Shortcuts with clear releases, privacy notes, and reproducible files.
+English: [README.md](README.md)
 
-Deutsch: [README.de.md](README.de.md)
+Öffentliche Apple-Kurzbefehle mit klaren Releases, Datenschutzberichten und
+nachvollziehbaren Dateien.
 
-This repository is a collection. Each shortcut lives completely in its own
-folder below `shortcuts/`, so future shortcuts can be released independently.
+Dieses Repository ist als Sammlung gedacht. Jeder Kurzbefehl liegt vollständig
+in einem eigenen Unterordner unter `shortcuts/`, damit spätere Kurzbefehle
+sauber getrennt veröffentlicht werden können.
 
-## Available Shortcuts
+## Verfügbare Kurzbefehle
 
-| Shortcut | Version | Folder | Release |
+| Kurzbefehl | Version | Ordner | Release |
 | --- | --- | --- | --- |
 | Weather for City | 1.0 | [`shortcuts/weather-for-city`](shortcuts/weather-for-city/) | [`v1.0`](https://github.com/Schrotty74/Shortcuts/releases/tag/v1.0), [`ZIP`](shortcuts/weather-for-city/dist/weather-for-city-1.0.zip) |
 
-## Structure
+## Struktur
 
 ```text
 shortcuts/
@@ -36,15 +38,16 @@ shortcuts/
     `-- dist/
 ```
 
-## Privacy
+## Datenschutz
 
-Each published shortcut includes its own privacy report in the shortcut folder.
+Jeder veröffentlichte Kurzbefehl enthält einen eigenen Datenschutzbericht im
+jeweiligen Shortcut-Ordner.
 
-For `Weather for City`:
+Für `Weather for City`:
 
-[`shortcuts/weather-for-city/PRIVACY_REPORT.md`](shortcuts/weather-for-city/PRIVACY_REPORT.md)
+[`shortcuts/weather-for-city/PRIVACY_REPORT.de.md`](shortcuts/weather-for-city/PRIVACY_REPORT.de.md)
 
-## Release Status
+## Release-Status
 
-The GitHub Action checks the published structure, checksums, ZIP files, and
-basic privacy indicators.
+Die GitHub Action prüft die veröffentlichte Struktur, Prüfsummen, ZIP-Dateien
+und einfache Datenschutzindikatoren.

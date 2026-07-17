@@ -17,23 +17,30 @@ jobs:
         run: |
           set -euo pipefail
 
-          test "$(cat shortcuts/wetter-fuer-stadt/VERSION)" = "1.0"
-          test -f "shortcuts/wetter-fuer-stadt/Wetter für Stadt.shortcut"
-          test -f "shortcuts/wetter-fuer-stadt/Wetter_fuer_Stadt.xml"
-          test -f "shortcuts/wetter-fuer-stadt/PRIVACY_REPORT.md"
-          test -f "shortcuts/wetter-fuer-stadt/CHECKSUMS.txt"
-          test -f "shortcuts/wetter-fuer-stadt/dist/wetter-fuer-stadt-1.0.zip"
-          test -f "shortcuts/wetter-fuer-stadt/dist/wetter-fuer-stadt-1.0.zip.sha256"
-          test -f "shortcuts/wetter-fuer-stadt/RELEASE_NOTES.md"
-          test -f "shortcuts/wetter-fuer-stadt/PORTFOLIO_UPDATE.md"
+          test "$(cat shortcuts/weather-for-city/VERSION)" = "1.0"
+          test -f "shortcuts/weather-for-city/Weather for City.shortcut"
+          test -f "shortcuts/weather-for-city/Weather_for_City.xml"
+          test -f "shortcuts/weather-for-city/README.de.md"
+          test -f "shortcuts/weather-for-city/PRIVACY_REPORT.md"
+          test -f "shortcuts/weather-for-city/PRIVACY_REPORT.de.md"
+          test -f "shortcuts/weather-for-city/CHECKSUMS.txt"
+          test -f "shortcuts/weather-for-city/dist/weather-for-city-1.0.zip"
+          test -f "shortcuts/weather-for-city/dist/weather-for-city-1.0.zip.sha256"
+          test -f "shortcuts/weather-for-city/RELEASE_NOTES.md"
+          test -f "shortcuts/weather-for-city/PORTFOLIO_UPDATE.md"
           test -f "PROJECT_CONTEXT.md"
+          test -f "PROJECT_CONTEXT.de.md"
           test -f "NEXT_STEPS.md"
+          test -f "NEXT_STEPS.de.md"
+          test -f "README.de.md"
 
-          grep -q "Version: \`1.0\`" shortcuts/wetter-fuer-stadt/README.md
-          grep -q "keine privaten Zugangsdaten" shortcuts/wetter-fuer-stadt/PRIVACY_REPORT.md
+          grep -q "Version: \`1.0\`" shortcuts/weather-for-city/README.md
+          grep -q "Deutsch: \\[README.de.md\\]" shortcuts/weather-for-city/README.md
+          grep -q "English: \\[README.md\\]" shortcuts/weather-for-city/README.de.md
+          grep -q "no private credentials" shortcuts/weather-for-city/PRIVACY_REPORT.md
 
-          shasum -a 256 -c shortcuts/wetter-fuer-stadt/CHECKSUMS.txt
-          shasum -a 256 -c shortcuts/wetter-fuer-stadt/dist/wetter-fuer-stadt-1.0.zip.sha256
+          shasum -a 256 -c shortcuts/weather-for-city/CHECKSUMS.txt
+          shasum -a 256 -c shortcuts/weather-for-city/dist/weather-for-city-1.0.zip.sha256
 
           if grep -R \
             --exclude-dir=.git \
