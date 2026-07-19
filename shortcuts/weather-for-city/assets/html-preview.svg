@@ -26,6 +26,10 @@
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+    <filter id="cityGlow" x="-30%" y="-40%" width="170%" height="190%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#07111f" flood-opacity=".9"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#60a5fa" flood-opacity=".42"/>
+    </filter>
   </defs>
   <rect width="720" height="405" rx="30" fill="url(#sky)"/>
   <g opacity=".16" stroke="#bfdbfe" stroke-width="2">
@@ -52,7 +56,8 @@
   <g filter="url(#softShadow)">
     <rect x="174" y="128" width="372" height="214" rx="32" fill="url(#card)" stroke="#93c5fd" stroke-opacity=".42" stroke-width="1.5"/>
     <text x="207" y="176" fill="#c7d2fe" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="14" font-weight="800" letter-spacing="5">CURRENT WEATHER</text>
-    <text x="207" y="223" fill="#2563eb" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="40" font-weight="900">Vienna</text>
+    <rect x="195" y="184" width="164" height="51" rx="16" fill="#07111f" fill-opacity=".52" stroke="#dbeafe" stroke-opacity=".14"/>
+    <text x="207" y="223" fill="#dceeff" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="40" font-weight="900" filter="url(#cityGlow)">Vienna</text>
     <rect x="207" y="246" width="205" height="70" rx="26" fill="#ffffff" opacity=".13"/>
     <text x="224" y="300" fill="#fff3b0" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="55" font-weight="950" letter-spacing="-4">21.9 °C</text>
     <text x="430" y="277" fill="#fde68a" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="20" font-weight="850">Cloudy</text>

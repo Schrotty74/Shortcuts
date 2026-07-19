@@ -12,6 +12,8 @@ Bugfix release.
 - Updates the published iCloud installation link.
 - Improves city-name contrast in the HTML weather card with a light ice-blue
   label, dark translucent backing, and a stronger shadow for phone displays.
+- Refreshes the public HTML preview image to match the higher-contrast city
+  label used by the shortcut.
 
 ## 1.2.2 - 2026-07-17
 
