@@ -13,7 +13,7 @@ folder below `shortcuts/`, so future shortcuts can be released independently.
 
 | Preview | Shortcut | Version | Folder | Release |
 | --- | --- | --- | --- | --- |
-| <img src="shortcuts/weather-for-city/assets/html-preview.svg" alt="Weather for City HTML preview" width="180"> | Weather for City | 1.2.2 | [`shortcuts/weather-for-city`](shortcuts/weather-for-city/) | [`Install`](https://www.icloud.com/shortcuts/9558234c76a84628ab4838677433dbcc), [`v1.2.2`](https://github.com/Schrotty74/Shortcuts/releases/tag/v1.2.2) |
+| <img src="shortcuts/weather-for-city/assets/html-preview.svg" alt="Weather for City HTML preview" width="180"> | Weather for City | 1.2.2 | [`shortcuts/weather-for-city`](shortcuts/weather-for-city/) | [`Install`](https://www.icloud.com/shortcuts/98b0d52ec71448068d4d4494e28c1336), [`v1.2.2`](https://github.com/Schrotty74/Shortcuts/releases/tag/v1.2.2) |
 
 ## Current Highlights
 
@@ -26,6 +26,9 @@ folder below `shortcuts/`, so future shortcuts can be released independently.
 For `Weather for City`:
 
 - animated weather card with responsive layouts for Mac and iPhone
+- saved selected-location reuse so `Get Weather` does not require typing or
+  choosing the same place again
+- separate `Change City` menu item for updating the saved city
 - city lookup with location picker for ambiguous results
 - current weather through public Open-Meteo APIs, without an API key
 - Celsius or Fahrenheit selected from the found city's country

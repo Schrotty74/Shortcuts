@@ -16,6 +16,8 @@ API-Schlüssel, keine Passwörter und keine persönlichen lokalen Dateien.
 Der Kurzbefehl verarbeitet:
 
 - die Stadt, die der Nutzer beim Start eingibt
+- die zuletzt gewählte Position, lokal gespeichert als
+  `Weather for City Last Location.json` im Kurzbefehle-Dateibereich
 - die daraus ermittelten öffentlichen Geocoding-Daten
 - aktuelle Wetterdaten von Open-Meteo
 - den Länder-Code der gefundenen Stadt, um Celsius oder Fahrenheit auszuwählen
@@ -36,6 +38,15 @@ Koordinaten gesendet:
 - Open-Meteo Forecast API
 - GitHub Releases API für Update-Prüfungen
 
+## Was wird lokal gespeichert?
+
+Der Kurzbefehl kann die zuletzt gewählte Position lokal als
+`Weather for City Last Location.json` im Kurzbefehle-Dateibereich speichern.
+Gespeichert werden Stadtname, Länder-Code, Breitengrad und Längengrad, damit
+bei wiederholten Läufen weder Stadteingabe noch mehrdeutige Ortsauswahl erneut
+nötig sind. Diese gespeicherte Position ist nicht Bestandteil dieses
+Repositorys oder der Release-Dateien.
+
 ## Was ist nicht enthalten?
 
 Nicht enthalten sind:
@@ -48,6 +59,7 @@ Nicht enthalten sind:
 - lokale Backup-Archive
 - Screenshots
 - alte Entwicklungsarchive
+- die lokal gespeicherte Positionsdatei des Nutzers
 
 ## Veröffentlichungskontrolle
 

@@ -14,7 +14,7 @@ animierte HTML-Wetterkarte.
 
 ## Installation
 
-1. Den [offiziellen iCloud-Kurzbefehl-Link](https://www.icloud.com/shortcuts/9558234c76a84628ab4838677433dbcc) öffnen.
+1. Den [offiziellen iCloud-Kurzbefehl-Link](https://www.icloud.com/shortcuts/98b0d52ec71448068d4d4494e28c1336) öffnen.
 2. In Apple Kurzbefehle importieren.
 3. Den Kurzbefehl starten und eine Stadt eingeben.
 
@@ -28,6 +28,9 @@ animierte HTML-Wetterkarte.
 ## Funktionen
 
 - freie Stadteingabe
+- merkt sich die zuletzt gewählte Position lokal, damit `Wetter abrufen` nicht
+  erneut nach Stadt oder Ort fragen muss
+- eigener Menüpunkt `Stadt ändern`, um die gespeicherte Position zu ersetzen
 - Ortsauswahl bei mehrdeutigen Städten wie `Columbia`
 - aktuelle Temperatur in Celsius oder Fahrenheit, abhängig vom Länder-Code der gefundenen Stadt
 - WMO-Wettercode als lesbare Beschreibung
@@ -40,6 +43,15 @@ animierte HTML-Wetterkarte.
 - deutsche sichtbare Shortcut-Texte und HTML-Ausgabe für `de-AT`, `de-DE`, `de-CH`, `de-LI`
 - englischer Fallback für andere Gerätesprachen und Regionen
 - Datenschutzbericht, signierte Shortcut-Datei, Release-ZIP und SHA-256-Prüfsummen
+
+## Erster Start und Berechtigungen
+
+Beim ersten Lauf kann iOS/macOS um Erlaubnis für Open-Meteo, GitHub, den
+lokalen Kurzbefehle-Dateibereich, Mitteilungen oder die HTML-Vorschau fragen.
+Diese Dialoge kommen von Apple Kurzbefehle und können vom Kurzbefehl nicht
+vollständig deaktiviert werden. Nach dem ersten bestätigten Lauf kann
+`Wetter abrufen` die gespeicherte gewählte Position ohne erneute Stadt- oder
+Ortsabfrage verwenden. Mit `Stadt ändern` kann sie ersetzt werden.
 
 ## Datenquellen
 

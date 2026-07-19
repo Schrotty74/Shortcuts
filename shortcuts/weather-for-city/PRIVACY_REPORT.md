@@ -16,6 +16,8 @@ and no personal local files.
 The shortcut processes:
 
 - the city entered by the user when the shortcut starts
+- the last selected location saved locally as
+  `Weather for City Last Location.json` in the Shortcuts file area
 - public geocoding data derived from that city
 - current weather data from Open-Meteo
 - the country code of the found city to select Celsius or Fahrenheit
@@ -35,6 +37,14 @@ Open-Meteo receives the entered city or coordinates derived from it:
 - Open-Meteo Forecast API
 - GitHub Releases API for update checks
 
+## What Is Stored Locally?
+
+The shortcut can save the last selected location locally as
+`Weather for City Last Location.json` in the Shortcuts file area. It stores the
+city name, country code, latitude, and longitude so repeated runs do not need
+the city input or ambiguous-location picker again. The saved location is not
+included in this repository or in release files.
+
 ## What Is Not Included?
 
 The release does not include:
@@ -47,6 +57,7 @@ The release does not include:
 - local backup archives
 - screenshots
 - old development archives
+- the user's locally saved location file
 
 ## Publication Control
 

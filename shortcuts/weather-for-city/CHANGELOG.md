@@ -11,6 +11,10 @@ Bugfix release.
   location when needed.
 - Normalizes city inputs such as `Columbia SC` and `Columbia, SC` before
   searching, so they resolve to the expected Columbia results.
+- Rebuilt in place on 2026-07-19 after testing to save the selected Open-Meteo
+  location locally, so repeated `Get Weather` runs skip both city input and the
+  ambiguous location picker.
+- Adds a separate `Change City` menu item for replacing the saved location.
 - Keeps the HTML weather card UTF-8 declaration and DACH/LI language handling.
 
 ## 1.2.1 - 2026-07-17

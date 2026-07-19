@@ -14,7 +14,7 @@ result view, and an animated HTML weather card.
 
 ## Installation
 
-1. Open the [official iCloud shortcut link](https://www.icloud.com/shortcuts/9558234c76a84628ab4838677433dbcc).
+1. Open the [official iCloud shortcut link](https://www.icloud.com/shortcuts/98b0d52ec71448068d4d4494e28c1336).
 2. Import it into Apple Shortcuts.
 3. Run the shortcut and enter a city.
 
@@ -28,6 +28,9 @@ result view, and an animated HTML weather card.
 ## Features
 
 - free city input
+- remembers the last selected location locally so `Get Weather` can run without
+  asking for the city or location choice again
+- separate `Change City` menu item for replacing the saved location
 - location picker for ambiguous city names such as `Columbia`
 - current temperature in Celsius or Fahrenheit, selected from the found city's country code
 - WMO weather code converted to a readable description
@@ -41,6 +44,15 @@ result view, and an animated HTML weather card.
 - English fallback for all other device languages and regions
 - official iCloud installation link for iPhone and Mac
 - privacy report, signed shortcut file, release ZIP, and SHA-256 checksums
+
+## First Run And Permissions
+
+On the first run, iOS/macOS may ask for permission to access Open-Meteo,
+GitHub, the local Shortcuts file area, notifications, or the HTML preview.
+These prompts come from Apple Shortcuts and cannot be fully disabled by the
+shortcut. After the first confirmed run, `Get Weather` can reuse the saved
+selected location without asking again. Use `Change City` when you want to
+replace it.
 
 ## Data Sources
 

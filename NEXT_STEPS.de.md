@@ -1,6 +1,6 @@
 # Nächste Schritte: Shortcuts
 
-Stand: 2026-07-17
+Stand: 2026-07-19
 
 Repository:
 `https://github.com/Schrotty74/Shortcuts`
@@ -9,7 +9,10 @@ English: [NEXT_STEPS.md](NEXT_STEPS.md)
 
 ## Priorität 1: Offene Aufgaben
 
-- Import der veröffentlichten `.shortcut`-Datei aus dem Wetter-Ordner testen.
+- Nutzerfeedback zum neu gebauten `1.2.2`-Ablauf mit gespeicherter Position
+  beobachten.
+- Import der veröffentlichten `.shortcut`-Datei aus dem Wetter-Ordner nach
+  jedem Release-Neubau testen.
 - GitHub-Profil-README `Schrotty74/Schrotty74` mit einem neutralen Link zur
   Shortcuts-Sammlung aktuell halten, ohne dort eine konkrete Shortcut-Version
   zu zeigen.
@@ -21,6 +24,8 @@ English: [NEXT_STEPS.md](NEXT_STEPS.md)
 - Prüfen, ob das ZIP auf iPhone und Mac problemlos entpackt werden kann.
 - Die HTML-Wetteransicht auf kleinen Mac-/iPhone-Fenstern beobachten, damit der
   große Temperaturwert dauerhaft einzeilig bleibt.
+- Erstlauf-Berechtigungen und Wiederverwendung der gespeicherten Position auf
+  iPhone und Mac prüfen.
 - Bei Bedarf zusätzliche Datenschutzmuster in der GitHub Action ergänzen.
 
 ## Priorität 3: Geplante Verbesserungen

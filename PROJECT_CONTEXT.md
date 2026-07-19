@@ -1,6 +1,6 @@
 # Project Context: Shortcuts
 
-Updated: 2026-07-17
+Updated: 2026-07-19
 
 Repository:
 `https://github.com/Schrotty74/Shortcuts`
@@ -89,6 +89,10 @@ Shortcuts/
   unit on one line in the HTML weather view.
 - Version `1.2.2` fixes UTF-8 rendering in the HTML card and was rebuilt in
   place to repair ambiguous Open-Meteo city lookup with a location picker.
+- Version `1.2.2` was rebuilt in place after local testing to reuse the last
+  selected Open-Meteo location through a local Shortcuts file named
+  `Weather for City Last Location.json`; `Get Weather` uses it directly, and
+  `Change City` replaces it.
 - The signed `.shortcut` is published as a direct release asset in addition to
   the ZIP package.
 - GitHub Actions release status automation configured.
@@ -124,6 +128,9 @@ Shortcuts/
   privacy review.
 - The weather shortcut sends the entered city name and derived coordinates to
   Open-Meteo, as described in the privacy report.
+- The weather shortcut can store the last selected location locally in the
+  Shortcuts file area. This is user-local state and must not be included in release
+  archives or screenshots.
 - GitHub Release `v1.2.2` remains the weather shortcut release even when the
   repository contains more shortcuts later.
 

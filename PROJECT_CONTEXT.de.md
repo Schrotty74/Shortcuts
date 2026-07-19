@@ -1,6 +1,6 @@
 # Projektkontext: Shortcuts
 
-Stand: 2026-07-17
+Stand: 2026-07-19
 
 Repository:
 `https://github.com/Schrotty74/Shortcuts`
@@ -95,6 +95,11 @@ Shortcuts/
 - Version `1.2.2` behebt UTF-8-Darstellung in der HTML-Karte und wurde innerhalb
   derselben Version neu gebaut, um mehrdeutige Open-Meteo-Ortssuchen mit einer
   Ortsauswahl zu reparieren.
+- Version `1.2.2` wurde nach lokalem Test innerhalb derselben Version neu
+  gebaut, um die zuletzt gewählte Open-Meteo-Position über eine lokale
+  Kurzbefehle-Datei namens `Weather for City Last Location.json`
+  wiederzuverwenden; `Wetter abrufen` verwendet sie direkt, `Stadt ändern`
+  ersetzt sie.
 - Die signierte `.shortcut`-Datei wird zusätzlich zum ZIP als direktes
   Release-Asset veröffentlicht.
 - GitHub Actions Release-Status-Automatik eingerichtet.
@@ -130,6 +135,9 @@ Shortcuts/
   manuelles Datenschutzreview.
 - Der Wetter-Kurzbefehl sendet den eingegebenen Stadtnamen und Koordinaten an
   Open-Meteo, wie im Datenschutzbericht beschrieben.
+- Der Wetter-Kurzbefehl kann die zuletzt gewählte Position lokal im
+  Kurzbefehle-Dateibereich speichern. Das ist lokaler Nutzerzustand und darf
+  nicht in Release-Archive oder Screenshots aufgenommen werden.
 - GitHub Release `v1.2.2` bleibt ein Release für den Wetter-Kurzbefehl, auch wenn
   das Repository künftig weitere Shortcuts enthält.
 

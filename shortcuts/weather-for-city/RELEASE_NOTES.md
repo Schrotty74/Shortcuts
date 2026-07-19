@@ -11,6 +11,10 @@ Fixed:
 - repairs ambiguous city lookup by loading multiple Open-Meteo geocoding
   results and letting the user choose the correct location
 - normalizes city inputs such as `Columbia SC` and `Columbia, SC`
+- rebuilds the release with local selected-location reuse: `Get Weather` can
+  skip repeated city input and ambiguous location selection after the first
+  confirmed run
+- adds a separate `Change City` menu item for replacing the saved location
 - keeps the existing weather lookup and update-check behavior
 
 Privacy:
@@ -21,6 +25,8 @@ Privacy:
 - no local work archives
 - no screenshots
 - GitHub update check reads only the public latest-release metadata
+- the saved location file stays local to the user's Shortcuts file area and is
+  not included in the release
 
 Release files:
 
@@ -30,4 +36,4 @@ Release files:
 
 Installation:
 
-- [Official iCloud shortcut link](https://www.icloud.com/shortcuts/9558234c76a84628ab4838677433dbcc)
+- [Official iCloud shortcut link](https://www.icloud.com/shortcuts/98b0d52ec71448068d4d4494e28c1336)
