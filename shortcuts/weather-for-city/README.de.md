@@ -46,12 +46,22 @@ animierte HTML-Wetterkarte.
 
 ## Erster Start und Berechtigungen
 
-Beim ersten Lauf kann iOS/macOS um Erlaubnis für Open-Meteo, GitHub, den
-lokalen Kurzbefehle-Dateibereich, Mitteilungen oder die HTML-Vorschau fragen.
+Beim ersten und teilweise auch beim zweiten Lauf kann iOS/macOS
+Berechtigungsdialoge von Apple Kurzbefehle anzeigen. Welche Dialoge erscheinen,
+hängt davon ab, was im Startmenü gewählt wird:
+
+- `Wetter abrufen` kann um Erlaubnis für Open-Meteo, Mitteilungen, die
+  HTML-Vorschau und das Speichern/Lesen der zuletzt gewählten Position im
+  lokalen Kurzbefehle-Dateibereich fragen.
+- `Stadt ändern` kann erneut fragen, weil die lokal gespeicherte Position
+  ersetzt wird.
+- `Nach Update suchen` kann um Erlaubnis für GitHub und das Öffnen der neuesten
+  Release-Seite fragen.
+
 Diese Dialoge kommen von Apple Kurzbefehle und können vom Kurzbefehl nicht
-vollständig deaktiviert werden. Nach dem ersten bestätigten Lauf kann
+vollständig deaktiviert werden. Nach dem ersten bestätigten Wetterlauf kann
 `Wetter abrufen` die gespeicherte gewählte Position ohne erneute Stadt- oder
-Ortsabfrage verwenden. Mit `Stadt ändern` kann sie ersetzt werden.
+Ortsauswahl verwenden. Mit `Stadt ändern` kann sie ersetzt werden.
 
 ## Datenquellen
 

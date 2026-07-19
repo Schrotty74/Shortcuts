@@ -36,6 +36,9 @@ English: [NEXT_STEPS.md](NEXT_STEPS.md)
   `PRIVACY_REPORT.md`, `CHECKSUMS.txt`, `dist/`.
 - Pro Shortcut ein kompaktes Vorschaubild ergänzen und auf der
   Repository-Startseite anzeigen, sofern keine privaten Inhalte sichtbar sind.
+- Erstlauf-Berechtigungen von Apple Kurzbefehle pro Shortcut dokumentieren,
+  besonders Netzwerk, Mitteilungen, HTML-Vorschau, Dateizugriff und
+  Update-Prüfung.
 - Optional automatische ZIP-Erstellung in GitHub Actions aus den jeweiligen
   Shortcut-Ordnern einrichten.
 

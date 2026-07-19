@@ -10,6 +10,7 @@ Fixed:
 - lets repeated `Get Weather` runs skip city input and ambiguous location
   selection after the first confirmed run
 - adds a separate `Change City` menu item for replacing the saved location
+- improves city-name contrast in the HTML card for phone displays
 - keeps the existing UTF-8 HTML card, weather lookup, DACH/LI language handling,
   unit selection, and update-check behavior
 
@@ -23,6 +24,10 @@ Privacy:
 - GitHub update check reads only the public latest-release metadata
 - the saved location file stays local to the user's Shortcuts file area and is
   not included in the release
+- iOS/macOS may ask for Apple Shortcuts permissions on the first and sometimes
+  second run, depending on the selected menu item: Open-Meteo for weather,
+  GitHub for update checks, notifications, HTML preview, and local Shortcuts
+  file access for the saved location
 
 Release files:
 

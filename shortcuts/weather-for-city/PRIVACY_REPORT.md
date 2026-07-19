@@ -2,7 +2,7 @@
 
 Version: `1.2.3`
 
-Updated: 2026-07-17
+Updated: 2026-07-19
 
 Deutsch: [PRIVACY_REPORT.de.md](PRIVACY_REPORT.de.md)
 
@@ -36,6 +36,20 @@ Open-Meteo receives the entered city or coordinates derived from it:
 - Open-Meteo Geocoding API
 - Open-Meteo Forecast API
 - GitHub Releases API for update checks
+
+## Apple Shortcuts Permission Prompts
+
+iOS/macOS may ask for permissions on the first and sometimes also the second
+run. The exact prompts depend on the selected menu item:
+
+- `Get Weather`: Open-Meteo network access, notifications, HTML preview, and
+  local Shortcuts file access for the saved location.
+- `Change City`: local Shortcuts file access again because the saved location is
+  replaced.
+- `Check for Update`: GitHub network access and opening the release page.
+
+These prompts are controlled by Apple Shortcuts. They are not hidden tracking or
+private data collection.
 
 ## What Is Stored Locally?
 

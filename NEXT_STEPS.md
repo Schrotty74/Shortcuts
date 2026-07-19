@@ -33,6 +33,9 @@ Deutsch: [NEXT_STEPS.de.md](NEXT_STEPS.de.md)
   `PRIVACY_REPORT.md`, `CHECKSUMS.txt`, `dist/`.
 - Add one compact preview image per shortcut and show it on the repository
   start page, as long as no private content is visible.
+- Document first-run Apple Shortcuts permission prompts for each shortcut,
+  especially network, notification, HTML preview, file access, and update-check
+  prompts.
 - Optionally automate ZIP creation in GitHub Actions from each shortcut folder.
 
 ## Ideas For Future Development

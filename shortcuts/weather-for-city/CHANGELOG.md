@@ -10,6 +10,8 @@ Bugfix release.
   selection after the first confirmed run.
 - Adds a separate `Change City` menu item for replacing the saved location.
 - Updates the published iCloud installation link.
+- Improves city-name contrast in the HTML weather card with a light ice-blue
+  label, dark translucent backing, and a stronger shadow for phone displays.
 
 ## 1.2.2 - 2026-07-17
 

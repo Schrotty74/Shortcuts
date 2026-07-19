@@ -30,6 +30,9 @@ Für `Weather for City`:
 - animierte Wetterkarte mit responsivem Layout für Mac und iPhone
 - gespeicherte gewählte Position, damit `Wetter abrufen` nicht jedes Mal neu
   nach Stadt oder Ort fragt
+- klarer Hinweis zu Erstlauf-Berechtigungen von Apple Kurzbefehle für
+  Open-Meteo, GitHub, Mitteilungen, HTML-Vorschau und lokalen Zugriff auf die
+  gespeicherte Position
 - eigener Menüpunkt `Stadt ändern`, um die gespeicherte Position zu ersetzen
 - Ortssuche mit Auswahl bei mehrdeutigen Treffern
 - aktuelle Wetterdaten über öffentliche Open-Meteo-APIs, ohne API-Schlüssel

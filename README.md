@@ -28,6 +28,8 @@ For `Weather for City`:
 - animated weather card with responsive layouts for Mac and iPhone
 - saved selected-location reuse so `Get Weather` does not require typing or
   choosing the same place again
+- clear first-run permission note for Apple Shortcuts prompts on Open-Meteo,
+  GitHub, notifications, HTML preview, and local saved-location access
 - separate `Change City` menu item for updating the saved location
 - city lookup with location picker for ambiguous results
 - current weather through public Open-Meteo APIs, without an API key

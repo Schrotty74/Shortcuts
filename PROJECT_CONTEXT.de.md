@@ -54,6 +54,7 @@ Shortcuts/
         |-- PORTFOLIO_UPDATE.de.md
         |-- PRIVACY_REPORT.md
         |-- PRIVACY_REPORT.de.md
+        |-- REDDIT_POST.md
         |-- README.md
         |-- README.de.md
         |-- RELEASE_NOTES.md
@@ -84,6 +85,7 @@ Shortcuts/
   `shortcuts/weather-for-city/assets/html-preview.svg`.
 - Reddit-taugliche PNG-Vorschaubilder ergänzt unter
   `shortcuts/weather-for-city/assets/reddit/`.
+- Reddit-Post-Vorlage ergänzt unter `shortcuts/weather-for-city/REDDIT_POST.md`.
 - Die Repository-Startseite zeigt das kompakte Vorschaubild direkt neben dem
   Shortcut-Eintrag, damit Besucher sofort sehen, wie der Shortcut aussieht.
 - Version `1.1` behebt die Temperatureinheit, indem Celsius oder Fahrenheit
@@ -98,6 +100,10 @@ Shortcuts/
 - Version `1.2.3` verwendet die zuletzt gewählte Open-Meteo-Position über eine
   lokale Kurzbefehle-Datei namens `Weather for City Last Location.json` wieder;
   `Wetter abrufen` verwendet sie direkt, `Stadt ändern` ersetzt sie.
+- GitHub-Dokumentation und Reddit-Post-Vorlage erklären, dass Apple Kurzbefehle
+  beim ersten und teilweise zweiten Lauf Berechtigungen anfragen kann, abhängig
+  davon, ob `Wetter abrufen`, `Stadt ändern` oder `Nach Update suchen` gewählt
+  wird.
 - Die signierte `.shortcut`-Datei wird zusätzlich zum ZIP als direktes
   Release-Asset veröffentlicht.
 - GitHub Actions Release-Status-Automatik eingerichtet.

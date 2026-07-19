@@ -47,12 +47,20 @@ result view, and an animated HTML weather card.
 
 ## First Run And Permissions
 
-On the first run, iOS/macOS may ask for permission to access Open-Meteo,
-GitHub, the local Shortcuts file area, notifications, or the HTML preview.
+On the first and sometimes also the second run, iOS/macOS may show Apple
+Shortcuts permission prompts. The exact prompts depend on what you choose in
+the start menu:
+
+- `Get Weather` can ask to contact Open-Meteo, show a notification, open the
+  HTML preview, and save/read the last selected location in the local Shortcuts
+  file area.
+- `Change City` can ask again because it replaces the locally saved location.
+- `Check for Update` can ask to contact GitHub and open the latest release page.
+
 These prompts come from Apple Shortcuts and cannot be fully disabled by the
-shortcut. After the first confirmed run, `Get Weather` can reuse the saved
-selected location without asking again. Use `Change City` when you want to
-replace it.
+shortcut. After the first confirmed weather run, `Get Weather` can reuse the
+saved selected location without asking for the city or location choice again.
+Use `Change City` when you want to replace it.
 
 ## Data Sources
 

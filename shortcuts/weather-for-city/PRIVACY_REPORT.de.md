@@ -2,7 +2,7 @@
 
 Version: `1.2.3`
 
-Stand: 2026-07-17
+Stand: 2026-07-19
 
 English: [PRIVACY_REPORT.md](PRIVACY_REPORT.md)
 
@@ -37,6 +37,22 @@ Koordinaten gesendet:
 - Open-Meteo Geocoding API
 - Open-Meteo Forecast API
 - GitHub Releases API für Update-Prüfungen
+
+## Berechtigungsdialoge von Apple Kurzbefehle
+
+iOS/macOS kann beim ersten und teilweise auch beim zweiten Lauf nach
+Berechtigungen fragen. Welche Dialoge erscheinen, hängt vom gewählten Menüpunkt
+ab:
+
+- `Wetter abrufen`: Netzwerkzugriff auf Open-Meteo, Mitteilungen,
+  HTML-Vorschau und lokaler Kurzbefehle-Dateizugriff für die gespeicherte
+  Position.
+- `Stadt ändern`: lokaler Kurzbefehle-Dateizugriff erneut, weil die gespeicherte
+  Position ersetzt wird.
+- `Nach Update suchen`: Netzwerkzugriff auf GitHub und Öffnen der Release-Seite.
+
+Diese Dialoge werden von Apple Kurzbefehle gesteuert. Sie sind kein verstecktes
+Tracking und keine private Datensammlung.
 
 ## Was wird lokal gespeichert?
 
