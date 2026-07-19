@@ -13,7 +13,7 @@ Dieses Repository stellt öffentliche Apple-Kurzbefehle bereit. Es ist als
 Sammlung angelegt: Jeder Kurzbefehl lebt vollständig in einem eigenen Ordner
 unter `shortcuts/`.
 
-Der erste veröffentlichte Kurzbefehl ist `Weather for City` in Version `1.2.2`.
+Der erste veröffentlichte Kurzbefehl ist `Weather for City` in Version `1.2.3`.
 
 ## Architektur und technische Entscheidungen
 
@@ -28,7 +28,7 @@ Der erste veröffentlichte Kurzbefehl ist `Weather for City` in Version `1.2.2`.
   anzeigen.
 - Aktueller Shortcut-Ordner: `shortcuts/weather-for-city/`
 - Das ZIP für `Weather for City` liegt unter:
-  `shortcuts/weather-for-city/dist/weather-for-city-1.2.2.zip`
+  `shortcuts/weather-for-city/dist/weather-for-city-1.2.3.zip`
 - GitHub Actions prüft die erwartete Ordnerstruktur, Prüfsummen und einfache
   Datenschutzindikatoren.
 - Der Wetter-Kurzbefehl nutzt öffentliche Open-Meteo-APIs und benötigt keinen
@@ -67,15 +67,15 @@ Shortcuts/
         |   |   `-- weather-for-city-reddit-card.png
         |   `-- social-preview.svg
         `-- dist/
-            |-- weather-for-city-1.2.2.zip
-            `-- weather-for-city-1.2.2.zip.sha256
+            |-- weather-for-city-1.2.3.zip
+            `-- weather-for-city-1.2.3.zip.sha256
 ```
 
 ## Umgesetzte Funktionen
 
 - Öffentliches Repository für Shortcuts eingerichtet.
 - Sammlungsstruktur eingeführt: jeder Shortcut in eigenem Unterordner.
-- `Weather for City` Version `1.2.2` bereitgestellt.
+- `Weather for City` Version `1.2.3` bereitgestellt.
 - Signierte `.shortcut`-Datei und XML-Quelle veröffentlicht.
 - Wetter-spezifische Version, Changelog, Release Notes, Portfolio-Update,
   Datenschutzbericht, Assets und ZIP in `shortcuts/weather-for-city/`
@@ -95,15 +95,13 @@ Shortcuts/
 - Version `1.2.2` behebt UTF-8-Darstellung in der HTML-Karte und wurde innerhalb
   derselben Version neu gebaut, um mehrdeutige Open-Meteo-Ortssuchen mit einer
   Ortsauswahl zu reparieren.
-- Version `1.2.2` wurde nach lokalem Test innerhalb derselben Version neu
-  gebaut, um die zuletzt gewählte Open-Meteo-Position über eine lokale
-  Kurzbefehle-Datei namens `Weather for City Last Location.json`
-  wiederzuverwenden; `Wetter abrufen` verwendet sie direkt, `Stadt ändern`
-  ersetzt sie.
+- Version `1.2.3` verwendet die zuletzt gewählte Open-Meteo-Position über eine
+  lokale Kurzbefehle-Datei namens `Weather for City Last Location.json` wieder;
+  `Wetter abrufen` verwendet sie direkt, `Stadt ändern` ersetzt sie.
 - Die signierte `.shortcut`-Datei wird zusätzlich zum ZIP als direktes
   Release-Asset veröffentlicht.
 - GitHub Actions Release-Status-Automatik eingerichtet.
-- GitHub Release `v1.2.2` mit ZIP, direktem Shortcut-Asset und SHA-256-Datei
+- GitHub Release `v1.2.3` mit ZIP, direktem Shortcut-Asset und SHA-256-Datei
   erstellt.
 - Das GitHub-Profil-Repository `Schrotty74/Schrotty74` muss mit einem neutralen
   Link zur öffentlichen Shortcuts-Sammlung synchron bleiben, darf dort aber
@@ -138,7 +136,7 @@ Shortcuts/
 - Der Wetter-Kurzbefehl kann die zuletzt gewählte Position lokal im
   Kurzbefehle-Dateibereich speichern. Das ist lokaler Nutzerzustand und darf
   nicht in Release-Archive oder Screenshots aufgenommen werden.
-- GitHub Release `v1.2.2` bleibt ein Release für den Wetter-Kurzbefehl, auch wenn
+- GitHub Release `v1.2.3` bleibt ein Release für den Wetter-Kurzbefehl, auch wenn
   das Repository künftig weitere Shortcuts enthält.
 
 ## Pflegehinweis

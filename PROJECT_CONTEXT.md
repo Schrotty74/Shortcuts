@@ -12,7 +12,7 @@ Deutsch: [PROJECT_CONTEXT.de.md](PROJECT_CONTEXT.de.md)
 This repository publishes public Apple Shortcuts. It is structured as a
 collection: each shortcut lives fully inside its own folder below `shortcuts/`.
 
-The first published shortcut is `Weather for City` version `1.2.2`.
+The first published shortcut is `Weather for City` version `1.2.3`.
 
 ## Architecture And Technical Decisions
 
@@ -26,7 +26,7 @@ The first published shortcut is `Weather for City` version `1.2.2`.
   folder and show that preview on the repository start page.
 - Current shortcut folder: `shortcuts/weather-for-city/`
 - The ZIP for `Weather for City` lives at:
-  `shortcuts/weather-for-city/dist/weather-for-city-1.2.2.zip`
+  `shortcuts/weather-for-city/dist/weather-for-city-1.2.3.zip`
 - GitHub Actions checks the expected folder structure, checksums, and basic
   privacy indicators.
 - The weather shortcut uses public Open-Meteo APIs and requires no API key.
@@ -64,15 +64,15 @@ Shortcuts/
         |   |   `-- weather-for-city-reddit-card.png
         |   `-- social-preview.svg
         `-- dist/
-            |-- weather-for-city-1.2.2.zip
-            `-- weather-for-city-1.2.2.zip.sha256
+            |-- weather-for-city-1.2.3.zip
+            `-- weather-for-city-1.2.3.zip.sha256
 ```
 
 ## Implemented Features
 
 - Public Shortcuts repository created.
 - Collection structure introduced: each shortcut lives in its own folder.
-- `Weather for City` version `1.2.2` published.
+- `Weather for City` version `1.2.3` published.
 - Signed `.shortcut` file and XML source published.
 - Shortcut-specific version file, changelog, release notes, portfolio update,
   privacy report, assets, and ZIP are stored in `shortcuts/weather-for-city/`.
@@ -89,14 +89,13 @@ Shortcuts/
   unit on one line in the HTML weather view.
 - Version `1.2.2` fixes UTF-8 rendering in the HTML card and was rebuilt in
   place to repair ambiguous Open-Meteo city lookup with a location picker.
-- Version `1.2.2` was rebuilt in place after local testing to reuse the last
-  selected Open-Meteo location through a local Shortcuts file named
-  `Weather for City Last Location.json`; `Get Weather` uses it directly, and
-  `Change City` replaces it.
+- Version `1.2.3` reuses the last selected Open-Meteo location through a local
+  Shortcuts file named `Weather for City Last Location.json`; `Get Weather`
+  uses it directly, and `Change City` replaces it.
 - The signed `.shortcut` is published as a direct release asset in addition to
   the ZIP package.
 - GitHub Actions release status automation configured.
-- GitHub Release `v1.2.2` created with ZIP, direct shortcut asset, and SHA-256
+- GitHub Release `v1.2.3` created with ZIP, direct shortcut asset, and SHA-256
   file.
 - GitHub profile repository `Schrotty74/Schrotty74` must stay in sync with a
   neutral link to the public Shortcuts collection, but must not show a specific
@@ -131,7 +130,7 @@ Shortcuts/
 - The weather shortcut can store the last selected location locally in the
   Shortcuts file area. This is user-local state and must not be included in release
   archives or screenshots.
-- GitHub Release `v1.2.2` remains the weather shortcut release even when the
+- GitHub Release `v1.2.3` remains the weather shortcut release even when the
   repository contains more shortcuts later.
 
 ## Maintenance Note

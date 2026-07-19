@@ -9,7 +9,7 @@ English: [NEXT_STEPS.md](NEXT_STEPS.md)
 
 ## Priorität 1: Offene Aufgaben
 
-- Nutzerfeedback zum neu gebauten `1.2.2`-Ablauf mit gespeicherter Position
+- Nutzerfeedback zum neu gebauten `1.2.3`-Ablauf mit gespeicherter Position
   beobachten.
 - Import der veröffentlichten `.shortcut`-Datei aus dem Wetter-Ordner nach
   jedem Release-Neubau testen.

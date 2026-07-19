@@ -9,7 +9,7 @@ Deutsch: [NEXT_STEPS.de.md](NEXT_STEPS.de.md)
 
 ## Priority 1: Open Tasks
 
-- Monitor user feedback for the rebuilt `1.2.2` saved-location flow.
+- Monitor user feedback for the rebuilt `1.2.3` saved-location flow.
 - Test importing the published `.shortcut` file from the weather folder after
   each release rebuild.
 - Keep the GitHub profile README `Schrotty74/Schrotty74` aligned with a neutral
