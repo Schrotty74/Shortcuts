@@ -15,7 +15,7 @@ sauber getrennt veröffentlicht werden können.
 
 | Vorschau | Kurzbefehl | Version | Ordner | Release |
 | --- | --- | --- | --- | --- |
-| <img src="shortcuts/weather-for-city/assets/html-preview.svg" alt="Weather for City HTML-Vorschau" width="180"> | Weather for City | 1.2.3 | [`shortcuts/weather-for-city`](shortcuts/weather-for-city/) | [`Installieren`](https://www.icloud.com/shortcuts/98b0d52ec71448068d4d4494e28c1336), [`v1.2.3`](https://github.com/Schrotty74/Shortcuts/releases/tag/v1.2.3) |
+| <img src="shortcuts/weather-for-city/assets/html-preview.svg" alt="Weather for City HTML-Vorschau" width="180"> | Weather for City | 1.2.3 | [`shortcuts/weather-for-city`](shortcuts/weather-for-city/) | [`Installieren`](https://www.icloud.com/shortcuts/27ee79aa7dd0427babb6758cef78c06b), [`v1.2.3`](https://github.com/Schrotty74/Shortcuts/releases/tag/v1.2.3) |
 
 ## Aktuelle Highlights
 
