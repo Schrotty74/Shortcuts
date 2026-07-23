@@ -1,29 +1,31 @@
 # Next Steps: Shortcuts
 
-Updated: 2026-07-19
+Updated: 2026-07-23
 
 Repository:
 `https://github.com/Schrotty74/Shortcuts`
 
 Deutsch: [NEXT_STEPS.de.md](NEXT_STEPS.de.md)
 
-## Priority 1: Open Tasks
+## Priority 1: Before The Next Public Release
 
-- Monitor user feedback for the rebuilt `1.2.3` saved-location flow.
-- Test importing the published `.shortcut` file from the weather folder after
-  each release rebuild.
-- Keep the GitHub profile README `Schrotty74/Schrotty74` aligned with a neutral
-  Shortcuts collection link, without showing a specific shortcut release.
+- Test import of the rebuilt signed `.shortcut` after every future release
+  rebuild.
+- Verify the saved-location flow and first-run Apple Shortcuts prompts on both
+  Mac and iPhone when a behavior-changing release is prepared.
+- Check the neutral public Shortcuts collection link in the Schrotty74 profile
+  when a new shortcut is published; do not add per-shortcut release versions
+  there.
 
 ## Priority 2: Bugs And Robustness
 
 - Check whether spaces in `Weather for City.shortcut` behave cleanly in all
   download contexts.
 - Check whether the ZIP extracts cleanly on iPhone and Mac.
-- Watch the HTML weather view on small Mac/iPhone windows to confirm the large
-  temperature value remains on one line.
-- Verify first-run permissions and saved-location reuse on iPhone and Mac.
-- Add more privacy patterns to the GitHub Action if needed.
+- Keep observing the HTML weather view on small Mac/iPhone windows after future
+  layout changes, especially the one-line temperature and readable city label.
+- Extend GitHub Action privacy patterns only when a concrete missed pattern is
+  identified.
 
 ## Priority 3: Planned Improvements
 
@@ -33,9 +35,7 @@ Deutsch: [NEXT_STEPS.de.md](NEXT_STEPS.de.md)
   `PRIVACY_REPORT.md`, `CHECKSUMS.txt`, `dist/`.
 - Add one compact preview image per shortcut and show it on the repository
   start page, as long as no private content is visible.
-- Document first-run Apple Shortcuts permission prompts for each shortcut,
-  especially network, notification, HTML preview, file access, and update-check
-  prompts.
+- Document first-run Apple Shortcuts permission prompts for each new shortcut.
 - Optionally automate ZIP creation in GitHub Actions from each shortcut folder.
 
 ## Ideas For Future Development
@@ -47,8 +47,8 @@ Deutsch: [NEXT_STEPS.de.md](NEXT_STEPS.de.md)
 
 ## Maintenance Note
 
-Update this file together with `PROJECT_CONTEXT.md` for larger changes, new
-shortcuts, new releases, or important decisions.
+Update this file together with [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) for
+larger changes, new shortcuts, new releases, or important decisions.
 
 Do not push or publish future shortcut changes immediately. Build and verify
-locally, let Martin test the result, and publish only after his explicit OK.
+locally, let the user test the result, and publish only after explicit approval.

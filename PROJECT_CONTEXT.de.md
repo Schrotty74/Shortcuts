@@ -1,11 +1,27 @@
 # Projektkontext: Shortcuts
 
-Stand: 2026-07-19
+Stand: 2026-07-23
 
 Repository:
 `https://github.com/Schrotty74/Shortcuts`
 
 English: [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md)
+
+## Zuerst Lesen Bei Einem Neuen Chat
+
+Vor Änderungen diese Dateien in dieser Reihenfolge lesen:
+
+1. diese Datei für das dauerhafte Projektmodell und feste Regeln
+2. [NEXT_STEPS.de.md](NEXT_STEPS.de.md) für die aktuell offenen Arbeiten
+3. [CHAT_TEMPLATE.md](CHAT_TEMPLATE.md) beim Start eines neuen Codex-Chats
+4. README, Datenschutzbericht, Changelog und Release Notes des betroffenen
+   Shortcut-Ordners
+5. `.github/workflows/release-status.yml` vor Änderungen an Release-Dateien
+   oder CI
+
+Für englische Dokumentation die jeweils verlinkte englische Datei verwenden.
+Alte Release-Dateien oder ignorierte lokale Arbeitsdateien sind keine aktuelle
+Wissensquelle.
 
 ## Projektziel und Zweck
 
@@ -34,11 +50,42 @@ Der erste veröffentlichte Kurzbefehl ist `Weather for City` in Version `1.2.3`.
 - Der Wetter-Kurzbefehl nutzt öffentliche Open-Meteo-APIs und benötigt keinen
   API-Schlüssel.
 
+## Datenformate Und Arbeitsablauf
+
+- `Weather_for_City.xml` ist die lesbare Plist-Quelle des Kurzbefehls.
+- `Weather for City.shortcut` ist die signierte, importierbare Shortcut-Datei.
+- `VERSION` enthält die Release-Version als Klartext.
+- `CHECKSUMS.txt` und die Datei `.zip.sha256` enthalten SHA-256-
+  Integritätsprüfungen.
+- `dist/` enthält Release-ZIP-Pakete; `assets/` enthält nur öffentliche
+  SVG- und PNG-Vorschaubilder.
+- Die Workflow-Plist enthält sichtbare Shortcut-Texte, Open-Meteo-Anfragen,
+  gespeicherte Positionsdaten und die eingebettete HTML-Wetterkarte.
+- Zeitgestempelte Arbeitskopien und `.DS_Store` werden von Git ignoriert und
+  gehören nicht zu den Release-Eingaben.
+
+## Build-, Test- Und Release-Ablauf
+
+1. `git status --short` prüfen und auf `main` bleiben. Unerwartete lokale
+   Änderungen erhalten und niemals überschreiben oder verwerfen.
+2. Bei sauberem Arbeitsbaum `main` per Fast-Forward mit `origin/main`
+   synchronisieren und gleiche Revisionen bestätigen.
+3. Zuerst die XML-Quelle ändern. Bei Shortcut-Änderungen die Plist und den
+   Shortcuts-Playground-Validator ausführen; Befunde vor dem Signieren beheben.
+4. Aus der validierten XML signieren, die nicht-leere `.shortcut`-Datei prüfen
+   und bei relevanten Änderungen Import und Verhalten testen.
+5. ZIP- und Prüfsummen-Dateien neu bauen, wenn sich Release-Inhalte ändern.
+   Vor einer Veröffentlichung die lokalen CI-äquivalenten Prüfsummen- und
+   Datenschutzprüfungen ausführen.
+6. Keinen Commit, Push, Tag, GitHub Release oder iCloud-Link ohne ausdrückliche
+   Anforderung erstellen. Öffentliche Änderungen zuerst lokal testen.
+
 ## Dateistruktur
 
 ```text
 Shortcuts/
 |-- .github/workflows/release-status.yml
+|-- CHAT_TEMPLATE.md
 |-- LICENSE
 |-- NEXT_STEPS.md
 |-- NEXT_STEPS.de.md
@@ -106,6 +153,8 @@ Shortcuts/
   wird.
 - Die signierte `.shortcut`-Datei wird zusätzlich zum ZIP als direktes
   Release-Asset veröffentlicht.
+- HTML-Karte und öffentliches Vorschaubild verwenden dieselbe kontrastreiche,
+  eisblaue Ortsdarstellung, damit der Ortsname auf Telefonen lesbar bleibt.
 - GitHub Actions Release-Status-Automatik eingerichtet.
 - GitHub Release `v1.2.3` mit ZIP, direktem Shortcut-Asset und SHA-256-Datei
   erstellt.
@@ -117,8 +166,10 @@ Shortcuts/
 
 - Keine Shortcut-spezifischen Release-Dateien im Repository-Root.
 - Root bleibt für Sammlung, Lizenz, Projektkontext und nächste Schritte.
+- Nur auf `main` arbeiten; keine Branches, Pull Requests oder temporären
+  Workflows für dieses Repository anlegen.
 - Veröffentlichungsablauf: Änderungen zuerst lokal bauen und prüfen, dann auf
-  Martins ausdrückliches OK warten, bevor etwas zu GitHub gepusht oder ein
+  ausdrückliches OK warten, bevor etwas zu GitHub gepusht oder ein
   Release-Asset ersetzt wird.
 - Datenschutzbericht ist pro Shortcut Pflichtbestandteil.
 - Nicht veröffentlicht werden lokale Arbeitsarchive, Screenshots, `.DS_Store`
@@ -128,6 +179,15 @@ Shortcuts/
   nicht nur Text.
 - Update-Prüfungen können den neuesten GitHub Release öffnen, aber Apple
   verlangt weiterhin eine Nutzerbestätigung beim Importieren oder Ersetzen.
+- Deutsch wird nur für den unterstützten DACH-/Liechtenstein-Gerätekontext
+  angezeigt; alle anderen Geräte erhalten Englisch. Keine automatischen
+  externen Übersetzungsdienste ohne ausdrückliche Entscheidung ergänzen.
+- Ein neu geteilter iCloud-Kurzbefehl hat einen neuen Link. Sichtbare
+  Repository-Verweise erst aktualisieren, nachdem der neue Link vorliegt und
+  eine Veröffentlichung freigegeben wurde.
+- In öffentlichen Texten ausschließlich `Schrotty74` verwenden. Niemals
+  persönliche Namen, lokale Pfade, Zugangsdaten, Tokens, private Testdaten oder
+  Backups in das Repository aufnehmen.
 - Bei jedem öffentlichen Shortcut-Release/Update auch die GitHub-Profilseite
   prüfen und den neutralen Shortcuts-Sammlungseintrag aktuell halten. Dort keine
   einzelnen Shortcut-Release-Links ergänzen, weil das Repository mehrere
@@ -144,9 +204,14 @@ Shortcuts/
   nicht in Release-Archive oder Screenshots aufgenommen werden.
 - GitHub Release `v1.2.3` bleibt ein Release für den Wetter-Kurzbefehl, auch wenn
   das Repository künftig weitere Shortcuts enthält.
+- Sichtbare Shortcut-Texte existieren derzeit nur auf Deutsch und Englisch.
+- Die genauen Berechtigungsdialoge werden von Apple Kurzbefehle gesteuert und
+  können je nach Plattform und Menüauswahl variieren.
+- Es ist kein projektinternes Build-Skript dokumentiert; Signieren und
+  Release-Paketierung sind manuelle, validierte Schritte.
 
 ## Pflegehinweis
 
 Bei größeren Änderungen, neuen Shortcuts, neuen Releases oder wichtigen
-Entscheidungen müssen `PROJECT_CONTEXT.md` und `NEXT_STEPS.md` aktualisiert
-werden.
+Entscheidungen müssen diese Datei, [NEXT_STEPS.de.md](NEXT_STEPS.de.md) und die
+jeweiligen englischen Kontextdateien aktualisiert werden.
