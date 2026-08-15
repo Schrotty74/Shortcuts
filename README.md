@@ -1,51 +1,31 @@
-# Shortcuts
+# Apple Shortcuts Collection – Privacy-Focused iPhone & Mac Shortcuts
 
 [![Release Status](https://github.com/Schrotty74/Shortcuts/actions/workflows/release-status.yml/badge.svg)](https://github.com/Schrotty74/Shortcuts/actions/workflows/release-status.yml)
 
-Public Apple Shortcuts with clear releases, privacy notes, and reproducible files.
+A public collection of Apple Shortcuts for iPhone, iPad and Mac with clear releases, privacy notes, checksums and reproducible files.
 
 Deutsch: [README.de.md](README.de.md)
 
-This repository is a collection. Each shortcut lives completely in its own
-folder below `shortcuts/`, so future shortcuts can be released independently.
+Each Apple Shortcut lives in its own folder under `shortcuts/` so it can be documented and released independently.
 
-## Available Shortcuts
+## Available Apple Shortcuts
 
 | Preview | Shortcut | Version | Folder | Release |
 | --- | --- | --- | --- | --- |
-| <img src="shortcuts/weather-for-city/assets/html-preview.svg" alt="Weather for City HTML preview" width="180"> | Weather for City | 1.2.3 | [`shortcuts/weather-for-city`](shortcuts/weather-for-city/) | [`Install`](https://www.icloud.com/shortcuts/27ee79aa7dd0427babb6758cef78c06b), [`v1.2.3`](https://github.com/Schrotty74/Shortcuts/releases/tag/v1.2.3) |
+| <img src="shortcuts/weather-for-city/assets/html-preview.svg" alt="Weather for City Apple Shortcut preview" width="180"> | Weather for City | 1.2.3 | [`shortcuts/weather-for-city`](shortcuts/weather-for-city/) | [`Install`](https://www.icloud.com/shortcuts/27ee79aa7dd0427babb6758cef78c06b), [`v1.2.3`](https://github.com/Schrotty74/Shortcuts/releases/tag/v1.2.3) |
 
-## Current Highlights
+## Weather for City
 
-- bilingual public shortcut documentation in English and German
-- compact preview image for every published shortcut entry
-- per-shortcut privacy reports, checksums, signed shortcut files, and ZIP
-  downloads
-- update-ready release structure for multiple independent shortcuts
+A privacy-conscious Apple weather shortcut for iPhone and Mac with an animated weather card, saved city selection and current weather from Open-Meteo without an API key.
 
-For `Weather for City`:
-
-- animated weather card with responsive layouts for Mac and iPhone
-- saved selected-location reuse so `Get Weather` does not require typing or
-  choosing the same place again
-- clear first-run permission note for Apple Shortcuts prompts on Open-Meteo,
-  GitHub, notifications, HTML preview, and local saved-location access
-- separate `Change City` menu item for updating the saved location
-- city lookup with location picker for ambiguous results
-- current weather through public Open-Meteo APIs, without an API key
-- Celsius or Fahrenheit selected from the found city's country
+- Responsive layouts for Mac and iPhone
+- Saved selected-location reuse
+- Separate Change City action
+- Location picker for ambiguous city searches
+- Celsius or Fahrenheit based on the selected city's country
 - German UI for `de-AT`, `de-DE`, `de-CH`, `de-LI`; English fallback elsewhere
-- built-in update check against the latest GitHub release
+- Built-in update check against the latest GitHub release
 
 ## Privacy
 
-Each published shortcut includes its own privacy report in the shortcut folder.
-
-For `Weather for City`:
-
-[`shortcuts/weather-for-city/PRIVACY_REPORT.md`](shortcuts/weather-for-city/PRIVACY_REPORT.md)
-
-## Release Status
-
-The GitHub Action checks the published structure, checksums, ZIP files, and
-basic privacy indicators.
+Each published shortcut includes its own privacy report. For Weather for City see [`shortcuts/weather-for-city/PRIVACY_REPORT.md`](shortcuts/weather-for-city/PRIVACY_REPORT.md).
