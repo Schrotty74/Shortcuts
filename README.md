@@ -1,6 +1,8 @@
 # Apple Shortcuts Collection – Privacy-Focused iPhone & Mac Shortcuts
 
 [![Release Status](https://github.com/Schrotty74/Shortcuts/actions/workflows/release-status.yml/badge.svg)](https://github.com/Schrotty74/Shortcuts/actions/workflows/release-status.yml)
+[![Latest Release](https://img.shields.io/github/v/release/Schrotty74/Shortcuts)](https://github.com/Schrotty74/Shortcuts/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/Schrotty74/Shortcuts/total)](https://github.com/Schrotty74/Shortcuts/releases)
 
 A public collection of Apple Shortcuts for iPhone, iPad and Mac with clear releases, privacy notes, checksums and reproducible files.
 
