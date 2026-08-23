@@ -7,18 +7,6 @@ Repository:
 
 English: [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md)
 
-## Zuerst Lesen Bei Einem Neuen Chat
-
-Vor Änderungen diese Dateien in dieser Reihenfolge lesen:
-
-1. diese Datei für das dauerhafte Projektmodell und feste Regeln
-2. [NEXT_STEPS.de.md](NEXT_STEPS.de.md) für die aktuell offenen Arbeiten
-3. [CHAT_TEMPLATE.md](CHAT_TEMPLATE.md) beim Start eines neuen Codex-Chats
-4. README, Datenschutzbericht, Changelog und Release Notes des betroffenen
-   Shortcut-Ordners
-5. `.github/workflows/release-status.yml` vor Änderungen an Release-Dateien
-   oder CI
-
 Für englische Dokumentation die jeweils verlinkte englische Datei verwenden.
 Alte Release-Dateien oder ignorierte lokale Arbeitsdateien sind keine aktuelle
 Wissensquelle.
