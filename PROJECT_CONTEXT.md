@@ -7,17 +7,6 @@ Repository:
 
 Deutsch: [PROJECT_CONTEXT.de.md](PROJECT_CONTEXT.de.md)
 
-## Start Here In A New Chat
-
-Read these files in this order before changing the project:
-
-1. this file for the durable project model and non-negotiable rules
-2. [NEXT_STEPS.md](NEXT_STEPS.md) for the currently open work
-3. [CHAT_TEMPLATE.md](CHAT_TEMPLATE.md) when starting a new Codex chat
-4. the relevant shortcut folder's README, privacy report, changelog, and
-   release notes
-5. `.github/workflows/release-status.yml` before changing release files or CI
-
 Use the German companion files when German documentation is needed. Do not
 treat old release files or ignored local work files as the current source of
 truth.
