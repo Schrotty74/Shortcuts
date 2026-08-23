@@ -1,36 +1,34 @@
-# New Codex Chat Template
+# Chat-Startvorlage – Shortcuts
 
-Use this as the first message in a new Codex chat for this repository:
+Ich arbeite am Projekt **Shortcuts**.
 
-```text
-Work only in this repository.
+Projekt-Root:
+`Repository-Root`
 
-Read PROJECT_CONTEXT.md and NEXT_STEPS.md first. Then read the relevant
-shortcut folder documentation and .github/workflows/release-status.yml before
-editing or publishing anything.
+Repository:
+https://github.com/Schrotty74/Shortcuts
 
-Keep PROJECT_CONTEXT.md and NEXT_STEPS.md current after significant changes,
-new shortcuts, releases, refactors, or important decisions.
+Bitte lies vor Beginn:
 
-Project safeguards:
-- Work only on main. Do not create branches, pull requests, or temporary
-  workflows.
-- Check git status before changing files. Preserve unexpected local changes.
-- Do not commit, push, tag, create a GitHub Release, replace release assets, or
-  update an iCloud link without explicit approval.
-- For Shortcut changes, edit the XML source, validate it, sign it, and verify
-  the signed file before packaging or publication.
-- Keep public documentation English-first with matching German files where the
-  project already provides them. Changelog and release notes stay English.
-- Keep each public shortcut in shortcuts/<english-name>/ with its own source,
-  signed file, documentation, privacy report, preview, checksums, and release
-  package.
-- Use only Schrotty74 in public text. Never add private names, local paths,
-  credentials, tokens, private test data, or backups.
-- Do not invent tests, release state, open work, or external service behavior.
-  Mark unknown information as unknown and verify it when needed.
-```
+1. `AGENTS.md`
+2. `PROJECT_CONTEXT.md`
+3. `NEXT_STEPS.md`
+4. Die für den Auftrag relevante Shortcut-Dokumentation
+5. Vor Bearbeitung oder Veröffentlichung `.github/workflows/release-status.yml`
 
-The primary sources of truth are [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) and
-[NEXT_STEPS.md](NEXT_STEPS.md). Read the German companion files when preparing
-or changing German documentation.
+Prüfe vor Aussagen oder Änderungen den tatsächlichen Projektzustand. Halte `PROJECT_CONTEXT.md` und `NEXT_STEPS.md` nach wesentlichen Änderungen, neuen Shortcuts, Releases, Refactorings oder wichtigen Entscheidungen aktuell.
+
+Projektregeln:
+
+- Nur auf `main` arbeiten. Keine Branches, Pull Requests oder temporären Workflows erstellen.
+- Vor Änderungen `git status` prüfen und unerwartete lokale Änderungen erhalten.
+- Nicht committen, pushen, taggen, einen GitHub Release erstellen, Release-Artefakte ersetzen oder einen iCloud-Link aktualisieren, sofern dies nicht ausdrücklich beauftragt wurde.
+- Bei Shortcut-Änderungen die XML-Quelle bearbeiten, validieren, signieren und die signierte Datei vor Paketierung oder Veröffentlichung prüfen.
+- Öffentliche Dokumentation bleibt Englisch-first mit passenden deutschen Dateien, wo das Projekt sie bereits vorsieht. Changelog und Release Notes bleiben Englisch.
+- Jeder öffentliche Shortcut bleibt unter `shortcuts/<english-name>/` mit eigener Quelle, signierter Datei, Dokumentation, Datenschutzbericht, Vorschau, Prüfsummen und Release-Paket.
+- In öffentlichen Texten nur `Schrotty74` verwenden. Niemals private Namen, lokale Pfade, Zugangsdaten, Tokens, private Testdaten oder Backups ergänzen.
+- Keine Tests, Release-Zustände, offenen Aufgaben oder externes Dienstverhalten erfinden. Unbekanntes als unbekannt markieren und bei Bedarf verifizieren.
+
+Aktueller Auftrag:
+
+<Aktueller Auftrag>
