@@ -51,6 +51,10 @@ For `Weather for City`:
 The GitHub Action checks the published structure, checksums, ZIP files, and
 basic privacy indicators.
 
+## Community
+
+Questions, feedback and discussions are welcome on [Discord](https://discord.gg/Zy93AaYFaj).
+
 ## Repo activity
 
 ![Repobeats analytics image](https://repobeats.axiom.co/api/embed/c0fc5c6dcbd919142d967a91088edf38d66336fd.svg "Repobeats analytics image")
