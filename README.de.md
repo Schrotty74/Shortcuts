@@ -53,3 +53,7 @@ Für `Weather for City`:
 
 Die GitHub Action prüft die veröffentlichte Struktur, Prüfsummen, ZIP-Dateien
 und einfache Datenschutzindikatoren.
+
+## Community
+
+Fragen, Feedback und Diskussionen sind auf [Discord](https://discord.gg/Zy93AaYFaj) willkommen.
