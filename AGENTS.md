@@ -52,7 +52,7 @@ Nicht veröffentlicht oder dokumentiert werden dürfen insbesondere:
 
 Beispiele, Testdaten, Vorschauen und Screenshots müssen ausschließlich synthetische, anonymisierte oder eindeutig fiktive Daten verwenden. Bewusst öffentliche Assets dürfen verwendet werden.
 
-Pfade in öffentlicher Dokumentation müssen neutral sein, zum Beispiel `/Users/example/...`. Echte lokale Benutzernamen oder persönliche Volume-Namen dürfen nicht verwendet werden.
+Pfade in öffentlicher Dokumentation müssen neutral sein. Echte lokale Benutzernamen oder persönliche Volume-Namen dürfen nicht verwendet werden.
 
 Vor Commit, Push oder Veröffentlichung prüfen, dass keine privaten oder sensiblen Daten enthalten sind. Vor öffentlichen Shortcut-Releases zusätzlich die vorhandenen shortcut-spezifischen Datenschutz- und Integritätsprüfungen durchführen.
 
