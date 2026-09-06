@@ -2,9 +2,14 @@
 
 [Deutsch](SECURITY.de.md)
 
-## Supported Content
+## Supported Versions
 
-Security reports are accepted for the currently published Apple Shortcuts and their release files.
+| Version | Supported |
+| --- | --- |
+| Current release of each published shortcut | Yes |
+| Superseded releases | No |
+
+Shortcuts in this collection are released independently. For Weather for City, the current published release is 1.2.3.
 
 ## Reporting a Vulnerability
 
@@ -12,10 +17,6 @@ Please do not publish sensitive vulnerability details in a public GitHub issue. 
 
 ## Scope
 
-Relevant reports include shortcut actions, requested permissions, network destinations, local saved values, release ZIPs, checksums, signed shortcut files and update checks.
-
-For example, Weather for City deliberately uses public Open-Meteo services for weather/location data and GitHub for its update check. Reports are especially useful if a published shortcut contacts an undocumented destination, requests unnecessary access, exposes locally stored values or differs from its published privacy report.
-
-Each shortcut may have its own privacy report; security behavior should remain consistent with that documentation.
+Relevant reports include shortcut actions, requested permissions, network destinations, local saved values, release ZIPs, checksums, signed shortcut files and update checks. Security behavior should remain consistent with each shortcut's published privacy report.
 
 Thank you for helping keep this Shortcuts collection safe.
