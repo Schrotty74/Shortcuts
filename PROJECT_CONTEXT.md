@@ -1,6 +1,6 @@
 # Project Context: Shortcuts
 
-Updated: 2026-07-23
+Updated: 2026-11-03
 
 Repository:
 `https://github.com/Schrotty74/Shortcuts`
@@ -16,7 +16,7 @@ truth.
 This repository publishes public Apple Shortcuts. It is structured as a
 collection: each shortcut lives fully inside its own folder below `shortcuts/`.
 
-The first published shortcut is `Weather for City` version `1.2.3`.
+The first published shortcut is `Weather for City`. Its current version is `1.2.4`.
 
 ## Architecture And Technical Decisions
 
@@ -30,7 +30,7 @@ The first published shortcut is `Weather for City` version `1.2.3`.
   folder and show that preview on the repository start page.
 - Current shortcut folder: `shortcuts/weather-for-city/`
 - The ZIP for `Weather for City` lives at:
-  `shortcuts/weather-for-city/dist/weather-for-city-1.2.3.zip`
+  `shortcuts/weather-for-city/dist/weather-for-city-1.2.4.zip`
 - GitHub Actions checks the expected folder structure, checksums, and basic
   privacy indicators.
 - The weather shortcut uses public Open-Meteo APIs and requires no API key.
@@ -41,8 +41,8 @@ The first published shortcut is `Weather for City` version `1.2.3`.
 - `Weather for City.shortcut` is the signed, importable Shortcut file.
 - `VERSION` is the shortcut's plain-text release version.
 - `CHECKSUMS.txt` and the `.zip.sha256` file contain SHA-256 integrity checks.
-- `dist/` contains release ZIP packages; `assets/` contains public SVG and PNG
-  previews only.
+- `dist/` contains release ZIP packages; `assets/` contains public SVG, PNG,
+  and HTML previews.
 - The workflow plist contains the visible Shortcut text, Open-Meteo requests,
   saved-location handling, and the embedded HTML weather card.
 - Timestamped work copies and `.DS_Store` are ignored by Git and are not
@@ -93,20 +93,21 @@ Shortcuts/
         |-- Weather_for_City.xml
         |-- assets/
         |   |-- html-preview.svg
+        |   |-- weather-preview.html
         |   |-- reddit/
         |   |   |-- weather-for-city-html-preview.png
         |   |   `-- weather-for-city-reddit-card.png
         |   `-- social-preview.svg
         `-- dist/
-            |-- weather-for-city-1.2.3.zip
-            `-- weather-for-city-1.2.3.zip.sha256
+            |-- weather-for-city-1.2.4.zip
+            `-- weather-for-city-1.2.4.zip.sha256
 ```
 
 ## Implemented Features
 
 - Public Shortcuts repository created.
 - Collection structure introduced: each shortcut lives in its own folder.
-- `Weather for City` version `1.2.3` published.
+- `Weather for City` version `1.2.4` published.
 - Signed `.shortcut` file and XML source published.
 - Shortcut-specific version file, changelog, release notes, portfolio update,
   privacy report, assets, and ZIP are stored in `shortcuts/weather-for-city/`.
@@ -179,8 +180,8 @@ Shortcuts/
 - The weather shortcut can store the last selected location locally in the
   Shortcuts file area. This is user-local state and must not be included in release
   archives or screenshots.
-- GitHub Release `v1.2.3` remains the weather shortcut release even when the
-  repository contains more shortcuts later.
+- GitHub releases for the weather shortcut remain available when the repository
+  contains more shortcuts.
 - Only German and English visible Shortcut text is currently implemented.
 - The exact device permission prompts are controlled by Apple Shortcuts and
   can vary by platform and selected menu item.

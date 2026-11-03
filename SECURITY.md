@@ -9,7 +9,7 @@
 | Current release of each published shortcut | Yes |
 | Superseded releases | No |
 
-Shortcuts in this collection are released independently. For Weather for City, the current published release is 1.2.3.
+Shortcuts in this collection are released independently. For Weather for City, the current published release is 1.2.4.
 
 ## Reporting a Vulnerability
 

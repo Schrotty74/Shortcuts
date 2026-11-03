@@ -3,7 +3,7 @@
 Title:
 
 ```text
-[Update] Weather for City 1.2.3 - animated weather card with saved location
+[Update] Weather for City 1.2.4 - animated weather card with saved location
 ```
 
 Post:

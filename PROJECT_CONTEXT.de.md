@@ -1,6 +1,6 @@
 # Projektkontext: Shortcuts
 
-Stand: 2026-07-23
+Stand: 2026-11-03
 
 Repository:
 `https://github.com/Schrotty74/Shortcuts`
@@ -17,7 +17,7 @@ Dieses Repository stellt öffentliche Apple-Kurzbefehle bereit. Es ist als
 Sammlung angelegt: Jeder Kurzbefehl lebt vollständig in einem eigenen Ordner
 unter `shortcuts/`.
 
-Der erste veröffentlichte Kurzbefehl ist `Weather for City` in Version `1.2.3`.
+Der erste veröffentlichte Kurzbefehl ist `Weather for City`. Die aktuelle Version ist `1.2.4`.
 
 ## Architektur und technische Entscheidungen
 
@@ -32,7 +32,7 @@ Der erste veröffentlichte Kurzbefehl ist `Weather for City` in Version `1.2.3`.
   anzeigen.
 - Aktueller Shortcut-Ordner: `shortcuts/weather-for-city/`
 - Das ZIP für `Weather for City` liegt unter:
-  `shortcuts/weather-for-city/dist/weather-for-city-1.2.3.zip`
+  `shortcuts/weather-for-city/dist/weather-for-city-1.2.4.zip`
 - GitHub Actions prüft die erwartete Ordnerstruktur, Prüfsummen und einfache
   Datenschutzindikatoren.
 - Der Wetter-Kurzbefehl nutzt öffentliche Open-Meteo-APIs und benötigt keinen
@@ -46,7 +46,7 @@ Der erste veröffentlichte Kurzbefehl ist `Weather for City` in Version `1.2.3`.
 - `CHECKSUMS.txt` und die Datei `.zip.sha256` enthalten SHA-256-
   Integritätsprüfungen.
 - `dist/` enthält Release-ZIP-Pakete; `assets/` enthält nur öffentliche
-  SVG- und PNG-Vorschaubilder.
+  SVG-, PNG- und HTML-Vorschauen.
 - Die Workflow-Plist enthält sichtbare Shortcut-Texte, Open-Meteo-Anfragen,
   gespeicherte Positionsdaten und die eingebettete HTML-Wetterkarte.
 - Zeitgestempelte Arbeitskopien und `.DS_Store` werden von Git ignoriert und
@@ -98,20 +98,21 @@ Shortcuts/
         |-- Weather_for_City.xml
         |-- assets/
         |   |-- html-preview.svg
+        |   |-- weather-preview.html
         |   |-- reddit/
         |   |   |-- weather-for-city-html-preview.png
         |   |   `-- weather-for-city-reddit-card.png
         |   `-- social-preview.svg
         `-- dist/
-            |-- weather-for-city-1.2.3.zip
-            `-- weather-for-city-1.2.3.zip.sha256
+            |-- weather-for-city-1.2.4.zip
+            `-- weather-for-city-1.2.4.zip.sha256
 ```
 
 ## Umgesetzte Funktionen
 
 - Öffentliches Repository für Shortcuts eingerichtet.
 - Sammlungsstruktur eingeführt: jeder Shortcut in eigenem Unterordner.
-- `Weather for City` Version `1.2.3` bereitgestellt.
+- `Weather for City` Version `1.2.4` bereitgestellt.
 - Signierte `.shortcut`-Datei und XML-Quelle veröffentlicht.
 - Wetter-spezifische Version, Changelog, Release Notes, Portfolio-Update,
   Datenschutzbericht, Assets und ZIP in `shortcuts/weather-for-city/`
@@ -190,8 +191,8 @@ Shortcuts/
 - Der Wetter-Kurzbefehl kann die zuletzt gewählte Position lokal im
   Kurzbefehle-Dateibereich speichern. Das ist lokaler Nutzerzustand und darf
   nicht in Release-Archive oder Screenshots aufgenommen werden.
-- GitHub Release `v1.2.3` bleibt ein Release für den Wetter-Kurzbefehl, auch wenn
-  das Repository künftig weitere Shortcuts enthält.
+- Die GitHub-Releases des Wetter-Kurzbefehls bleiben auch bei weiteren
+  Shortcuts im Repository verfügbar.
 - Sichtbare Shortcut-Texte existieren derzeit nur auf Deutsch und Englisch.
 - Die genauen Berechtigungsdialoge werden von Apple Kurzbefehle gesteuert und
   können je nach Plattform und Menüauswahl variieren.
