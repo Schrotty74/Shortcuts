@@ -14,7 +14,7 @@ Hi r/shortcuts,
 I updated my public Apple Shortcut "Weather for City".
 
 iCloud link:
-https://www.icloud.com/shortcuts/27ee79aa7dd0427babb6758cef78c06b
+https://www.icloud.com/shortcuts/d3f16b565ce64b7390a840b2db1e899e
 
 GitHub:
 https://github.com/Schrotty74/Shortcuts/tree/main/shortcuts/weather-for-city

@@ -204,4 +204,4 @@ Bei größeren Änderungen, neuen Shortcuts, neuen Releases oder wichtigen
 Entscheidungen müssen diese Datei, [NEXT_STEPS.de.md](NEXT_STEPS.de.md) und die
 jeweiligen englischen Kontextdateien aktualisiert werden.
 
-Version 1.2.4 ist auf GitHub veröffentlicht. Der iCloud-Installationslink verweist weiterhin auf Version 1.2.3.
+Version 1.2.4 ist auf GitHub veröffentlicht. Der iCloud-Installationslink verweist auf Version 1.2.4.

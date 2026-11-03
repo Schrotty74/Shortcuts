@@ -12,11 +12,11 @@ result view, and an animated HTML weather card.
 
 ![Weather for City HTML preview](assets/html-preview.svg)
 
-Download [the interactive weather preview](assets/weather-preview.html) and open it in a browser to try the weather effects. The iCloud link below installs version 1.2.3.
+Download [the interactive weather preview](assets/weather-preview.html) and open it in a browser to try the weather effects.
 
 ## Installation
 
-1. Open the [official iCloud shortcut link](https://www.icloud.com/shortcuts/27ee79aa7dd0427babb6758cef78c06b).
+1. Open the [official iCloud shortcut link](https://www.icloud.com/shortcuts/d3f16b565ce64b7390a840b2db1e899e).
 2. Import it into Apple Shortcuts.
 3. Run the shortcut and enter a city.
 

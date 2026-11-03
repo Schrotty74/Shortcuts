@@ -14,7 +14,7 @@ Each Apple Shortcut lives in its own folder under `shortcuts/` so it can be docu
 
 | Preview | Shortcut | Version | Folder | Release |
 | --- | --- | --- | --- | --- |
-| <img src="shortcuts/weather-for-city/assets/html-preview.svg" alt="Weather for City Apple Shortcut preview" width="180"> | Weather for City | 1.2.4 | [`shortcuts/weather-for-city`](shortcuts/weather-for-city/) | [`Install`](https://www.icloud.com/shortcuts/27ee79aa7dd0427babb6758cef78c06b), [`v1.2.4`](https://github.com/Schrotty74/Shortcuts/releases/tag/v1.2.4) |
+| <img src="shortcuts/weather-for-city/assets/html-preview.svg" alt="Weather for City Apple Shortcut preview" width="180"> | Weather for City | 1.2.4 | [`shortcuts/weather-for-city`](shortcuts/weather-for-city/) | [`Install`](https://www.icloud.com/shortcuts/d3f16b565ce64b7390a840b2db1e899e), [`v1.2.4`](https://github.com/Schrotty74/Shortcuts/releases/tag/v1.2.4) |
 
 ## Current Highlights
 

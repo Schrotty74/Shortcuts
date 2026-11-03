@@ -12,11 +12,11 @@ animierte HTML-Wetterkarte.
 
 ![Weather for City HTML-Vorschau](assets/html-preview.svg)
 
-Lade die [interaktive Wettervorschau](assets/weather-preview.html) herunter und öffne sie im Browser, um die Wettereffekte auszuprobieren. Der iCloud-Link unten installiert Version 1.2.3.
+Lade die [interaktive Wettervorschau](assets/weather-preview.html) herunter und öffne sie im Browser, um die Wettereffekte auszuprobieren.
 
 ## Installation
 
-1. Den [offiziellen iCloud-Kurzbefehl-Link](https://www.icloud.com/shortcuts/27ee79aa7dd0427babb6758cef78c06b) öffnen.
+1. Den [offiziellen iCloud-Kurzbefehl-Link](https://www.icloud.com/shortcuts/d3f16b565ce64b7390a840b2db1e899e) öffnen.
 2. In Apple Kurzbefehle importieren.
 3. Den Kurzbefehl starten und eine Stadt eingeben.
 
