@@ -7,4 +7,4 @@
 - Adds rain and snow animations for different precipitation intensities.
 - Restricts lightning to thunderstorm conditions.
 
-The signed shortcut and ZIP are available in the repository. The existing iCloud link and GitHub release point to version 1.2.3.
+The iCloud installation link currently points to version 1.2.3.

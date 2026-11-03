@@ -192,3 +192,5 @@ Shortcuts/
 For larger changes, new shortcuts, new releases, or important decisions,
 update this file, [NEXT_STEPS.md](NEXT_STEPS.md), and the matching German
 context files before considering the task complete.
+
+Version 1.2.4 is published on GitHub. The iCloud installation link still points to version 1.2.3.
