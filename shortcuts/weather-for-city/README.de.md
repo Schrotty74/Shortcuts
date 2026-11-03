@@ -1,6 +1,6 @@
 # Weather for City
 
-Version: `1.2.3`
+Version: `1.2.4`
 
 English: [README.md](README.md)
 
@@ -11,6 +11,8 @@ ruft aktuelle Wetterdaten ab und zeigt sie als Mitteilung, Ergebnisansicht und
 animierte HTML-Wetterkarte.
 
 ![Weather for City HTML-Vorschau](assets/html-preview.svg)
+
+Lade die [interaktive Wettervorschau](assets/weather-preview.html) herunter und öffne sie im Browser, um die Wettereffekte auszuprobieren. Der iCloud-Link unten installiert Version 1.2.3.
 
 ## Installation
 

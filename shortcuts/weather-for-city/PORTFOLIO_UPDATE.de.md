@@ -24,5 +24,5 @@ Release-ZIP, Prüfsummen und automatischer Release-Status-Prüfung.
 ## Links
 
 - Repository: https://github.com/Schrotty74/Shortcuts
-- Release-ZIP: `dist/weather-for-city-1.2.3.zip`
+- Release-ZIP: `dist/weather-for-city-1.2.4.zip`
 - Datenschutzbericht: `shortcuts/weather-for-city/PRIVACY_REPORT.de.md`

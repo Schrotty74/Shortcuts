@@ -1,6 +1,6 @@
 # Weather for City
 
-Version: `1.2.3`
+Version: `1.2.4`
 
 Deutsch: [README.de.md](README.de.md)
 
@@ -11,6 +11,8 @@ Open-Meteo, fetches current weather data, and shows it as a notification, a
 result view, and an animated HTML weather card.
 
 ![Weather for City HTML preview](assets/html-preview.svg)
+
+Download [the interactive weather preview](assets/weather-preview.html) and open it in a browser to try the weather effects. The iCloud link below installs version 1.2.3.
 
 ## Installation
 

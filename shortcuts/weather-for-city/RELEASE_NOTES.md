@@ -1,40 +1,10 @@
 # Release Notes
 
-## Weather for City 1.2.3
+## Weather for City 1.2.4
 
-Bugfix release of the Apple Shortcut `Weather for City`.
+- Keeps weather symbols visible above the card on iPhone and Mac.
+- Shows a moon and stars at night when the sky is clear or partly cloudy.
+- Adds rain and snow animations for different precipitation intensities.
+- Restricts lightning to thunderstorm conditions.
 
-Fixed:
-
-- saves the selected Open-Meteo location locally after city lookup
-- lets repeated `Get Weather` runs skip city input and ambiguous location
-  selection after the first confirmed run
-- adds a separate `Change City` menu item for replacing the saved location
-- improves city-name contrast in the HTML card for phone displays
-- keeps the existing UTF-8 HTML card, weather lookup, DACH/LI language handling,
-  unit selection, and update-check behavior
-
-Privacy:
-
-- no API keys
-- no passwords
-- no personal tokens
-- no local work archives
-- no screenshots
-- GitHub update check reads only the public latest-release metadata
-- the saved location file stays local to the user's Shortcuts file area and is
-  not included in the release
-- iOS/macOS may ask for Apple Shortcuts permissions on the first and sometimes
-  second run, depending on the selected menu item: Open-Meteo for weather,
-  GitHub for update checks, notifications, HTML preview, and local Shortcuts
-  file access for the saved location
-
-Release files:
-
-- `Weather for City.shortcut`
-- `dist/weather-for-city-1.2.3.zip`
-- `dist/weather-for-city-1.2.3.zip.sha256`
-
-Installation:
-
-- [Official iCloud shortcut link](https://www.icloud.com/shortcuts/27ee79aa7dd0427babb6758cef78c06b)
+The signed shortcut and ZIP are available in the repository. The existing iCloud link and GitHub release point to version 1.2.3.

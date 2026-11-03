@@ -1,6 +1,6 @@
 # Privacy Report: Weather for City
 
-Version: `1.2.3`
+Version: `1.2.4`
 
 Updated: 2026-07-19
 
